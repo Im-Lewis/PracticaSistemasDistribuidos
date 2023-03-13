@@ -2,9 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio de soporte</title>
+    <link rel="stylesheet" href="../CSS/estilos.css">
 </head>
 <body>
+    <div id="top_menu">
+        <img id="logo_top_menu" src="../IMG/table-tennis-7216579_1280.png" alt="logo_img">
+        <p id="page_name">BePong</p>
+        <button id="login_button">Iniciar Sesión</button>
+        <button id="singin_button">Registrarse</button>
+    </div>
+    
+    <div id="top_menu_options">
+        <button id="shop_button">Tienda</button>
+        <p>|</p>
+        <button id="tournaments_button">Torneos</button>
+        <p>|</p>
+        <button id="support_button">Soporte</button>
+    </div>
+    
+    <div class="section_questions">
+        <div class="title_blackbackground">
+            FREQUENT QUESTIONS
+        </div>
+        <div class="block_questions">
+            <div class="container_questions">
+                <span class="fontRegular">In the case where you want to buy a shovel or other object, how can you do it?</span>
+                <button class="dropdown" onclick="showHideText()">
+                    <img id ="arrow_down" class="arrow" src="../IMG/flecha_abajo.png">
+                    <!--<img id="arrow_up" class="arrow" src="../IMG/flecha_arriba.png">-->
+                </button>
+            </div>
+            <div class="container_answer">
+                <span class="fontLight">In order to buy a product, there are several options:</span>
+                <ol class="list">
+                    <li class="elem_list">
+                        Search directly for the name of the product that we want to buy in the search container. 
+                        Select the product and add it to the cart to then make the purchase.
+                    </li>
+                    <li class="elem_list">
+                        Go to the "Shop" option in the drop-down menu at the top, search for the product using the 
+                        filters we offer and carry out the same purchase operation as in the previous section
+                    </li>
+                </ol>        
+            </div>
+            <div class="container_questions">
+                <span class="fontRegular">Can I buy a product without having to create an account with my credentials?</span>
+                <button class="dropdown" onclick="showHideText()">
+                    <img id ="arrow_down" class="arrow" src="../IMG/flecha_abajo.png">
+                </button>
+            </div>
+            <div class="container_answer">
+                <span class="fontLight">No. We need to have data about the person who wants to buy the product for easier transfer 
+                    and contact with the user in the event of a possible incident</span>
+            </div>
+            <div class="container_questions">
+                <span class="fontRegular">In the tournaments section, if I want to sign up for a tournament, how do I see which tournament I'm signed up for?</span>
+                <button class="dropdown" onclick="showHideText()">
+                    <img id ="arrow_down" class="arrow" src="../IMG/flecha_abajo.png">
+                </button>
+            </div>
+            <div class="container_answer">
+                <span class="fontLight">In order to see which tournaments you are signed up for, you just need 
+                    to select the icon that is displayed at the bottom right of the screen to see all that information</span>
+            </div>
+        </div>
+    </div>
 
+    <div class="section_contact">
+            <div class="title_whitebackground">
+                DON'T FIND WHAT YOU WANT? GET IN TOUCH WITH US
+            </div>
+            <div class="section_form">
+                <form class="form_support">
+                    <label for="name"></label>
+                    <input type="text" name="name" placeholder="Name" class="input_text">
+
+                    <label for="email"></label>
+                    <input type="email" name="email" placeholder="Email" class="input_text">
+                    
+                    <label for="text_area"></label>
+                    <textarea class="textArea" placeholder="Place your problems here"></textarea>
+
+                    <button class="buttonRed">Send problems</button>
+        
+                </form>
+            </div>
+            <div class="container_socialmedia">
+                <div class="icon_sociamedia">
+                    <img src="../IMG/gmail.png" width="30px">
+                </div>
+                <span class="fontRegular" style="margin-right: 20px;">supportmepong@gmail.com</span>
+                <div class="icon_sociamedia">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" width="25px">
+                </div>
+                <span class="fontRegular" style="margin-right: 20px;">@mepong</span>
+                <div class="icon_sociamedia">
+                    <img src="../IMG/linkedin.png" width="25px">
+                </div>
+                <span class="fontRegular" style="margin-right: 20px;">mepong</span>
+            </div>
+    </div>
 </body>
 </html>
