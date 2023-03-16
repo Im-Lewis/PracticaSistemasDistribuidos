@@ -88,7 +88,7 @@ button {
     background-color: #2d2d2a;
     height: 2000px;
 }
-/* Section filters*/
+/* ----------------- Section filters -----------------*/
 .section_filters{
     height: 2000px;
     width: 300px;
@@ -103,6 +103,11 @@ button {
     border-right: none;
     border-top: none;
     padding-bottom: 10px;
+}
+.filters_sticky{
+    position:sticky;
+    top:170px;
+    z-index: 2;
 }
 
 .filters{
@@ -139,10 +144,16 @@ button {
     margin-top: 50px;
     margin-left: 40px;
     margin-right: 40px;
+    padding-bottom: 50px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+.colors{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .selector_red{
     width: 10px;
@@ -165,11 +176,23 @@ button {
     display:inline-block;
     background-color: #0026ff;
 }
+.selector_white{
+    width: 10px;
+    height: 10px;
+    margin-left:2px;
+    display:inline-block;
+    background-color: #8c8c8c;
+
+}
+.div_button_filter{
+    display:flex;
+    justify-content: center;
+    align-content: flex-start;
+}
 /* ----------------- Product -----------------*/
 .section_products_img{
     display: flex;
-    flex-direction: column;
-
+    flex-wrap: wrap;
 }
 .section_two_products{
     display: flex;
@@ -269,7 +292,14 @@ button {
     font-weight: 700;
     transition: 0.5s;
 }
-/* Fonts */
+/* ----------------- Buttoms ----------------- */
+.button_filter{
+    background-color: #C14953;
+    color:#ffffff;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+}
+/* ----------------- Fonts ----------------- */
 .fontLight{
     font-family: 'Barlow', sans-serif;
     font-weight: 300;

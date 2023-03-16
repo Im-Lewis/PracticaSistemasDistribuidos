@@ -78,6 +78,7 @@ button {
     position: fixed;
     top: 100px;
     height: 60px;
+    width: 100%;
 
     background-color: white;
     z-index: 2;
@@ -126,7 +127,8 @@ button {
 .section_questions{
     background-color: #2D2D2A;
     margin-top: 150px;
-    height: 120vh;
+    height: 800px;
+    overflow: scroll;
 }
 .section_contact{
     display: flex;
@@ -149,8 +151,12 @@ button {
     padding-top: 120px;
 }
 .container_questions{
-    border: 5px solid rgb(226, 223, 223);
-    background-color: #C14953;
+    border: 5px solid #2d2d2a;
+    border-radius: 10px 10px 0 0;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    background-color: #ffffff;
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -159,14 +165,16 @@ button {
     justify-content: space-between;
 }
 .container_answer{
-    border: 5px solid rgb(226, 223, 223);
+
+    display: none;
     background-color: #e3707a;
+    border-radius: 0 0 10px 10px;
     border-top: none;
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 .container_socialmedia{
     display: flex;
