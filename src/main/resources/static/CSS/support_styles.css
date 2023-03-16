@@ -78,7 +78,7 @@ button {
     position: fixed;
     top: 100px;
     height: 60px;
-    width: max-content;
+
     background-color: white;
     z-index: 2;
 }
