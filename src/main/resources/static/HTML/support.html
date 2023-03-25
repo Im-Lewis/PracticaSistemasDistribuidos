@@ -25,46 +25,49 @@
     
     <div class="section_questions">
         <div class="title_blackbackground">
-            FREQUENT QUESTIONS
+            PREGUNTAS FRECUENTES
         </div>
         <div class="block_questions">
             <div class="container_questions">
-                <span class="fontRegular">In the case where you want to buy a shovel or other object, how can you do it?</span>
-                <button class="dropdown" onclick="showHideText()">
+                <span class="fontRegular">En el caso en el que quiera comprar una pala u otro producto, ¿cómo lo hago?</span>
+                <button class="dropdown" onclick="mostrarOcultarRespuesta1()">
                     <img id ="arrow_down" class="arrow" src="../images/flecha_abajo.png">
                     <!--<img id="arrow_up" class="arrow" src="../IMG/flecha_arriba.png">-->
                 </button>
             </div>
-            <div class="container_answer">
-                <span class="fontLight">In order to buy a product, there are several options:</span>
+            <div class="container_answer" id="text_answer1">
+                <span class="fontLight">Para poder comprar un producto, hay varias opciones:</span>
                 <ol class="list">
                     <li class="elem_list">
-                        Search directly for the name of the product that we want to buy in the search container. 
-                        Select the product and add it to the cart to then make the purchase.
+                        Busca directamente el nombre del producto que quieras comprar en el contenedor
+                        de búsqueda. Seleccione el producto y añádelo al carrito para acto seguido efectuar
+                        la compra
                     </li>
                     <li class="elem_list">
-                        Go to the "Shop" option in the drop-down menu at the top, search for the product using the 
-                        filters we offer and carry out the same purchase operation as in the previous section
+                       Dirígete a la opción "Tienda" del menú desplegable de la parte superior, busca el producto
+                       que desees mediante la sección de filtros que se encuentra en la parte de la izquierda y por
+                       último efectúa la misma operación de pago que en el ejemplo anterior
                     </li>
                 </ol>        
             </div>
             <div class="container_questions">
-                <span class="fontRegular">Can I buy a product without having to create an account with my credentials?</span>
-                <button class="dropdown" onclick="showHideText()">
+                <span class="fontRegular">¿Puedo comprar un producto sin tener una cuenta creada con mis credenciales?</span>
+                <button class="dropdown" onclick="mostrarOcultarRespuesta2()">
                     <img id ="arrow_down" class="arrow" src="../images/flecha_abajo.png">
                 </button>
             </div>
-            <div class="container_answer">
-                <span class="fontLight">No. We need to have data about the person who wants to buy the product for easier transfer 
-                    and contact with the user in the event of a possible incident</span>
+            <div class="container_answer"  id="text_answer2">
+                <span class="fontLight">No. Necesitamos saber los datos necesarios de la persona que 
+                    quiere comprar el producto para un más fácil envío y contacto con el usuario ante la posibilidad de un incidente
+                </span>
             </div>
             <div class="container_questions">
                 <span class="fontRegular">In the tournaments section, if I want to sign up for a tournament, how do I see which tournament I'm signed up for?</span>
-                <button class="dropdown" onclick="showHideText()">
+                <button class="dropdown" onclick="mostrarOcultarRespuesta3()">
                     <img id ="arrow_down" class="arrow" src="../images/flecha_abajo.png">
                 </button>
             </div>
-            <div class="container_answer">
+            <div class="container_answer"  id="text_answer3">
                 <span class="fontLight">In order to see which tournaments you are signed up for, you just need 
                     to select the icon that is displayed at the bottom right of the screen to see all that information</span>
             </div>
@@ -73,20 +76,20 @@
 
     <div class="section_contact">
             <div class="title_whitebackground">
-                DON'T FIND WHAT YOU WANT? GET IN TOUCH WITH US
+                ¿NO ENCUENTRAS LO QUE NECESITAS? PONTE EN CONTACTO CON NOSOTROS
             </div>
             <div class="section_form">
                 <form class="form_support">
                     <label for="name"></label>
-                    <input type="text" name="name" placeholder="Name" class="input_text">
+                    <input type="text" name="name" placeholder="Nombre" class="input_text">
 
                     <label for="email"></label>
                     <input type="email" name="email" placeholder="Email" class="input_text">
                     
                     <label for="text_area"></label>
-                    <textarea class="textArea" placeholder="Place your problems here"></textarea>
+                    <textarea class="textArea" placeholder="Ingrese el problema"></textarea>
 
-                    <button class="buttonRed">Send problems</button>
+                    <button class="buttonRed">Enviar problema</button>
         
                 </form>
             </div>
@@ -104,6 +107,8 @@
                 </div>
                 <span class="fontRegular" style="margin-right: 20px;">mepong</span>
             </div>
+            
     </div>
+    <script src="../JS/support.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shop-BePong</title>
+    <title>Shop-BePong  </title>
     <link rel="stylesheet" href="../CSS/shop_style.css">
 </head>
 <body>
@@ -20,7 +20,7 @@
             <p>|</p>
             <button class="top_menu_options_button">Torneos</button>
             <p>|</p>
-            <button class="top_menu_options_button">Soporte</button>
+            <button class="top_menu_options_button" id="support_button">Soporte</button>
         </div>
         <div class="section_products">
             <div class="section_filters">
@@ -30,12 +30,12 @@
                 <div class="filters_sticky">
                     <div class="filters">
                         <label for="select" class="select_name">Tipo de producto</label>
-                        <select class="filter_type_product">
-                            <option>Pala</option>
-                            <option>Mesa</option>
-                            <option>Bolas</option>
-                            <option>Equipamiento</option>
-                            <option>Kit</option>
+                        <select class="filter_type_product" id="filter_type_product">
+                            <option id="option">Pala</option>
+                            <option id="option">Mesa</option>
+                            <option id="option">Bolas</option>
+                            <option id="option">Equipamiento</option>
+                            <option id="option">Kit</option>
                         </select>
                     </div>
                     <div class="price">
@@ -44,65 +44,115 @@
                         <label for="valor-rango">Valor seleccionado:</label>
                     </div>
                     <div class="selectors_colors">
-                        <span class="fontRegular">Colores</span>
-                        <label class="color">
-                            <input type="checkbox" checked="false">
-                            <span class="selector_red"></span>
-                        </label>
-                        <label class="color">
-                            <input type="checkbox" checked="true">
-                            <span class="selector_black"></span>
-                        </label>
-                        <label class="color">
-                            <input type="checkbox" checked="true">
-                            <span class="selector_blue"></span>
-                        </label>
+                        <div>Colores</div>
+                        <div class="colors">
+                            <label class="color">
+                                <input type="checkbox" checked="false">
+                                <span class="selector_red"></span>
+                            </label>
+                            <label class="color">
+                                <input type="checkbox" checked="true">
+                                <span class="selector_black"></span>
+                            </label>
+                            <label class="color">
+                                <input type="checkbox" checked="true">
+                                <span class="selector_blue"></span>
+                            </label>
+                            <label class="color">
+                                <input type="checkbox" checked="true">
+                                <span class="selector_white"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="div_button_filter">
+                        <button class="button_filter" onclick="filtrar();">Filtrar</button>
                     </div>
                 </div>
             </div>
             <div class="section_products_img">
-                <div class="section_two_products">
-                    <div class="product">
+                <!--<div class="section_two_products">-->
+                    <div class="product" id="product">
                         <div class="circle"></div>
                         <div class="content">
                             <h2>Kit PingPong</h2>
-                            <div class="tag">Kit</div>
+                            <div class="section_tag">
+                                <div class="tag">Kit</div>
+                                <div class="tag_price">19.99 $</div>
+                            </div>
                             <p>Disfruta de este maravilloso kit junto a un amigo con hasta tres bolas</p>
+                            <img src="../images/cesta.png" class="img_basket">
                         </div>
-                        <img src="https://www.esdadeportes.com/wp-content/uploads/2023/01/8010-2.png">
+                        <img src="https://www.esdadeportes.com/wp-content/uploads/2023/01/8010-2.png" class="img_front_page">
                     </div>
-                    <div class="product">
+                    <div class="product" id="product">
                         <div class="circle"></div>
                         <div class="content">
                             <h2>Mesa básica</h2>
-                            <div class="tag">Mesa</div>
+                            <div class="section_tag">
+                                <div class="tag">Mesa</div>
+                                <div class="tag_price">209.99 $</div>
+                            </div>
                             <p>¡No dudes en llevarte esta mesa para disfutar del ping pong!</p>
+                            <img src="../images/cesta.png" class="img_basket">
                         </div>
-                        <img src="https://www.myparque.com/wp-content/uploads/2019/02/mesapingpong_head.png" style="width: 300px; height: 300px;">
+                        <img src="https://www.myparque.com/wp-content/uploads/2019/02/mesapingpong_head.png" style="width: 300px; height: 300px;" class="img_front_page">
                     </div>
-                </div>
-                <div class="section_two_products">
-                    <div class="product">
+                    <div class="product" id="product">
                         <div class="circle"></div>
                         <div class="content">
                             <h2>Mesa Palatronix</h2>
-                            <div class="tag">Mesa</div>
+                            <div class="section_tag">
+                                <div class="tag">Mesa</div>
+                                <div class="tag_price">319.99 $</div>
+                            </div>
                             <p>Último modelo de la marca más prestigiosa de Ping Pong, Palitronix</p>
+                            <img src="../images/cesta.png" class="img_basket">
                         </div>
-                        <img src="https://www.benito.com/img/productes/imgProducte/VMOTC-1400.png" style="width: 300px; height: 300px;">
+                        <img src="https://www.benito.com/img/productes/imgProducte/VMOTC-1400.png" style="width: 300px; height: 300px;" class="img_front_page">
                     </div>
-                    <div class="product">
+                    <div class="product" id="product">
                         <div class="circle"></div>
                         <div class="content">
                             <h2>Bola</h2>
-                            <div class="tag">Bolas</div>
+                            <div class="section_tag">
+                                <div class="tag">Bolas</div>
+                                <div class="tag_price">0.99 $</div>
+                            </div>
                             <p>Se venden por unidades las bolas. Bolas de la marca Palatronix</p>
+                            <img src="../images/cesta.png" class="img_basket">
                         </div>
-                        <img src="../images/bolapingpong.png" style="width: 300px; height: 300px;">
+                        <img src="../images/bolapingpong.png" style="width: 300px; height: 300px;" class="img_front_page">
                     </div>
-                </div>
+                <!--</div>-->
+                    <div class="product" id="product">
+                        <div class="circle"></div>
+                        <div class="content">
+                            <h2>Red mesa casera</h2>
+                            <div class="section_tag">
+                                <div class="tag">Equipamiento</div>
+                                <div class="tag_price">10.99 $</div>
+                            </div>
+                            <p>Disfruta desde cualquier sitio con esta red</p>
+                            <img src="../images/cesta.png" class="img_basket">
+                        </div>
+                        <img src="https://o.remove.bg/downloads/dc584aec-8bb9-48ac-a552-2842c1a8ff4a/imagenGrande1-removebg-preview.png" style="width: 250px; height: 250px;" class="img_front_page">
+                    </div>
+                    <div class="product" id="product">
+                        <div class="circle"></div>
+                        <div class="content">
+                            <h2>Pala Pro</h2>
+                            <div class="section_tag">
+                                <div class="tag">Pala</div>
+                                <div class="tag_price">10.99 $</div>
+                            </div>
+                            <p>Con nuestra última pala, ten claro que ahora esta pala nos será tu excusa</p>
+                            <img src="../images/cesta.png" class="img_basket">
+                        </div>
+                        <img src="https://o.remove.bg/downloads/d1234b68-bbb4-4850-8539-9903c51ef5f1/pala-ping-pong-enebe-equipo-400-removebg-preview.png" style="width: 300px; height: 300px;" class="img_front_page">
+                    </div>
             </div>
         </div>
     </div>
+    <script src="../JS/shop.js"></script>
 </body>
 </html>
