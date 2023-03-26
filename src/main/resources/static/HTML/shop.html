@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../CSS/shop_style.css">
 </head>
 <body>
-    <div class="body">
+    <div class="body">       
         <div class="top_menu">
             <img class="logo_top_menu" src="../images/table-tennis-7216579_1280.png" alt="logo_img">
             <p class="page_name">BePong</p>
@@ -16,9 +16,9 @@
             <button class="singin_button">Registrarse</button>
         </div>
         <div class="top_menu_options">
-            <button class="top_menu_options_button">Tienda</button>
+            <button class="top_menu_options_button" id="shop_button">Tienda</button>
             <p>|</p>
-            <button class="top_menu_options_button">Torneos</button>
+            <button class="top_menu_options_button" id="tournaments_button">Torneos</button>
             <p>|</p>
             <button class="top_menu_options_button" id="support_button">Soporte</button>
         </div>
@@ -66,7 +66,6 @@
                     </div>
                     <div class="div_button_filter">
                         <button class="button_filter" onclick="filtrar();">Filtrar</button>
-                        <button class="button_filter">Filtrar</button>
                     </div>
                 </div>
             </div>
@@ -98,8 +97,8 @@
                     </div>
                     <img src="https://www.myparque.com/wp-content/uploads/2019/02/mesapingpong_head.png" style="width: 300px; height: 300px;" class="img_front_page">
                 </div>
-            <!--</div>-->
-            <!--<div class="section_two_products">-->
+                <!--</div>-->
+                <!--<div class="section_two_products">-->
                 <div class="product">
                     <div class="circle"></div>
                     <div class="content">
@@ -126,7 +125,7 @@
                     </div>
                     <img src="../images/bolapingpong.png" style="width: 300px; height: 300px;" class="img_front_page">
                 </div>
-            <!--</div>-->
+                <!--</div>-->
                 <div class="product" id="product">
                     <div class="circle"></div>
                     <div class="content">
@@ -138,7 +137,7 @@
                         <p>Disfruta desde cualquier sitio con esta red</p>
                         <img src="../images/cesta.png" class="img_basket">
                     </div>
-                    <img src="https://o.remove.bg/downloads/dc584aec-8bb9-48ac-a552-2842c1a8ff4a/imagenGrande1-removebg-preview.png" style="width: 250px; height: 250px;" class="img_front_page">
+                    <img src="../images/red.png" style="width: 250px; height: 250px;" class="img_front_page">
                 </div>
                 <div class="product" id="product">
                     <div class="circle"></div>
@@ -151,9 +150,9 @@
                         <p>Con nuestra última pala, ten claro que ahora esta pala nos será tu excusa</p>
                         <img src="../images/cesta.png" class="img_basket">
                     </div>
-                    <img src="https://o.remove.bg/downloads/d1234b68-bbb4-4850-8539-9903c51ef5f1/pala-ping-pong-enebe-equipo-400-removebg-preview.png" style="width: 300px; height: 300px;" class="img_front_page">
+                    <img src="../images/palapro.png" style="width: 300px; height: 300px;" class="img_front_page">
                 </div>
-            <!--</div>-->
+                <!--</div>-->
                 <div class="product">
                     <div class="circle"></div>
                     <div class="content">
@@ -175,6 +174,10 @@
             </div>
         </div>
     </div>
+    <button class="button_add_new_product" id="button_add_new_product">
+        Crear producto
+    </button>
+    <script src="../JS/change_page.js"></script>
     <script src="../JS/shop.js"></script>
 </body>
 </html>
