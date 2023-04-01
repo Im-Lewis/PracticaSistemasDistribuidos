@@ -13,3 +13,8 @@ function filtrar(){
         console.log(textTag);
     }
 }
+// Navegation buttons
+let button = document.getElementById("support_button");
+button.addEventListener("click", function(){
+    window.location.replace("../HTML/support.html");
+});

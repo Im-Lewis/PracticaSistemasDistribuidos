@@ -1,119 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;1,300&display=swap');
 /* font-family: 'Barlow', sans-serif; */
-*{
-    padding: 0;
-    margin: 0;
-}
-html {
-    font-family: 'Barlow', sans-serif;
-    overflow-x: hidden;
-}
-button {
-    margin: 25px 10px;
-    outline: none;
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-weight: bold;
-    cursor: pointer;
-    height: 50px;
-    width: 150px;
-    border-radius: 10px;
-}
-/* Body */
-.body{
-    display: flex;
-    flex-direction: column;
-}
-/* Top Menu*/
-.top_menu{
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    background-color: #C14953;
-    height: 100px;
-    width: 100%;
-    z-index: 2;
-}
-.logo_top_menu{
-    height: 70px;
-    width: 85px;
-    margin: 15px 35px;
-}
-.page_name {
-    font-weight: 600;
-    font-size: 45pt;
-    margin: 10px 10px;
-    color: white;
-}
-.login_button{
-    position: absolute;
-    right: 185px;
-    background-color: #2d2d2a;
-    color: white;
-    border: #2d2d2a;
-    transition: all 0.3s ease-in-out;
-}
-.login_button:hover{
-    background-color: white;
-    color:#C14953;
-}
-.singin_button{
-    position: absolute;
-    right: 15px;
-    background-color: #2d2d2a;
-    color: white;
-    border: #2d2d2a;
-    transition: all 0.3s ease-in-out;
-}
-.singin_button:hover{
-    background-color: white;
-    color:#C14953;
-}
-.top_menu_options {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 100px;
-    height: 60px;
-    width: 100%;
-    border:#000000 solid 2px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
 
-    background-color: white;
-    z-index: 2;
-}
-#shop_button{
-    transition: all 0.2s ease-in-out;
-}
-#shop_button:hover{
-    transform: scale(1.5);
-    color:#C14953;
-    cursor: pointer;
-}
-#tournaments_button{
-    transition: all 0.2s ease-in-out;
-}
-#tournaments_button:hover{
-    transform: scale(1.5);
-    color:#C14953;
-    cursor: pointer;
-}
-#support_button{
-    transition: all 0.2s ease-in-out;
-}
-#support_button:hover{
-    transform: scale(1.5);
-    color:#C14953;
-    cursor: pointer;
-}
-.top_menu_options_button{
-    background-color: rgba(0,0,0,0);
-    border: 0px;
-}
 /* ----------------- Section products -----------------*/
 .section_products{
     display: flex;
@@ -140,7 +27,7 @@ button {
 }
 .filters_sticky{
     position:sticky;
-    top:170px;
+    top:200px;
     z-index: 2;
 }
 
@@ -228,10 +115,7 @@ button {
     display: flex;
     flex-wrap: wrap;
 }
-.section_tag{
-    display: flex;
-    justify-content: space-between;
-}
+
 .product{
     position:relative;
     margin-top: 50px;
@@ -304,32 +188,8 @@ button {
     line-height: 1em;
     margin-bottom: 5px;
 }
-.tag{
-    color: #ffffff;
-    background-color: #C14953;
-    padding-left: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-right: 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 100px;
-}
-.tag_price{
-    background-color: white;
-    border: #000000 solid 2px;
-    padding-left: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-right: 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 30px;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 400;
-}
+
+
 .product .content a{
     position: relative;
     color: #fff;
@@ -345,8 +205,8 @@ button {
 }
 /* ----------------- Images ----------------- */
 .img_basket{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-color: #C14953;
     margin-top: 20px;
     padding: 10px;
@@ -359,15 +219,15 @@ button {
     color:#ffffff;
     font-family: 'Barlow', sans-serif;
     font-weight: 600;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .button_filter:hover{
     background-color: white;
-    color:#C14953
+    color:#C14953;
 }
 .button_add_new_product{
     background-color: #C14953;
-    color:#ffffff;
+    color:white;
     font-family: 'Barlow', sans-serif;
     font-weight: 600;
     border:none;
@@ -375,209 +235,11 @@ button {
     bottom: 0;
     right: 0;
     padding: 10px;
-    margin: 50px;
-    z-index: 1;
-    transition: all 0.3s ease-in-out;
+    margin:50px;
+    z-index: 10;
+    transition:all 0.3s ease-in-out;
 }
 .button_add_new_product:hover{
     background-color: white;
-    color: #C14953;
-}
-/* ----------------------------------------- */
-/* ----------------- ADD NEW PRODUCT HTML ----------------- */
-/* ----------------------------------------- */
-.section_form_new_product{
-    background-color: rgb(255, 255, 255);
-    min-height: 500px;
-    margin-top: 160px;
-    display: flex;
-    justify-content: center;
-}
-.title_whitebackground{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-family: 'Barlow', sans-serif;
-    font-weight: bold;
-    background-color: #C14953;
-    color: white;
-    height: 40px;
-    width: 100%;
-    /*margin-top: 40px;*/
-}
-.container_form{
-    display: flex;
-    flex-direction: row;
-
-    margin-top:10%;
-    background-color: #C14953;
-    border-radius: 10px;
-    min-height: 400px;
-    width: 900px;
-    /*margin-left: 15%;
-    margin-right: 15%;*/
-}
-.form_new_product{
-    display:flex;
-    flex-direction: column;
-    margin: 50px;
-    max-width: 50%;
-}
-.input_text{
-    font-family: 'Barlow', sans-serif;
-    font-weight: 600;
-    font-size: 0.5cm;
-    border-bottom: #2D2D2A solid 3px;
-    color: white;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    background-color: transparent;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    height: 15px;
-    width: 100%;
-    border-radius: 0px;
-}
-.textArea_form{
-    max-width: 300px;
-    max-height: 100px;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    font-family: 'Barlow', sans-serif;
-    padding: 10px;
-}
-.characteristics_container{
-    display:flex;
-    flex-direction: column;
-}
-.img_background_container{
-    height: 100%;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-    object-fit: cover;
-    max-width: 50%;
-}
-.button_white{
-    background-color: white;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 600;
-    padding: 5px;
-}
-.button_white h4{
     color:#C14953;
-    font-size: 0.5cm;
-}
-/* Show new products*/
-.section_show_new_products{
-    margin-top: 100px;
-    min-height: 600px;
-    background-color:#2D2D2A;
-    display: flex;
-    justify-content: center;
-}
-.title_blackbackground{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    font-family: 'Barlow', sans-serif;
-    font-weight: bold;
-    height: 40px;
-    width: 100%;
-    margin-top: 40px;
-}
-.container_new_products{
-
-    margin-top: 90px;
-}
-.new_product{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-}
-.circle_white{
-    position:absolute;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    overflow: hidden;
-}
-.product .circle_white::before{
-    content:'';
-    position:absolute;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
-    background: #ffffff;
-    clip-path: circle(120px at center);
-    transition: 0.5s;
-}
-.product:hover .circle_white::before{
-    background: #ffffff;
-    clip-path: circle(400px at center);
-}
-.circle_arrow{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.2s ease-in-out;
-}
-.circle_arrow:hover{
-    transform: scale(1.5);
-    cursor: pointer;
-}
-.container_new_product{
-    display: flex;
-    align-items: center;
-    margin-top: 50px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding: 20px;
-    width: 600px;
-    border-radius: 20px;
-    background-color: white;
-}
-.description_new_product{
-    margin: 40px;
-}
-.description_new_product h2{
-    color: #000000;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 600;
-    font-size: 1.5cm;
-    margin-bottom: 5px;
-}
-/* ----------------- Fonts ----------------- */
-.fontLight{
-    font-family: 'Barlow', sans-serif;
-    font-weight: 300;
-}
-.fontRegular{
-    font-family: 'Barlow', sans-serif;
-    font-weight: 400;
-}
-.fontSemiBold{
-    font-family: 'Barlow', sans-serif;
-    font-weight: 600;
-}
-h4{
-    color: #ffffff;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 600;
-    font-size: 0.8cm;
-    line-height: 1em;
 }
