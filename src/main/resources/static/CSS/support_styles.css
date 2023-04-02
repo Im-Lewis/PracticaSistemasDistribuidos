@@ -126,7 +126,7 @@ button {
 
 .section_questions{
     background-color: #2D2D2A;
-    margin-top: 150px;
+    margin-top: 200px;
     height: 800px;
     overflow: scroll;
 }
@@ -213,33 +213,36 @@ button {
     max-width: 475px;
 }
 
+/* Warning message*/
+.container_warning{
+    margin-top: 20px;
+}
+.warning_message{
+    background-color: rgb(255, 249, 169);
+    padding:20px;
+    display:flex;
+    justify-content: space-between;
+}
+.warning_img{
+    width: 50px;
+    height: 50px;
+    cursor:pointer;
+    transition: all 0.3s ease-in-out;
+}
+.warning_img:hover{
+    transform: scale(1.5);
+}
 /* Títulos con fondo */
-.title_blackbackground{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    font-family: 'Barlow', sans-serif;
-    font-weight: bold;
-    height: 40px;
-    width: 100%;
-    margin-top: 40px;
-}
-.title_whitebackground{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    font-family: 'Barlow', sans-serif;
-    font-weight: bold;
-    background-color: #C14953;
-    color: white;
-    height: 40px;
-    width: 100%;
+.title_whitebackground{
     margin-top: 40px;
 }
+.form_contact{
+    background-color: #C14953;
+    padding:20px;
+    border-radius: 10px;
+}
+
 /* Botones */
 .dropdown{
     border: #2D2D2A solid 2px;
@@ -261,19 +264,54 @@ button {
 .icon_sociamedia{
     /*border: 3px solid rgb(167, 166, 166);
     background-color: #ffffff;*/
-    display: inline-block;
-    text-align: center;
 
-    height: 25px;
-    width: 40px;
+
     border-radius: 10px;
-    margin-right: 3px;
+    margin-right: 100px;
 }
 .arrow{
     margin-left: 5px;
     margin-right: 5px;
     width: 10px;
     max-width: 10px;
+}
+.circle_red{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #C14953;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+.circle_red:hover{
+    transform: scale(1.5);
+    cursor: pointer;
+}
+.container_social_media{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text_socialmedia{
+    background-color: #C14953;
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.elem_socialmedia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.elem_socialmedia:hover .text_socialmedia{
+    opacity: 1;
 }
 /* Listas */
 .list{

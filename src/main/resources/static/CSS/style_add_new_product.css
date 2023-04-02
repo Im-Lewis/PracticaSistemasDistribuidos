@@ -47,21 +47,7 @@
     object-fit: cover;
     max-width: 50%;
 }
-.button_white{
-    background-color: white;
-    color:#C14953;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 600;
-    border:none;
-    padding: 5px;
-    transition: all 0.2s ease-in-out;
-}
-.button_white:hover{
-    background-color:#2D2D2A;
-    border:none;
-    color: white;
-    cursor: pointer;
-}
+
 /* Show new products*/
 .section_show_new_products{
     margin-top: 100px;
@@ -150,20 +136,14 @@
 .img_prueba{
     width: 100%;
 }
-.hola{
+.container_add{
     margin-top: 100px;
 }
 .img_background{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-.title_form{
-    color: #ffffff;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 600;
-    font-size: 0.8cm;
-    line-height: 1em;
-}
+
 .section_form_labels{
     margin:40px;
 }

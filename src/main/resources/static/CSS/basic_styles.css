@@ -239,6 +239,21 @@ button {
     width: 100%;
     border-radius: 0px;
 }
+.button_white{
+    background-color: white;
+    color:#C14953;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    border:none;
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+}
+.button_white:hover{
+    background-color:#2D2D2A;
+    border:none;
+    color: white;
+    cursor: pointer;
+}
 /* ----------------- Fonts ----------------- */
 .fontLight{
     font-family: 'Barlow', sans-serif;
@@ -257,5 +272,12 @@ h4{
     font-family: 'Barlow', sans-serif;
     font-weight: 600;
     font-size: 0.8cm;
+    line-height: 1em;
+}
+.title_form{
+    color: #ffffff;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    font-size: 0.6cm;
     line-height: 1em;
 }

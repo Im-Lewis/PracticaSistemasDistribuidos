@@ -22,3 +22,11 @@ function mostrarOcultarRespuesta3() {
         texto.style.display = "none";
     }
 }
+function removeWarning(){
+    let conteinerWarning = document.getElementById('warning_message');
+    conteinerWarning.style.display = 'none';
+
+}
+function addWarningMessage(){
+    document.getElementById('warning_message').style.visibility = "visible";
+}
