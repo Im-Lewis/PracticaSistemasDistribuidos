@@ -75,14 +75,25 @@
                 </span>
             </div>
             <div class="container_questions">
-                <span class="fontRegular">In the tournaments section, if I want to sign up for a tournament, how do I see which tournament I'm signed up for?</span>
+                <span class="fontRegular">En la sección de torneos, si quiero inscribirme en un torneo, ¿cómo veo en qué torneo estoy inscrito?</span>
                 <button class="dropdown" onclick="mostrarOcultarRespuesta3()">
                     <img id ="arrow_down" class="arrow" src="../images/flecha_abajo.png">
                 </button>
             </div>
             <div class="container_answer"  id="text_answer3">
-                <span class="fontLight">In order to see which tournaments you are signed up for, you just need 
-                    to select the icon that is displayed at the bottom right of the screen to see all that information</span>
+                <span class="fontLight">Para ver en qué torneos estás inscrito, solo tienes que seleccionar el icono donde pone "Torneos" que se muestra en la parte superior de la pantalla para ver toda esa información</span>
+            </div>
+            <div class="container_questions">
+                <span class="fontRegular">No encuentro el producto que quiero. ¿Cómo os contacto?</span>
+                <button class="dropdown" onclick="mostrarOcultarRespuesta4()">
+                    <img id ="arrow_down" class="arrow" src="../images/flecha_abajo.png">
+                </button>
+            </div>
+            <div class="container_answer"  id="text_answer4">
+                <span class="fontLight">Si no encuentra el producto que quiere, puede utilizar los filtros de los producto para una más fácil búsqueda. 
+                    En el caso en que siga sin encontrarlo y quiera contactarnos, lo único que debe hacer es dirigirse a la sección de Soporte y rellenar el 
+                    formulario que se encuentra en la parte inferior.
+                </span>
             </div>
         </div>
     </div>
@@ -110,47 +121,68 @@
             <div class="section_form container">
                 <div class="row">
                     <div class="col-md-6 mx-auto">
-                        <form class="form_contact">
+                        <form novalidate class="form_contact">
                             <div class="mb-3">
                                 <label for="inputnputEmail" class="form-label title_form">Nombre</label>
-                                <input type="email" class="form-control fontRegular" id="inputnputEmail" aria-describedby="emailHelp" placeholder="EJ: Pepe">
+                                <input type="email" class="form-control fontRegular" id="inputName" aria-describedby="emailHelp" placeholder="EJ: Pepe">
                             </div>
                             <div class="mb-3">
                                 <label for="inputnputEmail" class="form-label title_form">Correo electrónico</label>
-                                <input type="email" class="form-control fontRegular" id="inputnputEmail" aria-describedby="emailHelp" placeholder="example@gmail.com">
+                                <input type="email" class="form-control fontRegular" id="inputEmail" aria-describedby="emailHelp" placeholder="example@gmail.com">
                             </div>
                             <div class="mb-3">
                                 <label for="descProduct" class="form-label title_form">Comentario</label>
-                                <textarea class="form-control exampleFormInput fontRegular" id="descProduct" rows="3"></textarea>
+                                <textarea class="form-control exampleFormInput fontRegular" id="inputComment" rows="3"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary button_white" onclick="addWarningMessage();">Submit</button>    
+                            <button type="button" class="btn btn-primary button_white" onclick="addWarningMessage();">Submit</button>    
                         </form>
                     </div>
                 </div>
                 
             </div>
-            <div class="container container_warning">
+            <!--<div class="container container_warning">
                 <div class="row">
                     <div class="col-md-6 mx-auto warning_message fontLight" id="warning_message">    
                         Problema enviado correctamente a nuestro equipo de soporte. Para más información, póngase en contacto con nostros en las redes sociales que aparecen justo debajo. 
                         <img src="../images/equis.png" class="warning_img" id="warning_img" onclick="removeWarning();">                   
                     </div>
                 </div>
-            </div>
-            <!--<div class="container_socialmedia">
-                <div class="icon_sociamedia">
-                    <img src="../images/gmail.png" width="30px">
-                </div>
-                <span class="fontRegular" style="margin-right: 20px;">supportmepong@gmail.com</span>
-                <div class="icon_sociamedia">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/2048px-Instagram_icon.png" width="25px">
-                </div>
-                <span class="fontRegular" style="margin-right: 20px;">@mepong</span>
-                <div class="icon_sociamedia">
-                    <img src="../images/linkedin.png" width="25px">
-                </div>
-                <span class="fontRegular" style="margin-right: 20px;">mepong</span>
             </div>-->
+            <div class="cotainer">
+                <div class="row">
+                    <div class="col-md-4 mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+                            </symbol>
+                            <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+                            </symbol>
+                            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                            </symbol>
+                        </svg>
+                        <div id="alert_container">
+                            <div class="alert alert-primary d-flex align-items-center alert_container" role="alert">
+                                <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+                                <div class="fontLight">
+                                  Recuerde que para poder rellenar correctamente el formulario
+                                  debe seguir las siguientes pautas:
+                                  <ol>
+                                    <li>
+                                        La casilla "Nombre" no debe contener ningún número.
+                                    </li>
+                                    <li>
+                                        La dirección de correo electrónico debe tener el
+                                        mismo formato que se indica en el ejemplo.
+                                    </li>
+                                </ol>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="section_socialmedia">
                 <div class="socialmedia_container">
                     <div class="elem_socialmedia">
@@ -170,5 +202,6 @@
             
     </div>
     <script src="../JS/support.js"></script>
+    <script src="../JS/change_page.js"></script>
 </body>
 </html>

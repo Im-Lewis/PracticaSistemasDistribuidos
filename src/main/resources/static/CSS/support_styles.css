@@ -119,7 +119,7 @@ button {
     padding:20px;
     border-radius: 10px;
 }
-.container_warning{
+/*.container_warning{
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -127,6 +127,10 @@ button {
     display: flex;
     justify-content: center;
     margin-top: 50px;
+}*/
+.alert_container{
+    margin-top: 10px;
+    margin-bottom: 40px;
 }
 /*---------------2.2 WARNING MESSAGE---------------*/
 .warning_message{
