@@ -28,3 +28,21 @@
     padding: 6rem 0rem 6rem 0rem;
     justify-content: space-around;
 }
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* Mediaqueries for responsive desing */
+@media (max-width: 732px){
+    .container-multimedia-sections {
+        top: 280px;
+    }
+}
+@media (max-width: 707px){
+    .container-multimedia-sections {
+        top: 360px;
+    }
+}
+@media (max-width: 377px){
+    .container-multimedia-sections {
+        top: 440px;
+    }
+}
