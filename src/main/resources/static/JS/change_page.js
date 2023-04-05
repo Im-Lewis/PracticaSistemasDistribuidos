@@ -19,3 +19,8 @@ let buttonAddProduct = document.getElementById("button_add_new_product");
 buttonAddProduct.addEventListener("click", function(){
     window.location.replace("../HTML/add_new_product.html");
 });
+
+let buttonRegister = document.getElementById("signin_button");
+buttonRegister.addEventListener("click", function(){
+    window.location.replace("../HTML/signin.html");
+})

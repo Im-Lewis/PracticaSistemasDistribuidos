@@ -1,0 +1,63 @@
+.container_global{
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.container_register_form{
+    margin-top: 300px;
+    background-color: #C14953;
+    border-radius: 10px;
+    min-height: 300px;
+    width: 40%;
+    padding:20px;
+    padding-top: 50px;
+    padding-bottom: 0px;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
+.background_image{
+    background-image: url('../images/fondoRio.jpg');
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+}
+/* Form */
+.inputShort{
+    width: 20%;
+}
+.inputMid{
+    width: 45%;
+}
+.inputLarge{
+    width: 60%;
+}
+.img_profile{
+    position:absolute;
+    top: 200px;
+    height: 200px;
+}
+/* Media querys */
+@media (max-width: 550px){
+    .container_register_form {
+        margin-top: 400px;
+    }
+    .img_profile{
+        top:300px;
+        height: 150px;
+    }
+}
+@media (max-width: 380px){
+    .container_register_form {
+        margin-top: 500px;
+    }
+    .img_profile{
+        top:450px;
+        height: 100px;
+    }
+}
