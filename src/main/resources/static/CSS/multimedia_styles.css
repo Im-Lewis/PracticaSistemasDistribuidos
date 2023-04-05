@@ -1,0 +1,48 @@
+/*-----------------------------------------------------------------------------------------------------*/
+/* Styles for multimedia.html */
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* Container of the diferent sections */
+.container-multimedia-sections {
+    position: absolute;
+    top: 180px;
+    flex-direction: column;
+    background-color: #2d2d2a;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* Title of the diferent sections */
+.title-multimedia {
+    color: white;
+    font-weight: 600;
+    font-size: 25pt;
+    background-color: #C14953;
+    width: 100vw;
+    padding: 2rem 0rem 2rem 4rem;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* Container of the videos */
+.container-videos {
+    padding: 6rem 0rem 6rem 0rem;
+    justify-content: space-around;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* Mediaqueries for responsive desing */
+@media (max-width: 732px){
+    .container-multimedia-sections {
+        top: 280px;
+    }
+}
+@media (max-width: 707px){
+    .container-multimedia-sections {
+        top: 360px;
+    }
+}
+@media (max-width: 377px){
+    .container-multimedia-sections {
+        top: 440px;
+    }
+}

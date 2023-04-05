@@ -1,40 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,600;1,300&display=swap');
+/*-----------------------------------------------------------------------------------------------------*/
+/* Styles for index.html */
+/*-----------------------------------------------------------------------------------------------------*/
 
-html {
-    overflow-x: hidden;
-}
-
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Barlow', sans-serif;
-}
-
-img {
-    border-radius: 10px;
-}
-
-iframe {
-    border-radius: 10px;
-}
-
-button {
-    margin: 25px 10px;
-    outline: none;
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-weight: bold;
-    cursor: pointer;
-    height: 50px;
-    width: 150px;
-    border-radius: 10px;
-}
-
-.container {
-    width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
-}
 /*-----------------------------------------------------------------------*/
 /*style of background image*/
 .background-image img{
@@ -47,91 +14,7 @@ button {
 }
 
 /*-----------------------------------------------------------------------*/
-/*style of the elements in the top menu*/
-.container-main {
-    flex-direction: column;
-}
-
-/*-----------------------------------------------------------------------*/
-/*style of the elements in the top menu*/
-.container-top-menu {
-    position: fixed;
-    top: 0;
-    flex-direction: column;
-    z-index: 10;
-}
-
-.top-menu {
-    background-color: #C14953;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.icon-name {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.icon-name img {
-    height: 70px;
-    width: 85px;
-    margin: 15px 35px;
-}
-
-.icon-name span {
-    font-weight: 600;
-    font-size: 45pt;
-    margin: 10px 10px;
-    color: white;
-}
-
-.buttons-top-menu {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-right: 15px;
-}
-
-.singin-btn, .login-btn {
-    background-color: #2d2d2a;
-    color: white;
-    border: #2d2d2a;
-}
-
-.singin-btn:hover, .login-btn:hover {
-    background: linear-gradient(to right, white, #e5dcc5);
-    color: #C14953;
-}
-
-/*-----------------------------------------------------------------------*/
-/*style of the elements in the under menu*/
-.under-menu {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.under-menu button {
-    border: none;
-    background: none;
-    font-size: large;
-    padding: 0;
-    height: 30px;
-    border-radius: 0%;
-}
-
-.under-menu button:hover{
-    border-bottom: 2px solid #2d2d2a;
-}
-
-/*-----------------------------------------------------------------------*/
 /*style of the elements in main-panel*/
-
 .main-panel {
     background-color: #2d2d2a;
     position: absolute;
@@ -203,7 +86,7 @@ button {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    margin-left: 3rem;
+    margin-left: 1rem;
     border-radius: 10px;
 }
 
@@ -397,7 +280,7 @@ button {
     }
 }
 
-@media (max-width: 528px){
+@media (max-width: 707px){
     .main-panel {
         top: 360px;
     }
