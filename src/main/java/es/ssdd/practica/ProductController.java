@@ -12,28 +12,22 @@ import java.util.List;
 @Controller
 public class ProductController {
 
-    private List<Product> listProducts;
+    private List<Product> listProducts = new ArrayList<>();
 
     public ProductController(){
-        listProducts = new ArrayList<>();
+        Product p1 = new Product("Pala pro", "Pala", 20, "Mola mucho esta pala");
+        Product p2 = new Product("Mesa palatronix", "Mesa", 200, "No dudes en llevarte esta maravillosa pala");
     }
 
-
-
-    @GetMapping("/product/created")
-    public String getProducts(Model model){
-        model.addAttribute("products", listProducts);
-        return "added_new_product";
+    @GetMapping("productos/nuevos")
+    public String productosNuevos(Model model){
+        model.addAttribute("productos", listProducts);
+        return "add_new_product";
     }
 
-    @PostMapping("/product/add")
-    public String newProduct(Model model, @RequestParam String name, @RequestParam String tag,
-                             @RequestParam float price, @RequestParam String description){
-        Product product = new Product(name, tag, price, description);
-
+    @PostMapping("/product/creado")
+    public String productoNuevo(Model model, Product product){
         listProducts.add(product);
-
-        return "shop";
-
+        return "added_new_product";
     }
 }

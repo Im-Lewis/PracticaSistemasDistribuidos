@@ -2,32 +2,32 @@ package es.ssdd.practica;
 
 public class Product {
 
-    private String name;
-    private String tag;
-    private float price;
-    private String description;
+    private String nombre;
+    private String etiqueta;
+    private double precio;
+    private String descripcion;
 
     public Product(String name, String tag, float price, String description){
-        this.name = name;
-        this.tag = tag;
-        this.price = price;
-        this.description = description;
+        this.nombre = name;
+        this.etiqueta = tag;
+        this.precio = price;
+        this.descripcion = description;
     }
 
-    public String getName(){return name;}
+    public String getNombre(){return nombre;}
 
-    public String getTag(){return tag;}
+    public String getEtiqueta(){return etiqueta;}
 
-    public float getPrice(){return price;}
+    public double getPrecio(){return precio;}
 
-    public String getDescription(){return description;}
+    public String getDescripcion(){return descripcion;}
 
-    public void setNombre(String name){this.name = name;}
+    public void setNombre(String name){this.nombre = name;}
 
-    public void setTag(String tag){this.tag = tag;}
+    public void setTag(String tag){this.etiqueta = tag;}
 
-    public void setPrice(float price){this.price = price;}
+    public void setPrice(float price){this.precio = price;}
 
-    public void setDescription(String description){this.description = description;}
+    public void setDescription(String description){this.descripcion = description;}
 
 }
