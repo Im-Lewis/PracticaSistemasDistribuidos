@@ -5,22 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop-BePong  </title>
+    <link rel="stylesheet" href="../CSS/basic_styles.css">
     <link rel="stylesheet" href="../CSS/shop_style.css">
+    
 </head>
 <body>
-    <div class="body">
-        <div class="top_menu">
+    <div class="body">       
+        <!--<div class="top_menu">
             <img class="logo_top_menu" src="../images/table-tennis-7216579_1280.png" alt="logo_img">
             <p class="page_name">BePong</p>
             <button class="login_button">Iniciar Sesión</button>
             <button class="singin_button">Registrarse</button>
         </div>
         <div class="top_menu_options">
-            <button class="top_menu_options_button">Tienda</button>
+            <button class="top_menu_options_button top_menu_options_button_trans" id="shop_buttom">Tienda</button>
             <p>|</p>
-            <button class="top_menu_options_button">Torneos</button>
+            <button class="top_menu_options_button top_menu_options_button_trans" class="top_menu_options_buttom" id="tournaments_buttom">Torneos</button>
             <p>|</p>
-            <button class="top_menu_options_button" id="support_button">Soporte</button>
+            <button class="top_menu_options_button top_menu_options_button_trans" class="top_menu_options_buttom" id="support_buttom">Soporte</button>
+        </div>-->
+        <div class="container-top-menu">
+            <div class="top-menu">
+                    <div class="icon-name">
+                        <img src="../images/table-tennis-7216579_1280.png" alt="logo-img"/>
+                        <span>BePong</span>
+                    </div>
+                    <div class="buttons-top-menu">
+                        <button class="login_button">
+                            <span>Iniciar Sesión</span>
+                        </button>
+                        <button class="singin_button">
+                            <span>Registarse</span>
+                        </button>
+                    </div>
+            </div>
+            <div class="under-menu">
+                <div class="buttons-under-menu">
+                    <button id="shop_button">Tienda</button>
+                    <span>|</span>
+                    <button id="tournaments_button">Torneos</button>
+                    <span>|</span>
+                    <button id="support_button">Soporte</button>
+                </div>
+            </div>
         </div>
         <div class="section_products">
             <div class="section_filters">
@@ -71,88 +98,113 @@
             </div>
             <div class="section_products_img">
                 <!--<div class="section_two_products">-->
-                    <div class="product" id="product">
-                        <div class="circle"></div>
-                        <div class="content">
-                            <h2>Kit PingPong</h2>
-                            <div class="section_tag">
-                                <div class="tag">Kit</div>
-                                <div class="tag_price">19.99 $</div>
-                            </div>
-                            <p>Disfruta de este maravilloso kit junto a un amigo con hasta tres bolas</p>
-                            <img src="../images/cesta.png" class="img_basket">
+                <div class="product">
+                    <div class="circle"></div>
+                    <div class="content">
+                        <h2>Kit PingPong</h2>
+                        <div class="section_tag">
+                            <div class="tag">Kit</div>
+                            <div class="tag_price">19.99 $</div>
                         </div>
-                        <img src="https://www.esdadeportes.com/wp-content/uploads/2023/01/8010-2.png" class="img_front_page">
+                        <p>Disfruta de este maravilloso kit junto a un amigo con hasta tres bolas</p>
+                        <img src="../images/cesta.png" class="img_basket">
                     </div>
-                    <div class="product" id="product">
-                        <div class="circle"></div>
-                        <div class="content">
-                            <h2>Mesa básica</h2>
-                            <div class="section_tag">
-                                <div class="tag">Mesa</div>
-                                <div class="tag_price">209.99 $</div>
-                            </div>
-                            <p>¡No dudes en llevarte esta mesa para disfutar del ping pong!</p>
-                            <img src="../images/cesta.png" class="img_basket">
+                    <img src="https://www.esdadeportes.com/wp-content/uploads/2023/01/8010-2.png" class="img_front_page">
+                </div>
+                <div class="product" id="product">
+                    <div class="circle"></div>
+                    <div class="content">
+                        <h2>Mesa básica</h2>
+                        <div class="section_tag">
+                            <div class="tag">Mesa</div>
+                            <div class="tag_price">209.99 $</div>
                         </div>
-                        <img src="https://www.myparque.com/wp-content/uploads/2019/02/mesapingpong_head.png" style="width: 300px; height: 300px;" class="img_front_page">
+                        <p>¡No dudes en llevarte esta mesa para disfutar del ping pong!</p>
+                        <img src="../images/cesta.png" class="img_basket">
                     </div>
-                    <div class="product" id="product">
-                        <div class="circle"></div>
-                        <div class="content">
-                            <h2>Mesa Palatronix</h2>
-                            <div class="section_tag">
-                                <div class="tag">Mesa</div>
-                                <div class="tag_price">319.99 $</div>
-                            </div>
-                            <p>Último modelo de la marca más prestigiosa de Ping Pong, Palitronix</p>
-                            <img src="../images/cesta.png" class="img_basket">
-                        </div>
-                        <img src="https://www.benito.com/img/productes/imgProducte/VMOTC-1400.png" style="width: 300px; height: 300px;" class="img_front_page">
-                    </div>
-                    <div class="product" id="product">
-                        <div class="circle"></div>
-                        <div class="content">
-                            <h2>Bola</h2>
-                            <div class="section_tag">
-                                <div class="tag">Bolas</div>
-                                <div class="tag_price">0.99 $</div>
-                            </div>
-                            <p>Se venden por unidades las bolas. Bolas de la marca Palatronix</p>
-                            <img src="../images/cesta.png" class="img_basket">
-                        </div>
-                        <img src="../images/bolapingpong.png" style="width: 300px; height: 300px;" class="img_front_page">
-                    </div>
+                    <img src="https://www.myparque.com/wp-content/uploads/2019/02/mesapingpong_head.png" style="width: 300px; height: 300px;" class="img_front_page">
+                </div>
                 <!--</div>-->
-                    <div class="product" id="product">
-                        <div class="circle"></div>
-                        <div class="content">
-                            <h2>Red mesa casera</h2>
-                            <div class="section_tag">
-                                <div class="tag">Equipamiento</div>
-                                <div class="tag_price">10.99 $</div>
-                            </div>
-                            <p>Disfruta desde cualquier sitio con esta red</p>
-                            <img src="../images/cesta.png" class="img_basket">
+                <!--<div class="section_two_products">-->
+                <div class="product">
+                    <div class="circle"></div>
+                    <div class="content">
+                        <h2>Mesa Palatronix</h2>
+                        <div class="section_tag">
+                            <div class="tag">Mesa</div>
+                            <div class="tag_price">319.99 $</div>
                         </div>
-                        <img src="https://o.remove.bg/downloads/dc584aec-8bb9-48ac-a552-2842c1a8ff4a/imagenGrande1-removebg-preview.png" style="width: 250px; height: 250px;" class="img_front_page">
+                        <p>Último modelo de la marca más prestigiosa de Ping Pong, Palitronix</p>
+                        <img src="../images/cesta.png" class="img_basket">
                     </div>
-                    <div class="product" id="product">
-                        <div class="circle"></div>
-                        <div class="content">
-                            <h2>Pala Pro</h2>
-                            <div class="section_tag">
-                                <div class="tag">Pala</div>
-                                <div class="tag_price">10.99 $</div>
-                            </div>
-                            <p>Con nuestra última pala, ten claro que ahora esta pala nos será tu excusa</p>
-                            <img src="../images/cesta.png" class="img_basket">
+                    <img src="https://www.benito.com/img/productes/imgProducte/VMOTC-1400.png" style="width: 300px; height: 300px;" class="img_front_page">
+                </div>
+                <div class="product" id="product">
+                    <div class="circle"></div>
+                    <div class="content">
+                        <h2>Bola</h2>
+                        <div class="section_tag">
+                            <div class="tag">Bolas</div>
+                            <div class="tag_price">0.99 $</div>
                         </div>
-                        <img src="https://o.remove.bg/downloads/d1234b68-bbb4-4850-8539-9903c51ef5f1/pala-ping-pong-enebe-equipo-400-removebg-preview.png" style="width: 300px; height: 300px;" class="img_front_page">
+                        <p>Se venden por unidades las bolas. Bolas de la marca Palatronix</p>
+                        <img src="../images/cesta.png" class="img_basket">
                     </div>
+                    <img src="../images/bolapingpong.png" style="width: 300px; height: 300px;" class="img_front_page">
+                </div>
+                <!--</div>-->
+                <div class="product" id="product">
+                    <div class="circle"></div>
+                    <div class="content">
+                        <h2>Red mesa casera</h2>
+                        <div class="section_tag">
+                            <div class="tag">Equipamiento</div>
+                            <div class="tag_price">10.99 $</div>
+                        </div>
+                        <p>Disfruta desde cualquier sitio con esta red</p>
+                        <img src="../images/cesta.png" class="img_basket">
+                    </div>
+                    <img src="../images/red.png" style="width: 250px; height: 250px;" class="img_front_page">
+                </div>
+                <div class="product" id="product">
+                    <div class="circle"></div>
+                    <div class="content">
+                        <h2>Pala Pro</h2>
+                        <div class="section_tag">
+                            <div class="tag">Pala</div>
+                            <div class="tag_price">10.99 $</div>
+                        </div>
+                        <p>Con nuestra última pala, ten claro que ahora esta pala nos será tu excusa</p>
+                        <img src="../images/cesta.png" class="img_basket">
+                    </div>
+                    <img src="../images/palapro.png" style="width: 300px; height: 300px;" class="img_front_page">
+                </div>
+                <!--</div>-->
+                <div class="product">
+                    <div class="circle"></div>
+                    <div class="content">
+                        <h2>Bola</h2>
+                        <div class="tag">Bolas</div>
+                        <p>Se venden por unidades las bolas. Bolas de la marca Palatronix</p>
+                    </div>
+                    <img src="../images/bolapingpong.png" style="width: 300px; height: 300px;">
+                </div>
+                <div class="product">
+                    <div class="circle"></div>
+                    <div class="content">
+                        <h2>Bola</h2>
+                        <div class="tag">Bolas</div>
+                        <p>Se venden por unidades las bolas. Bolas de la marca Palatronix</p>
+                    </div>
+                    <img src="../images/bolapingpong.png" style="width: 300px; height: 300px;">
+                </div>
             </div>
         </div>
+        <button class="button_add_new_product" id="button_add_new_product">
+            Crear producto
+        </button>
     </div>
+    <script src="../JS/change_page.js"></script>
     <script src="../JS/shop.js"></script>
 </body>
 </html>

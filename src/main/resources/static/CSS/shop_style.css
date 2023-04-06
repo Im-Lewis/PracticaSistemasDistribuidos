@@ -1,85 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;1,300&display=swap');
 /* font-family: 'Barlow', sans-serif; */
-*{
-    padding: 0;
-    margin: 0;
-}
-html {
-    font-family: 'Barlow', sans-serif;
-    overflow-x: hidden;
-}
-button {
-    margin: 25px 10px;
-    outline: none;
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-weight: bold;
-    cursor: pointer;
-    height: 50px;
-    width: 150px;
-    border-radius: 10px;
-}
-/* Body */
-.body{
-    display: flex;
-    flex-direction: column;
-}
-/* Top Menu*/
-.top_menu{
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    background-color: #C14953;
-    height: 100px;
-    width: 100%;
-    z-index: 2;
-}
-.logo_top_menu{
-    height: 70px;
-    width: 85px;
-    margin: 15px 35px;
-}
-.page_name {
-    font-weight: 600;
-    font-size: 45pt;
-    margin: 10px 10px;
-    color: white;
-}
-.login_button{
-    position: absolute;
-    right: 185px;
-    background-color: #2d2d2a;
-    color: white;
-    border: #2d2d2a;
-}
-.singin_button{
-    position: absolute;
-    right: 15px;
-    background-color: #2d2d2a;
-    color: white;
-    border: #2d2d2a;
-}
-.top_menu_options {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 100px;
-    height: 60px;
-    width: 100%;
-    border:#000000 solid 2px;
-    border-left: none;
-    border-right: none;
-    border-top: none;
 
-    background-color: white;
-    z-index: 2;
-}
-.top_menu_options_button{
-    background-color: rgba(0,0,0,0);
-    border: 0px;
-}
 /* ----------------- Section products -----------------*/
 .section_products{
     display: flex;
@@ -106,7 +27,7 @@ button {
 }
 .filters_sticky{
     position:sticky;
-    top:170px;
+    top:200px;
     z-index: 2;
 }
 
@@ -194,18 +115,12 @@ button {
     display: flex;
     flex-wrap: wrap;
 }
-.section_two_products{
-    display: flex;
-    justify-content: center;
-}
-.section_tag{
-    display: flex;
-    justify-content: space-between;
-}
+
 .product{
     position:relative;
     margin-top: 50px;
     margin-left: 20px;
+    margin-right: 20px;
     width: 600px;
     height: 350px;
     border-radius: 20px;
@@ -273,32 +188,8 @@ button {
     line-height: 1em;
     margin-bottom: 5px;
 }
-.product .content .tag{
-    color: #ffffff;
-    background-color: #C14953;
-    padding-left: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-right: 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 100px;
-}
-.tag_price{
-    background-color: white;
-    border: #000000 solid 2px;
-    padding-left: 10px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-right: 10px;
-    border-radius: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-right: 30px;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 400;
-}
+
+
 .product .content a{
     position: relative;
     color: #fff;
@@ -314,8 +205,8 @@ button {
 }
 /* ----------------- Images ----------------- */
 .img_basket{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-color: #C14953;
     margin-top: 20px;
     padding: 10px;
@@ -328,112 +219,27 @@ button {
     color:#ffffff;
     font-family: 'Barlow', sans-serif;
     font-weight: 600;
+    transition: all 0.2s ease-in-out;
 }
-
-/* ----------------------------------------- */
-/* ----------------- ADD NEW PRODUCT HTML ----------------- */
-/* ----------------------------------------- */
-.section_form_new_product{
-    background-color: rgb(255, 255, 255);
-    min-height: 500px;
-    margin-top: 160px;
-}
-.title_whitebackground{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-family: 'Barlow', sans-serif;
-    font-weight: bold;
-    background-color: #C14953;
-    color: white;
-    height: 40px;
-    width: 100%;
-    /*margin-top: 40px;*/
-}
-.container_form{
-    display: flex;
-    flex-direction: row;
-
-    margin-top:10%;
-    background-color: #C14953;
-    border-radius: 10px;
-    min-height: 800px;
-    width: 70%;
-    /*margin-left: 15%;
-    margin-right: 15%;*/
-}
-.form_new_product{
-    display:flex;
-    flex-direction: column;
-    margin: 50px;
-    width: 50%;
-}
-.input_text{
-    font-family: 'Barlow', sans-serif;
-    font-weight: 600;
-    font-size: 0.5cm;
-    border-bottom: #2D2D2A solid 3px;
-    color: white;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    background-color: transparent;
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    height: 15px;
-    width: 100%;
-    border-radius: 0px;
-}
-.textArea_form{
-    max-width: 300px;
-    max-height: 100px;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    font-family: 'Barlow', sans-serif;
-    padding: 10px;
-}
-.characteristics_container{
-    display:flex;
-    flex-direction: column;
-}
-.img_background_container{
-    height: 100%;
-    border-bottom-left-radius: 10px;
-    border-top-left-radius: 10px;
-    object-fit: cover;
-    width: 50%;
-}
-.button_white{
+.button_filter:hover{
     background-color: white;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 600;
-    padding: 5px;
-}
-.button_white h4{
     color:#C14953;
-    font-size: 0.5cm;
 }
-
-/* ----------------- Fonts ----------------- */
-.fontLight{
-    font-family: 'Barlow', sans-serif;
-    font-weight: 300;
-}
-.fontRegular{
-    font-family: 'Barlow', sans-serif;
-    font-weight: 400;
-}
-.fontSemiBold{
+.button_add_new_product{
+    background-color: #C14953;
+    color:white;
     font-family: 'Barlow', sans-serif;
     font-weight: 600;
+    border:none;
+    position:fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    margin:50px;
+    z-index: 10;
+    transition:all 0.3s ease-in-out;
 }
-h4{
-    color: #ffffff;
-    font-family: 'Barlow', sans-serif;
-    font-weight: 600;
-    font-size: 0.8cm;
-    line-height: 1em;
+.button_add_new_product:hover{
+    background-color: white;
+    color:#C14953;
 }
