@@ -20,7 +20,12 @@ buttonAddProduct.addEventListener("click", function(){
     window.location.replace("../HTML/add_new_product.html");
 });
 
-let buttonRegister = document.getElementById("signin_button");
+/*let buttonRegister = document.getElementById("signin_button");
 buttonRegister.addEventListener("click", function(){
     window.location.replace("../HTML/signin.html");
-})
+});
+
+let buttonLogIn = document.getElementById("login_button");
+buttonLogIn,addEventListener("click", function(){
+    this.window.location.replace("../HTML/login.html");
+})*/

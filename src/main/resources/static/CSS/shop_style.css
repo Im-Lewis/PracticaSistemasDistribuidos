@@ -6,7 +6,8 @@
     display: flex;
     flex-direction: row;
     margin-top: 160px;
-    background-color: #2d2d2a;
+    /*background-color: #2d2d2a;*/
+    background-image: url("../images/fondoMesa.jpg");
     min-height: 2000px;
 }
 /* ----------------- Section filters -----------------*/
@@ -242,4 +243,24 @@
 .button_add_new_product:hover{
     background-color: white;
     color:#C14953;
+}
+
+/* ------ Media querys ------*/
+@media (max-width: 620px){
+    .product{
+        width: 400px;
+        height: 300px;
+    }
+    .section_products_img{
+        margin-top: 100px;
+    }
+}
+@media (max-width: 500px){
+    .product{
+        width: 250px;
+        height: 300px;
+    }
+    .section_products_img{
+        margin-top: 200px;
+    }
 }

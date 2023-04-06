@@ -13,6 +13,18 @@
     padding:20px;
     padding-top: 50px;
     padding-bottom: 0px;
+    z-index: 1;
+}
+.container_login_form{
+    margin-top: 300px;
+    background-color: #C14953;
+    border-radius: 10px;
+    min-height: 100px;
+    width: 40%;
+    padding:20px;
+    padding-top: 50px;
+    padding-bottom: 0px;
+    z-index: 1;
 }
 .center{
     display: flex;
@@ -28,6 +40,12 @@
     z-index: 0;
 }
 /* Form */
+.inputAnimation{
+    transition: all 0.2s ease-in-out;
+}
+.inputAnimation:hover{
+    transform: scale(1.1);
+}
 .inputShort{
     width: 20%;
 }
@@ -47,6 +65,9 @@
     .container_register_form {
         margin-top: 400px;
     }
+    .container_login_form{
+        margin-top: 400px;
+    }
     .img_profile{
         top:300px;
         height: 150px;
@@ -54,6 +75,9 @@
 }
 @media (max-width: 380px){
     .container_register_form {
+        margin-top: 500px;
+    }
+    .container_login_form{
         margin-top: 500px;
     }
     .img_profile{
