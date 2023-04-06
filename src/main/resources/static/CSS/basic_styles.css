@@ -49,13 +49,19 @@ button {
 .icon-name img {
     height: 70px;
     width: 85px;
-    margin: 15px 35px;
 }
 .icon-name span {
     font-weight: 600;
     font-size: 45pt;
     margin: 10px 10px;
     color: white;
+}
+.home-btn {
+    height: 70px;
+    width: 85px;
+    margin: 15px 35px;
+    border: none;
+    background: none;
 }
 .buttons-top-menu {
     display: flex;
