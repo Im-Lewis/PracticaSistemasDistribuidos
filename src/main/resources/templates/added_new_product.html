@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add new product</title>
+</head>
+<body>
+    <h3>PRODUCTOS GUARDADOS</h3>
+    {{#products}}
+        <p>Nombre: {{name}}</p>
+        <p>Etiqueta: {{tag}}</p>
+        <p>Precio: {{price}}$</p>
+        <p>{{description}}</p>
+    {{/products}}
+    <a href="../static/HTML/add_new_product.html">Volver</a>
+</body>
+</html>

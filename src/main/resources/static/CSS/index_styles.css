@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,600;1,300&display=swap');
 
 html {
@@ -27,6 +28,12 @@ button {
     display: flex;
     flex-wrap: wrap;
 }
+=======
+/*-----------------------------------------------------------------------------------------------------*/
+/* Styles for index.html */
+/*-----------------------------------------------------------------------------------------------------*/
+
+>>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
 /*-----------------------------------------------------------------------*/
 /*style of background image*/
 .background-image img{
@@ -39,6 +46,7 @@ button {
 }
 
 /*-----------------------------------------------------------------------*/
+<<<<<<< HEAD
 /*style of the elements in the top menu*/
 .container-main {
     flex-direction: column;
@@ -126,20 +134,45 @@ button {
 
 /*mirar que la altura de los divs de las secciones sea responsive cambie
 la altura para que entren todos sus elementos*/
+=======
+/*style of the elements in main-panel*/
+>>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
 .main-panel {
     background-color: #2d2d2a;
     position: absolute;
     top: 180px;
+<<<<<<< HEAD
     height: 850px;
+=======
+>>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+<<<<<<< HEAD
     justify-content: center;
+=======
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.main-panel span{
+    color: #2d2d2a;
+    font-size: 25pt;
+    font-weight: 600;
+    margin: 2rem;
+}
+
+.product-selection, .news, .recents-tournaments {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+>>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
 }
 
 .product-selection{
     background-color: white;
+<<<<<<< HEAD
     width: 45rem;
     margin: 3em 0.25em 2em 0.25em;
     border: 3px solid yellow;
@@ -172,6 +205,97 @@ la altura para que entren todos sus elementos*/
     flex-direction: column;
     flex-wrap: wrap;
 }*/
+=======
+    width: 35rem;
+    height: 48rem;
+    border-radius: 5px;
+    margin: 0rem 1rem 0rem 5rem;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    height: 60rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.product-1, .product-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C14953;
+    height: 13rem;
+    width: 30rem;
+    border-radius: 10px;
+}
+
+.product-1 img, .product-2 img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 10px;
+}
+
+.product-info-1 {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 5rem;
+    border-radius: 10px;
+}
+
+.product-info-2 {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 1rem;
+    border-radius: 10px;
+}
+
+.product-info-1 span, .product-info-2 span{
+    font-size: 12pt;
+}
+
+.news{
+    background-color: white;
+    width: 35rem;
+    height: 48rem;
+    border-radius: 5px;
+    margin: 0rem 1rem 0rem 1rem;
+}
+
+.videos{
+    display: flex;
+    flex-direction: column;
+    height: 60rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.recents-tournaments{
+    background-color: white;
+    width: 35rem;
+    height: 48rem;
+    border-radius: 5px;
+    margin: 0rem 5rem 0rem 1rem;
+}
+
+.tournament-1, .tournament-2 {
+    margin-top: 2rem;
+}
+
+.tournament-1 img, .tournament-2 img {
+    width: 25rem;
+    height: 15rem;
+    margin: 0.25rem 2rem 0rem 5rem;
+}
+
+.tournament-1 span, .tournament-2 span {
+    font-size: 15pt;
+}
+>>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
 
 /*-----------------------------------------------------------------------*/
 /*style of no-background-div*/
@@ -188,18 +312,146 @@ la altura para que entren todos sus elementos*/
     background-color: white;
     position: absolute;
     top: 1530px;
+<<<<<<< HEAD
     height: 850px;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+=======
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10rem 0rem 10rem 0rem;
+}
+
+.title-tournaments {
+    background-color: #C14953;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:5rem;
+}
+
+.title-tournaments span {
+    color: white;
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.images-tournaments {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.images-tournaments img {
+    height: 15rem;
+    width: 20rem;
+    margin: 0rem 3rem 0rem 3rem;
+}
+
+.register {
+    background-color: #2d2d2a;
+    color: white;
+    font-weight: 600;
+    border: #2d2d2a;
+    margin-top: 5rem;
+}
+
+.register:hover {
+    background-color: #C14953;
+>>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
 }
 
 
 /*-------------------------------------------------------------------------*/
+<<<<<<< HEAD
 /*Media queries for responsive desing*/
 
+=======
+/*styles of the elements in about us*/
+.about-us {
+    background-color: #848fa5;
+    position: absolute;
+    top: 2380px;
+    height: 850px;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.title-about-us {
+    background-color: white;
+    width: 100vw;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-about-us span {
+    color: #2d2d2a;
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.image-about-us img {
+    height: 30em;
+    width: 40em;
+}
+
+.content-about-us {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    justify-content: space-around;
+}
+
+.text-and-colors-about-us {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.content-color-red, .content-color-black {
+    display: flex;
+    align-items: center;
+}
+
+.content-color-red span, .content-color-black span{
+    color: white;
+    font-size: 45pt;
+    font-weight: 600;
+    margin-left: 3rem;
+}
+
+.color-red {
+    background-color: #C14953;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 100%;
+}
+
+.color-black {
+    background-color: #2d2d2a;
+    height: 7rem;
+    width: 7rem;
+    border-radius: 100%;
+}
+
+/*-------------------------------------------------------------------------*/
+/*Media queries for responsive desing*/
+>>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
 /*position of the main panel*/
 @media (max-width: 733px){
     .main-panel {
@@ -207,8 +459,71 @@ la altura para que entren todos sus elementos*/
     }
 }
 
+<<<<<<< HEAD
 @media (max-width: 528px){
     .main-panel {
         top: 360px;
     }
+=======
+@media (max-width: 707px){
+    .main-panel {
+        top: 360px;
+    }
+}
+
+/*changes in tournaments images and about-us panel position*/
+@media (max-width: 1903px){
+    .tournaments {
+        top: 2330px;
+    }
+}
+
+@media (max-width: 1247px){
+    .tournaments {
+        top: 3000px;
+    }
+}
+
+@media (max-width: 1248px){
+    .about-us {
+        top: 2700px;
+    }
+
+    .images-tournaments img {
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 831px){
+    .about-us {
+        top: 2970px;
+    }
+
+    .images-tournaments img {
+        margin-top: 2rem;
+    }
+}
+
+/*changes in about-us panel*/
+@media (max-width: 1128px){
+    .image-about-us img {
+        margin-top: 1rem;
+    }
+
+    .title-about-us {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 1903px){
+    .about-us {
+        top: 3200px;
+    }
+}
+
+@media (max-width: 1247px){
+    .about-us {
+        top: 4170px;
+    }
+>>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
 }

@@ -26,121 +26,16 @@ button {
     width: 150px;
     border-radius: 10px;
 }
-.flex {
-    display: flex;
-    align-items: center;
-}
-.flex#top_menu_options {
-    justify-content: center;
-}
 
-/* Menú */
-#page_name {
-    font-weight: 600;
-    font-size: 45pt;
-    margin: 10px 10px;
-    color: white;
-}
-#login_button{
-    position: absolute;
-    right: 185px;
-    background-color: #2d2d2a;
-    color: white;
-    border: #2d2d2a;
-}
-#singin_button{
-    position: absolute;
-    right: 15px;
-    background-color: #2d2d2a;
-    color: white;
-    border: #2d2d2a;
-}
-#top_menu {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    background-color: #C14953;
-    height: 100px;
-    width: 100%;
-    z-index: 2;
-}
-#logo_top_menu {
-    height: 70px;
-    width: 85px;
-    margin: 15px 35px;
-}
-/* Menú opciones*/
-#top_menu_options {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 100px;
-    height: 60px;
-    width: 100%;
-
-    background-color: white;
-    z-index: 2;
-}
-#shop_button {
-    margin: 25px 10px;
-    outline: none;
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-weight: bold;
-    cursor: pointer;
-    height: 50px;
-    width: 150px;
-    border-radius: 10px;
-    background-color: rgba(0,0,0,0);
-    border: 0px;
-}
-#tournaments_button {
-    margin: 25px 10px;
-    outline: none;
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-weight: bold;
-    cursor: pointer;
-    height: 50px;
-    width: 150px;
-    border-radius: 10px;
-    background-color: rgba(0,0,0,0);
-    border: 0px;
-}
-#support_button {
-    margin: 25px 10px;
-    outline: none;
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-weight: bold;
-    cursor: pointer;
-    height: 50px;
-    width: 150px;
-    border-radius: 10px;
-    background-color: rgba(0,0,0,0);
-    border: 0px;
-}
-/* Secciones */
-
+/*---------------------------------------------*/
+/*---------------1. SECTION QUESTIONS---------------*/
+/*---------------------------------------------*/
 .section_questions{
     background-color: #2D2D2A;
-    margin-top: 150px;
+    margin-top: 200px;
     height: 800px;
     overflow: scroll;
 }
-.section_contact{
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    background-color: white;
-    height: 570px;
-}
-.section_form{
-    margin-top: 150px;
-}
-/* Contenedores */
 .block_questions{
     /*display: flex;
     flex-direction: column;
@@ -150,6 +45,7 @@ button {
     margin-right: 25%;
     padding-top: 120px;
 }
+/*---------------1.1 QUESTIONS---------------*/
 .container_questions{
     border: 5px solid #2d2d2a;
     border-radius: 10px 10px 0 0;
@@ -164,6 +60,19 @@ button {
     display: flex;
     justify-content: space-between;
 }
+.dropdown{
+    border: #2D2D2A solid 2px;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+}
+.arrow{
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 10px;
+    max-width: 10px;
+}
+/*---------------1.2 ANSWERS---------------*/
 .container_answer{
 
     display: none;
@@ -176,106 +85,6 @@ button {
     padding-right: 10px;
     margin-bottom: 30px;
 }
-.container_socialmedia{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-/* Formularios */
-.form_support{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    margin-left: 30%;
-    margin-right: 30%;
-    height: 300px;
-    border-radius: 5px;
-    border: 2px solid #2D2D2A;
-}
-.input_text{
-    font-family: 'Barlow', sans-serif;
-    border: #2D2D2A solid 1.5px;
-    margin-left: 10px;
-    padding: 5px;
-    margin-top: 20px;
-    height: 15px;
-    width: 150px;
-    border-radius: 5px;
-}
-.textArea{
-    font-family: 'Barlow', sans-serif;
-    border: #2D2D2A solid 1.5px;
-    padding: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 20px;
-    border-radius: 5px;
-    max-width: 475px;
-}
-
-/* Títulos con fondo */
-.title_blackbackground{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    font-family: 'Barlow', sans-serif;
-    font-weight: bold;
-    height: 40px;
-    width: 100%;
-    margin-top: 40px;
-}
-.title_whitebackground{
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-family: 'Barlow', sans-serif;
-    font-weight: bold;
-    background-color: #C14953;
-    color: white;
-    height: 40px;
-    width: 100%;
-    margin-top: 40px;
-}
-/* Botones */
-.dropdown{
-    border: #2D2D2A solid 2px;
-    border-radius: 10px;
-    width: 30px;
-    height: 30px;
-}
-.buttonBlack{
-    background-color: #2d2d2a;
-    color: white;
-    border: #2d2d2a;
-}
-.buttonRed{
-    background-color: #C14953;
-    color: white;
-    border: #2d2d2a;
-}
-/* Imagenes */
-.icon_sociamedia{
-    /*border: 3px solid rgb(167, 166, 166);
-    background-color: #ffffff;*/
-    display: inline-block;
-    text-align: center;
-
-    height: 25px;
-    width: 40px;
-    border-radius: 10px;
-    margin-right: 3px;
-}
-.arrow{
-    margin-left: 5px;
-    margin-right: 5px;
-    width: 10px;
-    max-width: 10px;
-}
-/* Listas */
 .list{
     margin-left: 40px;
     margin-top: 10px;
@@ -286,16 +95,108 @@ button {
     font-family: 'Barlow', sans-serif;
     font-weight: 300;
 }
-/* Fuentes */
-.fontLight{
-    font-family: 'Barlow', sans-serif;
-    font-weight: 300;
+
+/*---------------------------------------------*/
+/*---------------2. SECTION CONTACT---------------*/
+/*---------------------------------------------*/
+
+.section_contact{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: white;
+    height: 570px;
 }
-.fontRegular{
-    font-family: 'Barlow', sans-serif;
-    font-weight: 400;
+/*---------------2.1 FORM---------------*/
+.section_form{
+    margin-top: 150px;
 }
-.fontSemiBold{
-    font-family: 'Barlow', sans-serif;
-    font-weight: 600;
+.title_whitebackground{
+    margin-top: 40px;
+}
+.form_contact{
+    background-color: #C14953;
+    padding:20px;
+    border-radius: 10px;
+}
+/*.container_warning{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.container_socialmedia{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}*/
+.alert_container{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+/*---------------2.2 WARNING MESSAGE---------------*/
+.warning_message{
+    background-color: rgb(255, 249, 169);
+    padding:20px;
+    display:flex;
+    justify-content: space-between;
+}
+.warning_img{
+    width: 50px;
+    height: 50px;
+    cursor:pointer;
+    transition: all 0.3s ease-in-out;
+}
+.warning_img:hover{
+    transform: scale(1.5);
+}
+
+/*---------------------------------------------*/
+/*---------------3. SECTION SOCIAL MEDIA---------------*/
+/*---------------------------------------------*/
+.section_socialmedia{
+    display: flex;
+    justify-content: center;
+}
+.socialmedia_container{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    min-height: 150px;
+}
+.elem_socialmedia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+}
+.elem_socialmedia:hover .text_socialmedia{
+    /*opacity: 1;*/
+    opacity: 1;
+    transform: translateY(100%);
+}
+.elem_socialmedia:hover .circle_red{
+    transform: scale(1.5);
+    cursor: pointer;
+}
+.circle_red{
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #C14953;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+.text_socialmedia{
+    margin-top: 40px;
+    position: absolute;
+    background-color: #C14953;
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    /*opacity: 0;
+    transition: opacity 0.3s ease-in-out;*/
+    opacity: 0;
+    transition: all 1s;
 }
