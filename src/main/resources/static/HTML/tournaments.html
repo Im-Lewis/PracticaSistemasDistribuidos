@@ -9,55 +9,56 @@
   <link rel="stylesheet" href="../CSS/tournaments.css">
 </head>
 <body>
-<div class="container container-main">
+  <div class="container container-main">
 
-  <!-- Menu of the top -->
-  <div class="container container-top-menu">
-    <div class="container top-menu">
-      <div class="icon-name">
-        <button class="home-btn">
-          <img src="../images/table-tennis-7216579_1280.png" alt="logo-img"/>
-        </button>
-        <span>BePong</span>
+    <!-- Menu of the top -->
+    <div class="container container-top-menu">
+      <div class="container top-menu">
+        <div class="icon-name">
+          <button id="home_button" class="home-btn">
+            <img src="../images/table-tennis-7216579_1280.png" alt="logo-img"/>
+          </button>
+          <span>BePong</span>
+        </div>
+        <div class="buttons-top-menu">
+          <button class="singin-btn">
+            <span>Iniciar Sesión</span>
+          </button>
+          <button class="login-btn">
+            <span>Registarse</span>
+          </button>
+        </div>
       </div>
-      <div class="buttons-top-menu">
-        <button class="singin-btn">
-          <span>Iniciar Sesión</span>
-        </button>
-        <button class="login-btn">
-          <span>Registarse</span>
-        </button>
+      <div class="under-menu">
+        <div class="buttons-under-menu">
+          <button id="shop_button">Tienda</button>
+          <span>|</span>
+          <button id="tournaments_button">Torneos</button>
+          <span>|</span>
+          <button id="support_button">Soporte</button>
+          <span>|</span>
+          <button id="multimedia_button">Multimedia</button>
+        </div>
       </div>
     </div>
-    <div class="under-menu">
-      <div class="buttons-under-menu">
-        <button>Tienda</button>
-        <span>|</span>
-        <button>Torneos</button>
-        <span>|</span>
-        <button>Soporte</button>
-        <span>|</span>
-        <button>Multimedia</button>
+
+    <!-- Section of the active tournaments -->
+    <div class="container container-active-tournaments">
+      <span class="title-tournaments">TORNEOS ACTIVOS</span>
+      <div class="torneos-activos">
+        <span>No hay torneos activos en este momento...</span>
+      </div>
+
+      <!-- Section of the buttons of the options for tournaments -->
+      <div class="container container-tournaments-btns-options">
+        <div class="container-btns">
+          <button class="create-tournament">Crear Torneo</button>
+          <button class="edit-tournament">Editar Torneo</button>
+          <button class="delete-tournament">Eliminar Torneo</button>
+        </div>
       </div>
     </div>
   </div>
-
-  <!-- Section of the active tournaments -->
-  <div class="container container-active-tournaments">
-    <span class="title-tournaments">TORNEOS ACTIVOS</span>
-    <div class="torneos-activos">
-      <span>No hay torneos activos en este momento...</span>
-    </div>
-
-    <!-- Section of the buttons of the options for tournaments -->
-    <div class="container container-tournaments-btns-options">
-      <div class="container-btns">
-        <button class="create-tournament">Crear Torneo</button>
-        <button class="edit-tournament">Editar Torneo</button>
-        <button class="delete-tournament">Eliminar Torneo</button>
-      </div>
-    </div>
-  </div>
-</div>
+  <script src="../JS/change_page.js"></script>
 </body>
 </html>
