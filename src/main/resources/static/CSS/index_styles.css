@@ -1,39 +1,7 @@
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,600;1,300&display=swap');
-
-html {
-    overflow-x: hidden;
-}
-
-*{
-    padding: 0;
-    margin: 0;
-    font-family: 'Barlow', sans-serif;
-}
-
-button {
-    margin: 25px 10px;
-    outline: none;
-    text-decoration: none;
-    letter-spacing: 1px;
-    font-weight: bold;
-    cursor: pointer;
-    height: 50px;
-    width: 150px;
-    border-radius: 10px;
-}
-
-.container {
-    width: 100vw;
-    display: flex;
-    flex-wrap: wrap;
-}
-=======
 /*-----------------------------------------------------------------------------------------------------*/
 /* Styles for index.html */
 /*-----------------------------------------------------------------------------------------------------*/
 
->>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
 /*-----------------------------------------------------------------------*/
 /*style of background image*/
 .background-image img{
@@ -46,112 +14,15 @@ button {
 }
 
 /*-----------------------------------------------------------------------*/
-<<<<<<< HEAD
-/*style of the elements in the top menu*/
-.container-main {
-    flex-direction: column;
-}
-
-/*-----------------------------------------------------------------------*/
-/*style of the elements in the top menu*/
-.container-top-menu {
-    position: fixed;
-    top: 0;
-    flex-direction: column;
-    z-index: 10;
-}
-
-.top-menu {
-    background-color: #C14953;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.icon-name {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.icon-name img {
-    height: 70px;
-    width: 85px;
-    margin: 15px 35px;
-}
-
-.icon-name span {
-    font-weight: 600;
-    font-size: 45pt;
-    margin: 10px 10px;
-    color: white;
-}
-
-.buttons-top-menu {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-right: 15px;
-}
-
-.singin-btn, .login-btn {
-    background-color: #2d2d2a;
-    color: white;
-    border: #2d2d2a;
-}
-
-.singin-btn:hover, .login-btn:hover {
-    background: linear-gradient(to right, white, #e5dcc5);
-    color: #C14953;
-}
-
-/*-----------------------------------------------------------------------*/
-/*style of the elements in the under menu*/
-.under-menu {
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.under-menu button {
-    border: none;
-    background: none;
-    font-size: large;
-    padding: 0;
-    height: 30px;
-    border-radius: 0%;
-}
-
-.under-menu button:hover{
-    border-bottom: 2px solid #2d2d2a;
-}
-
-/*-----------------------------------------------------------------------*/
 /*style of the elements in main-panel*/
-
-/*mirar que la altura de los divs de las secciones sea responsive cambie
-la altura para que entren todos sus elementos*/
-=======
-/*style of the elements in main-panel*/
->>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
 .main-panel {
     background-color: #2d2d2a;
     position: absolute;
     top: 180px;
-<<<<<<< HEAD
-    height: 850px;
-=======
->>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
     width: 100vw;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-<<<<<<< HEAD
-    justify-content: center;
-=======
     justify-content: space-between;
     padding: 2rem;
 }
@@ -167,45 +38,10 @@ la altura para que entren todos sus elementos*/
     display: flex;
     flex-direction: column;
     align-items: center;
->>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
 }
 
 .product-selection{
     background-color: white;
-<<<<<<< HEAD
-    width: 45rem;
-    margin: 3em 0.25em 2em 0.25em;
-    border: 3px solid yellow;
-    border-radius: 5px;
-}
-.news{
-    background-color: white;
-    width: 45rem;
-    margin: 5em 0.25em 2em 0.25em;
-    border: 3px solid yellow;
-    border-radius: 5px;
-}
-.sales{
-    background-color: white;
-    width: 45rem;
-    margin: 3em 0.25em 3em 0.25em;
-    border: 3px solid yellow;
-    border-radius: 5px;
-}
-
-.product-selection {
-    align-self: stretch;
-    margin: 5em 0.25em 5em 3em;
-
-}
-
-/*.container-in-main {
-    background-color: aquamarine;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}*/
-=======
     width: 35rem;
     height: 48rem;
     border-radius: 5px;
@@ -295,7 +131,6 @@ la altura para que entren todos sus elementos*/
 .tournament-1 span, .tournament-2 span {
     font-size: 15pt;
 }
->>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
 
 /*-----------------------------------------------------------------------*/
 /*style of no-background-div*/
@@ -312,14 +147,6 @@ la altura para que entren todos sus elementos*/
     background-color: white;
     position: absolute;
     top: 1530px;
-<<<<<<< HEAD
-    height: 850px;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-=======
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -366,15 +193,10 @@ la altura para que entren todos sus elementos*/
 
 .register:hover {
     background-color: #C14953;
->>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
 }
 
 
 /*-------------------------------------------------------------------------*/
-<<<<<<< HEAD
-/*Media queries for responsive desing*/
-
-=======
 /*styles of the elements in about us*/
 .about-us {
     background-color: #848fa5;
@@ -451,7 +273,6 @@ la altura para que entren todos sus elementos*/
 
 /*-------------------------------------------------------------------------*/
 /*Media queries for responsive desing*/
->>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
 /*position of the main panel*/
 @media (max-width: 733px){
     .main-panel {
@@ -459,12 +280,6 @@ la altura para que entren todos sus elementos*/
     }
 }
 
-<<<<<<< HEAD
-@media (max-width: 528px){
-    .main-panel {
-        top: 360px;
-    }
-=======
 @media (max-width: 707px){
     .main-panel {
         top: 360px;
@@ -525,5 +340,4 @@ la altura para que entren todos sus elementos*/
     .about-us {
         top: 4170px;
     }
->>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
 }
