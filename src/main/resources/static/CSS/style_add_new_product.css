@@ -47,7 +47,6 @@
     object-fit: cover;
     max-width: 50%;
 }
-<<<<<<< HEAD
 .button_white{
     background-color: white;
     color:#C14953;
@@ -63,9 +62,7 @@
     color: white;
     cursor: pointer;
 }
-=======
 
->>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
 /* Show new products*/
 .section_show_new_products{
     margin-top: 100px;
@@ -154,18 +151,14 @@
 .img_prueba{
     width: 100%;
 }
-<<<<<<< HEAD
 .hola{
-=======
-.container_add{
->>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
     margin-top: 100px;
 }
 .img_background{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-<<<<<<< HEAD
+
 .title_form{
     color: #ffffff;
     font-family: 'Barlow', sans-serif;
@@ -173,9 +166,7 @@
     font-size: 0.8cm;
     line-height: 1em;
 }
-=======
 
->>>>>>> 3b3a4069ebd96ccb1ece6543e50236d271ce9135
 .section_form_labels{
     margin:40px;
 }

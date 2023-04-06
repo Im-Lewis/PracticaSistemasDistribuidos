@@ -27,7 +27,12 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>net.thauvin.erik.httpstatus</groupId>
+            <artifactId>httpstatus</artifactId>
+            <version>1.0.5</version>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>

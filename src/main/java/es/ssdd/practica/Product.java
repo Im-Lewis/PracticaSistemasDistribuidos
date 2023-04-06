@@ -6,8 +6,9 @@ public class Product {
     private String etiqueta;
     private double precio;
     private String descripcion;
+    private int id = -1;
 
-    public Product(String name, String tag, float price, String description){
+    public Product(String name, String tag, double price, String description){
         this.nombre = name;
         this.etiqueta = tag;
         this.precio = price;
@@ -20,14 +21,18 @@ public class Product {
 
     public double getPrecio(){return precio;}
 
+    public int getId(){return id;}
+
     public String getDescripcion(){return descripcion;}
 
     public void setNombre(String name){this.nombre = name;}
 
     public void setTag(String tag){this.etiqueta = tag;}
 
-    public void setPrice(float price){this.precio = price;}
+    public void setPrice(double price){this.precio = price;}
 
     public void setDescription(String description){this.descripcion = description;}
+
+    public void setId(int id){this.id = id;}
 
 }

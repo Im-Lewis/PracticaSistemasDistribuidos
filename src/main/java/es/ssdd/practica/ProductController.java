@@ -17,17 +17,20 @@ public class ProductController {
     public ProductController(){
         Product p1 = new Product("Pala pro", "Pala", 20, "Mola mucho esta pala");
         Product p2 = new Product("Mesa palatronix", "Mesa", 200, "No dudes en llevarte esta maravillosa pala");
+        listProducts.add(p1);
+        listProducts.add(p2);
     }
 
-    @GetMapping("productos/nuevos")
+    @GetMapping("/productos/nuevos")
     public String productosNuevos(Model model){
         model.addAttribute("productos", listProducts);
-        return "add_new_product";
+        return "productos_nuevos";
     }
 
     @PostMapping("/product/creado")
     public String productoNuevo(Model model, Product product){
         listProducts.add(product);
+        model.addAttribute("products", listProducts);
         return "added_new_product";
     }
 }

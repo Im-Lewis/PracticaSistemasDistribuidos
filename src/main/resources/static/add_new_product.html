@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <link rel="stylesheet" href="../CSS/basic_styles.css">
-    <link rel="stylesheet" href="../CSS/style_add_new_product.css">
+    <link rel="stylesheet" href="CSS/basic_styles.css">
+    <link rel="stylesheet" href="CSS/style_add_new_product.css">
     <title>Add new product</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
             <div class="top-menu">
                     <div class="icon-name">
                         <button class="home-btn">
-                            <img src="../images/table-tennis-7216579_1280.png" alt="logo-img"/>
+                            <img src="images/table-tennis-7216579_1280.png" alt="logo-img"/>
                         </button>
                         <span>BePong</span>
                     </div>
@@ -57,61 +57,39 @@
                 </form>
             </div>-->
             <div class="container-fluid hola">
-
             <div class="container-fluid container_add">
                 <div class="row no-gutters">
                     <!--<div class="col-md-6" style="background-image: url('../images/fondopingpong.jpg'); background-size: cover;
                     background-repeat: no-repeat;">-->
                     <div class="col-md-6" style="background-color: white;">
-                        <img src="../images/fondopingpong.jpg" class="w-100 img_background">
+                        <img src="images/fondopingpong.jpg" class="w-100 img_background">
                     </div>
                     <div class="col-md-6" style="background-color:#C14953; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
-                        <form action="producto/creado" method="post" novalidate class="section_form_labels naneProductInput" id="form_new_product">
+                        <form action="product/creado" method="post" novalidate class="section_form_labels naneProductInput" id="form_new_product">
                         <div class="section_form_labels naneProductInput" id="form_new_product">
                             <div class="mb-3">
                                 <label for="nameProduct" class="form-label title_form">Nombre del producto</label>
-                                <input type="email" class="form-control fontRegular exampleFormInput" id="nameProduct" placeholder="EJ: Pala pro">
+                                <input name="nombre" type="email" class="form-control fontRegular exampleFormInput" id="nameProduct" placeholder="EJ: Pala pro">
                             </div>
                             <div class="mb-3">
                                 <label for="tagProduct" class="form-label title_form">Etiqueta</label>
-                                <input type="email" class="form-control fontRegular exampleFormInput" id="tagProduct" placeholder="EJ: Kit">
+                                <input name="etiqueta" type="email" class="form-control fontRegular exampleFormInput" id="tagProduct" placeholder="EJ: Kit">
                             </div>
                             <div class="mb-3">
                                 <label for="priceProduct" class="form-label title_form">Precio</label>
-                                <input type="email" class="form-control fontRegular exampleFormInput" id="priceProduct" placeholder="EJ: 19.99">
-                            </div>
-                            <div class="mb-3">
-                                <label for="descProduct" class="form-label title_form">Descripción</label>
-                                <textarea class="form-control exampleFormInput" id="descProduct" rows="3"></textarea>
-                        <form action="product/add" method="post" novalidate class="section_form_labels naneProductInput" id="form_new_product">
-                            <div class="mb-3">
-                                <label for="nameProduct" class="form-label title_form">Nombre del producto</label>
-                                <input name="nombre" type="text" class="form-control fontRegular exampleFormInput" id="nameProduct" placeholder="EJ: Pala pro">
-                            </div>
-                            <div class="mb-3">
-                                <label for="tagProduct" class="form-label title_form">Etiqueta</label>
-                                <input name="etiqueta" type="text" class="form-control fontRegular exampleFormInput" id="tagProduct" placeholder="EJ: Kit">
-                            </div>
-                            <div class="mb-3">
-                                <label for="priceProduct" class="form-label title_form">Precio</label>
-                                <input name="precio" type="text" class="form-control fontRegular exampleFormInput" id="priceProduct" placeholder="EJ: 19.99">
+                                <input name="precio" type="email" class="form-control fontRegular exampleFormInput" id="priceProduct" placeholder="EJ: 19.99">
                             </div>
                             <div class="mb-3">
                                 <label for="descProduct" class="form-label title_form">Descripción</label>
                                 <textarea name="descripcion" class="form-control exampleFormInput" id="descProduct" rows="3"></textarea>
                             </div>
-                            <div class="input-group mb-3">
-                                <label for="imageProduct"></label>
-                                <input type="file" class="form-control fontRegular" id="imageProduct" aria-describedby="inputGroupFileAddon01">
-                                <!--<label class="input-group-text" for="inputGroupFile01">Selecciona una imagen</label>-->
-                            </div>
-                            <button class="button_white" onclick="añadir();">Añadir producto</button>
-                        </div>
                             <!--<button class="button_white" onclick="añadir();">Añadir producto</button>-->
                             <button type="submit" class="button_white">Añadir producto</button>
+                        </div>
                         </form>
                     </div>
                 </div>
+            </div>
             </div>
         </div>
         {{#productos}}
@@ -135,7 +113,7 @@
                         </div>
                         <div class="col-md-6" style="background-color:#ffffff; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
                             <div class="img_section_preview">
-                                <img src="../images/palapro.png" class="img_preview" id="image_output">
+                                <img src="images/palapro.png" class="img_preview" id="image_output">
                             </div>
                         </div>
                     </div>      
@@ -148,7 +126,7 @@
             
         </div>
     </div>
-    <script src="../JS/change_page.js"></script>
-    <script src="../JS/add_new_product.js"></script>
+    <script src="JS/change_page.js"></script>
+    <script src="JS/add_new_product.js"></script>
 </body>
 </html>
