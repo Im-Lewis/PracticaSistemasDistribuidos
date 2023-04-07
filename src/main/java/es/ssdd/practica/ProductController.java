@@ -33,4 +33,9 @@ public class ProductController {
         model.addAttribute("products", listProducts);
         return "added_new_product";
     }
+
+    @GetMapping("caca")
+    public String cacador(Model model){
+        return "caca_template";
+    }
 }
