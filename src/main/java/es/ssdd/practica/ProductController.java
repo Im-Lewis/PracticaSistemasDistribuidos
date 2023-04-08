@@ -26,7 +26,7 @@ public class ProductController {
         try{
             double num = Double.parseDouble(product.getPrecio());
             listProducts.add(product);
-            return "added_product";
+            return "added_new_product";
         }catch (NumberFormatException e) {
             return "error_add_new_product";
         }
@@ -44,11 +44,6 @@ public class ProductController {
         Product product = listProducts.get(num-1);
         model.addAttribute("product", product);
         return "view_product";
-    }
-
-    @GetMapping("caca")
-    public String cacador(Model model){
-        return "added_product";
     }
 
 }
