@@ -1,7 +1,7 @@
 /*-------------------------------------------------------------------------------------------------------------------*/
 let buttonShop = document.getElementById("shop_button");
 buttonShop.addEventListener("click", function(){
-    window.location.replace("HTML/shop.html");
+    window.location.replace("../shop");
 });
 
 /*-------------------------------------------------------------------------------------------------------------------*/

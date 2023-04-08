@@ -29,6 +29,10 @@ buttonSup.addEventListener("click", function() {
     window.location.replace("../HTML/support.html");
     }, 3000); // El número 3000 representa el tiempo en milisegundos (3 segundos)
 });
+let buttonLogin = document.getElementsByName("login_button");
+buttonLogin.addEventListener("click", function(){
+    window.location.replace("../HTML/login.html");
+});
 /*buttonSup.addEventListener("click", function(){
     setTimeout(function() {
         window.location.replace("../HTML/support.html");
@@ -37,7 +41,7 @@ buttonSup.addEventListener("click", function() {
 
 let buttonShop = document.getElementById("shop_button");
 buttonShop.addEventListener("click", function(){
-    window.location.replace("../HTML/shop.html");
+    window.location.replace("../shop");
 });
 
 let buttonAddProduct = document.getElementById("button_add_new_product");

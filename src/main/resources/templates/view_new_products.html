@@ -27,7 +27,7 @@
         </div>
         <div class="under-menu">
             <div class="buttons-under-menu">
-                <button id="shop_button">Tienda</button>
+                <a src="../shop"><button id="shop_button">Tienda</button></a>
                 <span>|</span>
                 <button id="tournaments_button">Torneos</button>
                 <span>|</span>
@@ -38,28 +38,29 @@
         </div>
     </div>
     <div class="section_products_added">
-        <div class="title_blackbackground">PRODUCTOS AÑADIDOS</div>
+        <!--<div class="title_blackbackground">PRODUCTOS AÑADIDOS</div>-->
         <div class="container_new_products">
             {{#products}}
-            <div class="container-fluid d-flex col-auto p-4 text-center">
-                <div class="row">
-                    <div class="col-md-6" style="background-color:#ffffff; padding: 30px; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
-                        <h2 id="title_output">{{nombre}}</h2>
-                        <div class="section_tag">
-                            <div class="tag fontLight" id="tag_output">{{etiqueta}}</div>
-                            <div class="tag_price" id="price_output">{{precio}}</div>
+            <div class="container-fluid d-flex col-auto p-4 text-center center">
+                    <div class="row">
+                        <div class="col-md-6" style="background-color:#ffffff; padding: 30px; border-top-left-radius: 10px; border-bottom-left-radius: 10px;">
+                            <h2 id="title_output">{{nombre}}</h2>
+                            <div class="section_tag">
+                                <div class="tag fontLight" id="tag_output">{{etiqueta}}</div>
+                                <div class="tag_price" id="price_output">{{precio}}</div>
+                            </div>
+                            <p class="fontRegular" id="desc_output">{{descripcion}}</p>
+                            <a href="product/{{-index}}">Editar producto</a>
                         </div>
-                        <p class="fontRegular" id="desc_output">{{descripcion}}</p>
-                        <a href="product/{{-index}}">Editar producto</a>
-                    </div>
-                    <div class="col-md-6" style="background-color:#ffffff; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
-                        <div class="img_section_preview">
-                            <img src="/images/palapro.png" class="img_preview" id="image_output">
+                        <div class="col-md-6" style="background-color:#ffffff; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
+                            <div class="img_section_preview">
+                                <img src={{url}} class="img_preview" id="image_output">
+                            </div>
                         </div>
-                    </div>
-                </div>      
+                </div>
             </div>
             {{/products}}
+        </div>
         </div>
     </div>
 </body>

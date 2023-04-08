@@ -69,19 +69,23 @@
                             <div class="section_form_labels naneProductInput" id="form_new_product">
                                 <div class="mb-3">
                                     <label for="nameProduct" class="form-label title_form">Nombre del producto</label>
-                                    <input name="nombre" type="email" class="form-control fontRegular exampleFormInput" id="nameProduct" placeholder="EJ: Pala pro">
+                                    <input name="nombre" type="text" class="form-control fontRegular exampleFormInput" id="nameProduct" placeholder="EJ: Pala pro">
                                 </div>
                                 <div class="mb-3">
                                     <label for="tagProduct" class="form-label title_form">Etiqueta</label>
-                                    <input name="etiqueta" type="email" class="form-control fontRegular exampleFormInput" id="tagProduct" placeholder="EJ: Kit">
+                                    <input name="etiqueta" type="text" class="form-control fontRegular exampleFormInput" id="tagProduct" placeholder="EJ: Kit">
                                 </div>
                                 <div class="mb-3">
                                     <label for="priceProduct" class="form-label title_form">Precio</label>
-                                    <input name="precio" type="email" class="form-control fontRegular exampleFormInput" id="priceProduct" placeholder="EJ: 19.99">
+                                    <input name="precio" type="text" class="form-control fontRegular exampleFormInput" id="priceProduct" placeholder="EJ: 19.99">
                                 </div>
                                 <div class="mb-3">
                                     <label for="descProduct" class="form-label title_form">Descripción</label>
                                     <textarea name="descripcion" class="form-control exampleFormInput" id="descProduct" rows="3"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="priceProduct" class="form-label title_form">URL de la imagen</label>
+                                    <input name="url" type="text" class="form-control fontRegular exampleFormInput" id="urlProduct" placeholder="">
                                 </div>
                                 <!--<button class="button_white" onclick="añadir();">Añadir producto</button>-->
                                 <button type="submit" class="button_white">Añadir producto</button>
@@ -92,7 +96,9 @@
             </div>
         </div>
     </div>
-    <a href="../view/products">Ver productos nuevos</a>
+    <div class="center" style="margin-top: 30px;">
+        <a href="../view/products"><button class="button_black">Ver productos nuevos</button></a>
+    </div>
     <div class="section_preview">
         <!--<div class="title_blackbackground fontTitle">VISTA PREVIA</div>-->
         <div class="new_product">

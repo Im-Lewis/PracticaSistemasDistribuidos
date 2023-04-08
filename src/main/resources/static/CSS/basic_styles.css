@@ -260,6 +260,35 @@ button {
     color: white;
     cursor: pointer;
 }
+.button_red{
+    background-color: #C14953;
+    color:#ffffff;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+.button_red:hover{
+    background-color: white;
+    color:#C14953;
+}
+.button_black{
+    padding: 10px;
+    background-color: #2d2d2a;
+    color: white;
+    border: #2d2d2a;
+    height: 70px;
+    transition: all 0.3s ease-in-out;
+}
+.button_black:hover{
+    background-color: white;
+    border:#000000 solid 2px;
+    color:#C14953;
+    cursor: pointer;
+}
+.center{
+    display: flex;
+    justify-content: center;
+}
 /* ----------------- Fonts ----------------- */
 .fontLight{
     font-family: 'Barlow', sans-serif;
@@ -281,9 +310,10 @@ h4{
     line-height: 1em;
 }
 .title_form{
-    color: #ffffff;
+    color: #000000;
     font-family: 'Barlow', sans-serif;
     font-weight: 600;
-    font-size: 0.6cm;
+    font-size: 1.5cm;
     line-height: 1em;
+    margin-bottom: 5px;
 }
