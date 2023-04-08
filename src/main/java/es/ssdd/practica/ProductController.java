@@ -15,10 +15,24 @@ public class ProductController {
     private List<Product> listProducts = new ArrayList<>();
 
     public ProductController(){
-        Product p1 = new Product("Pala pro", "Pala", "20", "Mola mucho esta pala");
-        Product p2 = new Product("Mesa palatronix", "Mesa", "200", "No dudes en llevarte esta maravillosa pala");
+        String imageURL1 = "/images/kit.png";
+        String imageURL2 = "/images/mesabasica.png";
+        String imageURL3 = "/images/mesapalatronix.png";
+        String imageURL4 = "/images/bolapingpong.png";
+        String imageURL5 = "/images/red.png";
+        String imageURL6 = "/images/palapro.png";
+        Product p1 = new Product("KIT PINGPONG", "Kit", "19.99", "Disfruta de este maravilloso kit junto a un amigo con hasta tres bolas", imageURL1);
+        Product p2 = new Product("MESA BÁSICA", "Mesa", "209.99", "¡No dudes en llevarte esta mesa para disfutar del ping pong!", imageURL2);
+        Product p3 = new Product("MESA PALATRONIX", "Mesa", "319.99", "Último modelo de la marca más prestigiosa de Ping Pong, Palitronix", imageURL3);
+        Product p4 = new Product("BOLA", "Bolas", "0.99", "Se venden por unidades las bolas. Bolas de la marca Palatronix", imageURL4);
+        Product p5 = new Product("RED MESA CASERA", "Equipamiento", "10.99", "Disfruta desde cualquier sitio con esta red", imageURL5);
+        Product p6 = new Product("PALA PRO", "Pala", "10.99", "Con nuestra última pala, ten claro que ahora esta pala nos será tu excusa", imageURL6);
         listProducts.add(p1);
         listProducts.add(p2);
+        listProducts.add(p3);
+        listProducts.add(p4);
+        listProducts.add(p5);
+        listProducts.add(p6);
     }
 
     @PostMapping("/product/added")
@@ -37,6 +51,12 @@ public class ProductController {
     public String viewProducts(Model model){
         model.addAttribute("products", listProducts);
         return "view_new_products";
+    }
+
+    @GetMapping("/shop")
+    public String shop(Model model){
+        model.addAttribute("products", listProducts);
+        return "shop";
     }
 
     @GetMapping("/product{num}")

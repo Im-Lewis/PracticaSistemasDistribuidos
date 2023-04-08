@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop-BePong  </title>
+    <link rel="stylesheet" href="/CSS/basic_styles.css">
+    <link rel="stylesheet" href="/CSS/shop_style.css">
+
+</head>
+<body>
+<div class="body">
+    <!--<div class="top_menu">
+        <img class="logo_top_menu" src="../images/table-tennis-7216579_1280.png" alt="logo_img">
+        <p class="page_name">BePong</p>
+        <button class="login_button">Iniciar Sesión</button>
+        <button class="singin_button">Registrarse</button>
+    </div>
+    <div class="top_menu_options">
+        <button class="top_menu_options_button top_menu_options_button_trans" id="shop_buttom">Tienda</button>
+        <p>|</p>
+        <button class="top_menu_options_button top_menu_options_button_trans" class="top_menu_options_buttom" id="tournaments_buttom">Torneos</button>
+        <p>|</p>
+        <button class="top_menu_options_button top_menu_options_button_trans" class="top_menu_options_buttom" id="support_buttom">Soporte</button>
+    </div>-->
+    <div class="container-top-menu">
+        <div class="top-menu">
+            <div class="icon-name">
+                <button id="home_button" class="home-btn">
+                    <a href="/"><img src="/images/table-tennis-7216579_1280.png" alt="logo-img"/></a>
+                </button>
+                <span>BePong</span>
+            </div>
+            <div class="buttons-top-menu">
+                <button class="login_button">
+                    <span>Iniciar Sesión</span>
+                </button>
+                <button class="singin_button"></button>
+                <button class="singin_button" id="signin_button">
+                    <span>Registarse</span>
+                </button>
+            </div>
+        </div>
+        <div class="under-menu">
+            <div class="buttons-under-menu">
+                <button id="shop_button">Tienda</button>
+                <span>|</span>
+                <button id="tournaments_button">Torneos</button>
+                <span>|</span>
+                <button id="support_button">Soporte</button>
+                <span>|</span>
+                <button id="multimedia_button">Multimedia</button>
+            </div>
+        </div>
+    </div>
+    <div class="section_products">
+        <div class="section_filters">
+            <div class="filter_title">
+                <span class="fontSemiBold">FILTROS</span>
+            </div>
+            <div class="filters_sticky">
+                <div class="filters">
+                    <label for="select" class="select_name">Tipo de producto</label>
+                    <select class="filter_type_product" id="filter_type_product">
+                        <option id="option">Pala</option>
+                        <option id="option">Mesa</option>
+                        <option id="option">Bolas</option>
+                        <option id="option">Equipamiento</option>
+                        <option id="option">Kit</option>
+                    </select>
+                </div>
+                <div class="price">
+                    <span class="fontRegular">Precio</span>
+                    <input type="range" class="range_price">
+                    <label for="valor-rango">Valor seleccionado:</label>
+                </div>
+                <div class="selectors_colors">
+                    <div>Colores</div>
+                    <div class="colors">
+                        <label class="color">
+                            <input type="checkbox" checked="false">
+                            <span class="selector_red"></span>
+                        </label>
+                        <label class="color">
+                            <input type="checkbox" checked="true">
+                            <span class="selector_black"></span>
+                        </label>
+                        <label class="color">
+                            <input type="checkbox" checked="true">
+                            <span class="selector_blue"></span>
+                        </label>
+                        <label class="color">
+                            <input type="checkbox" checked="true">
+                            <span class="selector_white"></span>
+                        </label>
+                    </div>
+                </div>
+                <label for="exampleColorInput" class="form-label">Color picker</label>
+                <input type="color" class="form-control form-control-color" id="exampleColorInput" value="#563d7c" title="Choose your color">
+                <div class="div_button_filter">
+                    <button class="button_filter" onclick="filtrar();">Filtrar</button>
+                </div>
+            </div>
+        </div>
+        <div class="section_products_img">
+            <!--<div class="section_two_products">-->
+            {{#products}}
+            <div class="product">
+                <div class="circle"></div>
+                <div class="content">
+                    <h2>{{nombre}}</h2>
+                    <div class="section_tag">
+                        <div class="tag">{{etiqueta}}</div>
+                        <div class="tag_price">{{precio}} $</div>
+                    </div>
+                    <p>{{descripcion}}</p>
+                    <img src="/images/cesta.png" class="img_basket">
+                </div>
+                <img src="{{url}}" class="img_front_page" style="height: 250px">
+            </div>
+            {{/products}}
+        </div>
+    </div>
+    <a href="/HTML/add_new_product.html">
+        <button class="button_add_new_product" id="button_add_new_product">
+            Crear producto
+        </button>
+    </a>
+</div>
+<script src="/JS/change_page.js"></script>
+<script src="/JS/shop.js"></script>
+</body>
+</html>
