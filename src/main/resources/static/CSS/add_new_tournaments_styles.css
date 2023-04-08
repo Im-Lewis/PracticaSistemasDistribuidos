@@ -1,0 +1,104 @@
+/*-----------------------------------------------------------------------------------------------------*/
+/* Styles for add_new_tournaments.html */
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* Title */
+.container-title-add-tournaments {
+    justify-content: center;
+    background-color: #C14953;
+}
+
+.title-add-tournaments {
+    color: white;
+    font-weight: 600;
+    font-size: 25pt;
+    padding: 2rem 0 2rem 0;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* Form */
+.container-form-create-tournament {
+    position: absolute;
+    top: 180px;
+    justify-content: center;
+}
+
+.form-create-tournament {
+    background-color: #2D2D2A;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    padding: 3rem 0 0 0;
+}
+
+.section-inputs {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+label span {
+    font-weight: 700;
+    color: white;
+}
+
+.section-inputs label input {
+    width: 60vw;
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14pt;
+    color: white;
+    transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
+}
+
+label input {
+    width: 30vw;
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 14pt;
+    transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
+    color: white;
+}
+
+label input:hover {
+    border: 2px solid #C14953;
+    box-shadow: 0 0 4px #C14953;
+}
+
+label input:focus {
+    border: 2px solid #C14953;
+    box-shadow: 0 0 4px #C14953;
+}
+
+.submit-btn {
+    background-color: #C14953;
+    color: white;
+    border: #2d2d2a;
+    transition: all 0.3s ease-in-out;
+    justify-self: center;
+}
+.submit-btn:hover {
+    background-color: white;
+    color:#C14953;
+    cursor: pointer;
+}

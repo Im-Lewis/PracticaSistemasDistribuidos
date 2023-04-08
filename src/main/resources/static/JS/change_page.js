@@ -17,6 +17,19 @@ buttonHome.addEventListener("click", function(){
 });
 
 /*-------------------------------------------------------------------------------------------------------------------*/
+let buttonLogin = document.getElementById("log_in_button");
+buttonLogin.addEventListener("click", function(){
+    window.location.replace("../HTML/login.html");
+});
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+let buttonSignin = document.getElementById("sign_in_button");
+buttonSignin.addEventListener("click", function(){
+    window.location.replace("../HTML/signin.html");
+});
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+
 
 
 let buttonSup = document.getElementById("support_button");

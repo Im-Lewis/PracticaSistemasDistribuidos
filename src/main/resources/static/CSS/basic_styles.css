@@ -112,7 +112,7 @@ button {
     margin: 10px 10px;
     color: white;
 }
-.login_button{
+.login-btn{
     position: absolute;
     right: 185px;
     background-color: #2d2d2a;
@@ -120,12 +120,12 @@ button {
     border: #2d2d2a;
     transition: all 0.3s ease-in-out;
 }
-.login_button:hover{
+.login-btn:hover{
     background-color: white;
     color:#C14953;
     cursor: pointer;
 }
-.singin_button{
+.singin-btn{
     position: absolute;
     right: 15px;
     background-color: #2d2d2a;
@@ -133,7 +133,7 @@ button {
     border: #2d2d2a;
     transition: all 0.3s ease-in-out;
 }
-.singin_button:hover{
+.singin-btn:hover{
     background-color: white;
     color:#C14953;
     cursor: pointer;
