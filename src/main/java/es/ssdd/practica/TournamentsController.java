@@ -17,10 +17,10 @@ public class TournamentsController {
 /*--------------------------------------------------------------------------------------------------------------------*/
 /* Default tournaments */
     public TournamentsController() {
-        active_tournaments.add(new Tournament("Torneo-1", "10/10/23",
+        active_tournaments.add(new Tournament(1, "Torneo-1", "10/10/23",
                 "10:10", "Pinto", "Luis"));
 
-        active_tournaments.add(new Tournament("Torneo-2", "11/10/23",
+        active_tournaments.add(new Tournament(2, "Torneo-2", "11/10/23",
                 "11:11", "Valdemoro", "Jaime"));
     }
 

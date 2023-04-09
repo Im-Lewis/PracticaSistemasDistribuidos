@@ -9,13 +9,22 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 public class Tournament {
+    private long id;
     private String name;
     private String date;
     private String hour;
     private String location;
     private String organizer;
 
-/*--------------------------------------------------------------------------------------------------------------------*/
+    public Tournament(String name, String date, String hour, String location, String organizer) {
+        this.name = name;
+        this.date = date;
+        this.hour = hour;
+        this.location = location;
+        this.organizer = organizer;
+    }
+
+    /*--------------------------------------------------------------------------------------------------------------------*/
 /* GETTER AND SETER FUNCTIONS */
     public String getName() {
         return name;
