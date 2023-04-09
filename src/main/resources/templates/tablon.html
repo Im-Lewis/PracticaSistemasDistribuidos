@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Active Tournaments - BePong</title>
+</head>
+<body>
+  <h1>Torneos Activos</h1>
+  {{#tournaments}}
+  <a href="../tournament/{{-index}}">{{name}} {{location}}</a><br>
+  {{/tournaments}}
+
+  <br>
+  <a href="../HTML/add_new_tournaments.html">Nuevo torneo</a>
+</body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tournaments BePong</title>
+    <title>Formulario Crear Torneos - BePong</title>
     <link rel="stylesheet" href="../CSS/basic_styles_2.css">
     <link rel="stylesheet" href="../CSS/add_new_tournaments_styles.css">
 </head>
@@ -48,28 +48,28 @@
             <span class="title-add-tournaments">Agregar Nuevos Torneos</span>
         </div>
         <div class=" container form-create-tournament">
-            <form action="" method="">
+            <form action="../tournament/added" method="post" novalidate>
                 <label for="tournament-name">
                     <span>Nombre</span>
-                    <input id="tournament-name" name="tournament-name">
+                    <input id="tournament-name" name="name" type="text">
                 </label>
                 <label for="tournament-date">
                     <span>Fecha</span>
-                    <input id="tournament-date" name="tournament-date">
+                    <input id="tournament-date" name="date" type="text">
                 </label>
                 <label for="tournament-hour">
                     <span>Hora</span>
-                    <input id="tournament-hour" name="tournament-hour">
+                    <input id="tournament-hour" name="hour" type="text">
                 </label>
                 <label for="tournament-location">
                     <span>Localización</span>
-                    <input id="tournament-location" name="tournament-location">
+                    <input id="tournament-location" name="location" type="text">
                 </label>
                 <label for="tournament-organizer">
                     <span>Organizador</span>
-                    <input id="tournament-organizer" name="tournament-organizer">
+                    <input id="tournament-organizer" name="organizer" type="text">
                 </label>
-                <button type="submit" class="submit-btn">Crear Torneo</button>
+                <button type="submit" class="submit-btn">Crear</button>
             </form>
         </div>
     </div>

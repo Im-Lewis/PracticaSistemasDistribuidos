@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------------------------------------*/
-/* Styles for tournaments.html */
+/* Styles for active_tournaments.html */
 /*-----------------------------------------------------------------------------------------------------*/
 
 /*-----------------------------------------------------------------------------------------------------*/
@@ -10,7 +10,7 @@
     font-size: 25pt;
     background-color: #C14953;
     width: 100vw;
-    padding: 2rem 0rem 2rem 4rem;
+    padding: 2rem 0 2rem 4rem;
 }
 
 /*-----------------------------------------------------------------------------------------------------*/
@@ -22,13 +22,29 @@
 }
 .torneos-activos {
     background-color: #2d2d2a;
+    padding: 3rem 4rem 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 32.09rem;
+    gap: 3rem;
+}
+.courrent-tournament {
+    background-color: #2d2d2a;
     padding: 2rem 4rem 2rem 4rem;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 32.09rem;
 }
-.torneos-activos span {
+.active-tournament a{
+    color: white;
+    font-weight: 600;
+    font-size: 25pt;
+}
+.torneos-activos span, .courrent-tournament span {
     color: white;
     font-weight: 600;
     font-size: 25pt;
@@ -42,13 +58,13 @@
     background-color: #C14953;
     padding: 1.5rem;
 }
-.create-tournament, .edit-tournament, .delete-tournament {
+.create-tournament, .go_back, .edit-btn, .delete-btn {
     background-color: #2d2d2a;
     color: white;
     border: #2d2d2a;
     transition: all 0.3s ease-in-out;
 }
-.create-tournament:hover, .edit-tournament:hover, .delete-tournament:hover {
+.create-tournament:hover, .go_back:hover, .edit-btn:hover, .delete-btn:hover {
     background-color: white;
     color:#C14953;
     cursor: pointer;

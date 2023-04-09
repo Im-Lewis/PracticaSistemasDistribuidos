@@ -1,7 +1,19 @@
 /*-------------------------------------------------------------------------------------------------------------------*/
+let buttonLogin = document.getElementById("log_in_button");
+buttonLogin.addEventListener("click", function(){
+    window.location.replace("../HTML/login.html");
+});
+
+/*-------------------------------------------------------------------------------------------------------------------*/
+let buttonSignin = document.getElementById("sign_in_button");
+buttonSignin.addEventListener("click", function(){
+    window.location.replace("../HTML/signin.html");
+});
+
+/*-------------------------------------------------------------------------------------------------------------------*/
 let buttonTournaments = document.getElementById("tournaments_button");
 buttonTournaments.addEventListener("click", function(){
-    window.location.replace("../HTML/tournaments.html");
+    window.location.replace("../view/tournaments");
 });
 
 /*-------------------------------------------------------------------------------------------------------------------*/
@@ -17,15 +29,9 @@ buttonHome.addEventListener("click", function(){
 });
 
 /*-------------------------------------------------------------------------------------------------------------------*/
-let buttonLogin = document.getElementById("log_in_button");
-buttonLogin.addEventListener("click", function(){
-    window.location.replace("../HTML/login.html");
-});
-
-/*-------------------------------------------------------------------------------------------------------------------*/
-let buttonSignin = document.getElementById("sign_in_button");
-buttonSignin.addEventListener("click", function(){
-    window.location.replace("../HTML/signin.html");
+let buttonGoBack = document.getElementById("go_back_btn");
+buttonGoBack.addEventListener("click", function(){
+    window.location.replace("../view/tournaments");
 });
 
 /*-------------------------------------------------------------------------------------------------------------------*/
@@ -42,9 +48,10 @@ buttonSup.addEventListener("click", function() {
     window.location.replace("../HTML/support.html");
     }, 3000); // El número 3000 representa el tiempo en milisegundos (3 segundos)
 });
-let buttonLogin = document.getElementsByName("login_button");
-buttonLogin.addEventListener("click", function(){
-    window.location.replace("../HTML/login.html");
+
+let buttonShop = document.getElementById("shop_button");
+buttonShop.addEventListener("click", function(){
+    window.location.replace("../shop");
 });
 /*buttonSup.addEventListener("click", function(){
     setTimeout(function() {
@@ -52,10 +59,12 @@ buttonLogin.addEventListener("click", function(){
     }, 3000);
 });*/
 
+/*
 let buttonShop = document.getElementById("shop_button");
 buttonShop.addEventListener("click", function(){
     window.location.replace("../HTML/shop.html");
 });
+*/
 
 let buttonAddProduct = document.getElementById("button_add_new_product");
 buttonAddProduct.addEventListener("click", function(){

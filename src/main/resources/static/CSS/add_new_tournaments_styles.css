@@ -64,7 +64,7 @@ label span {
     border-radius: 10px;
     outline: none;
     font-size: 14pt;
-    color: white;
+    color: #2D2D2A;
     transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
 }
 
@@ -77,7 +77,7 @@ label input {
     outline: none;
     font-size: 14pt;
     transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
-    color: white;
+    color: #2D2D2A;
 }
 
 label input:hover {
@@ -101,4 +101,9 @@ label input:focus {
     background-color: white;
     color:#C14953;
     cursor: pointer;
+}
+
+.tournament-info{
+    position: absolute;
+    top: 200px;
 }

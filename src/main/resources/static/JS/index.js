@@ -3,17 +3,10 @@
 /*-------------------------------------------------------------------------------------------------------------------*/
 
 /*-------------------------------------------------------------------------------------------------------------------*/
-/* Shop */
-let buttonShop = document.getElementById("shop_button");
-buttonShop.addEventListener("click", function(){
-    window.location.replace("HTML/shop.html");
-});
-
-/*-------------------------------------------------------------------------------------------------------------------*/
 /* Tournaments */
 let buttonTournaments = document.getElementById("tournaments_button");
 buttonTournaments.addEventListener("click", function(){
-    window.location.replace("HTML/tournaments.html");
+    window.location.replace("/view/tournaments");
 });
 
 /*-------------------------------------------------------------------------------------------------------------------*/
@@ -52,4 +45,8 @@ buttonSigninTournament.addEventListener("click", function(){
 });
 
 /*-------------------------------------------------------------------------------------------------------------------*/
-
+/* Shop */
+let buttonShop = document.getElementById("shop_button");
+buttonShop.addEventListener("click", function(){
+    window.location.replace("/shop");
+});
