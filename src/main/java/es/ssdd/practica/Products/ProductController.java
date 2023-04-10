@@ -1,10 +1,10 @@
-package es.ssdd.practica;
+package es.ssdd.practica.Products;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,11 +59,19 @@ public class ProductController {
         return "shop";
     }
 
-    @GetMapping("/product{num}")
+    @GetMapping("/product/{num}")
     public String viewProduct(Model model, @PathVariable int num){
         Product product = listProducts.get(num-1);
         model.addAttribute("product", product);
+        model.addAttribute("indice", num);
         return "view_product";
+    }
+
+    @GetMapping("/product/{num}/deleted")
+    public String productDeleted(Model model, @PathVariable int num){
+        Product product = listProducts.remove(num-1);
+        model.addAttribute("product", product);
+        return "deleted_product";
     }
 
 }

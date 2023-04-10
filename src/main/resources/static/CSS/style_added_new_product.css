@@ -65,3 +65,13 @@
     transform: scale(1.2);
     cursor: pointer;
 }
+
+/* DELETED PRODUCT */
+.container_product_deleted{
+    margin-top: 200px;
+}
+
+/* ERROR PAGE */
+.section_error{
+    margin-top: 200px;
+}

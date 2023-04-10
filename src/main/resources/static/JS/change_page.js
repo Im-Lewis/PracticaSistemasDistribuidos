@@ -53,6 +53,7 @@ let buttonShop = document.getElementById("shop_button");
 buttonShop.addEventListener("click", function(){
     window.location.replace("../shop");
 });
+
 /*buttonSup.addEventListener("click", function(){
     setTimeout(function() {
         window.location.replace("../HTML/support.html");

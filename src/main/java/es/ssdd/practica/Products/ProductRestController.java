@@ -1,4 +1,4 @@
-package es.ssdd.practica;
+package es.ssdd.practica.Products;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

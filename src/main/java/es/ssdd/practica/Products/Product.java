@@ -1,4 +1,4 @@
-package es.ssdd.practica;
+package es.ssdd.practica.Products;
 
 public class Product {
 
