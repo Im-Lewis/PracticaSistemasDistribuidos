@@ -1,4 +1,5 @@
 package es.ssdd.practica.Products;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -12,7 +13,10 @@ import java.util.List;
 @Controller
 public class ProductController {
 
-    private List<Product> listProducts = new ArrayList<>();
+    @Autowired
+    ProductService productService;
+
+    /*private List<Product> listProducts = new ArrayList<>();
 
     public ProductController(){
         String imageURL1 = "/images/kit.png";
@@ -33,13 +37,13 @@ public class ProductController {
         listProducts.add(p4);
         listProducts.add(p5);
         listProducts.add(p6);
-    }
+    }*/
 
     @PostMapping("/product/added")
     public String addedProduct(Model model, Product product) {
         try{
             double num = Double.parseDouble(product.getPrecio());
-            listProducts.add(product);
+            productService.createProduct(product);
             return "added_new_product";
         }catch (NumberFormatException e) {
             return "error_add_new_product";
@@ -49,27 +53,27 @@ public class ProductController {
 
     @GetMapping("/view/products")
     public String viewProducts(Model model){
-        model.addAttribute("products", listProducts);
+        model.addAttribute("products", productService.getAll());
         return "view_new_products";
     }
 
     @GetMapping("/shop")
     public String shop(Model model){
-        model.addAttribute("products", listProducts);
+        model.addAttribute("products", productService.getAll());
         return "shop";
     }
 
     @GetMapping("/product/{num}")
-    public String viewProduct(Model model, @PathVariable int num){
-        Product product = listProducts.get(num-1);
+    public String viewProduct(Model model, @PathVariable Long num){
+        Product product = productService.getProductById(num);
         model.addAttribute("product", product);
         model.addAttribute("indice", num);
         return "view_product";
     }
 
     @GetMapping("/product/{num}/deleted")
-    public String productDeleted(Model model, @PathVariable int num){
-        Product product = listProducts.remove(num-1);
+    public String productDeleted(Model model, @PathVariable Long num){
+        Product product = productService.deleteProduct(num);
         model.addAttribute("product", product);
         return "deleted_product";
     }

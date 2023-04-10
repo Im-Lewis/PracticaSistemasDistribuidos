@@ -1,5 +1,12 @@
 package es.ssdd.practica.Products;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Product {
 
     private String nombre;
@@ -7,7 +14,7 @@ public class Product {
     private String precio;
     private String descripcion;
     private String url;
-    private int id = -1;
+    private long id;
 
     public Product(String name, String tag, String price, String description, String url){
         this.nombre = name;
@@ -23,7 +30,6 @@ public class Product {
 
     public String getPrecio(){return precio;}
 
-    public int getId(){return id;}
 
     public String getDescripcion(){return descripcion;}
 
@@ -39,6 +45,6 @@ public class Product {
 
     public void setUrl(String url){this.url=url;}
 
-    public void setId(int id){this.id = id;}
+
 
 }

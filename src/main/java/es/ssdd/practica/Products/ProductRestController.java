@@ -1,5 +1,6 @@
 package es.ssdd.practica.Products;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -9,45 +10,42 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/rest/product")
+@RequestMapping("/api/products")
 public class ProductRestController {
 
-    private Map<Integer, Product> mapProducts = new HashMap<>();
-    private int lastId;
+    @Autowired
+    ProductService productService;
 
     @GetMapping("/")
-    public Collection<Product> getAllProducts(){
-        return mapProducts.values();
+    public ResponseEntity<Collection<Product>> getAllProducts(){
+        return new ResponseEntity(productService.getAll(), HttpStatus.OK);
     }
 
     @PostMapping("/")
-    @ResponseStatus(HttpStatus.CREATED)
-    public Product createProduct(@RequestBody Product product){
-        lastId++;
-        int id = lastId;
-        product.setId(id);
-        mapProducts.put(id, product);
-        return product;
+    public ResponseEntity createProduct(@RequestBody Product product){
+        Product p = productService.createProduct(product);
+        return new ResponseEntity(p, HttpStatus.CREATED);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Product> getItem(@PathVariable int id) {
+    public ResponseEntity<Product> getItem(@PathVariable Long id) {
 
-        Product product = mapProducts.get(id);
+        boolean contains = productService.containsProduct(id);
 
-        if (product != null) {
-            return new ResponseEntity<>(product, HttpStatus.OK);
+        if (contains) {
+            return new ResponseEntity<>(productService.getProductById(id), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Product> deleteItem(@PathVariable int id) {
+    public ResponseEntity<Product> deleteItem(@PathVariable Long id) {
 
-        Product product = mapProducts.remove(id);
+        boolean contains = productService.containsProduct(id);
 
-        if (product != null) {
+        if (contains) {
+            Product product = productService.deleteProduct(id);
             return new ResponseEntity<>(product, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -55,13 +53,12 @@ public class ProductRestController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Product> updateItem(@PathVariable int id, @RequestBody Product newProduct) {
+    public ResponseEntity<Product> updateItem(@PathVariable Long id, @RequestBody Product newProduct) {
 
-        Product oldProduct = mapProducts.get(id);
+        Product oldProduct = productService.getProductById(id);
 
         if (oldProduct != null) {
-            newProduct.setId(id);
-            mapProducts.put(id, newProduct);
+            productService.editTournament(id, newProduct);
             return new ResponseEntity<>(newProduct, HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
