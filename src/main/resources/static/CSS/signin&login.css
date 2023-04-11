@@ -61,7 +61,7 @@
     height: 200px;
 }
 /* Media querys */
-@media (max-width: 550px){
+@media (max-width: 737px){
     .container_register_form {
         margin-top: 400px;
     }
@@ -73,7 +73,7 @@
         height: 150px;
     }
 }
-@media (max-width: 380px){
+@media (max-width: 717px){
     .container_register_form {
         margin-top: 500px;
     }
@@ -81,7 +81,27 @@
         margin-top: 500px;
     }
     .img_profile{
-        top:450px;
+        top:400px;
+    }
+    .inputShort{
+        width: 70%;
+    }
+    .inputMid{
+        width: 70%;
+    }
+    .inputLarge{
+        width: 70%;
+    }
+}
+@media (max-width: 352px){
+    .container_register_form {
+        margin-top: 900px;
+    }
+    .container_login_form{
+        margin-top: 900px;
+    }
+    .img_profile{
+        top:850px;
         height: 100px;
     }
 }

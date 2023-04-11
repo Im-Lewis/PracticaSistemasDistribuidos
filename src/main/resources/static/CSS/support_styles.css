@@ -90,35 +90,11 @@
     padding:20px;
     border-radius: 10px;
 }
-/*.container_warning{
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.container_socialmedia{
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}*/
 .alert_container{
     margin-top: 10px;
     margin-bottom: 40px;
 }
-/*---------------2.2 WARNING MESSAGE---------------*/
-.warning_message{
-    background-color: rgb(255, 249, 169);
-    padding:20px;
-    display:flex;
-    justify-content: space-between;
-}
-.warning_img{
-    width: 50px;
-    height: 50px;
-    cursor:pointer;
-    transition: all 0.3s ease-in-out;
-}
-.warning_img:hover{
-    transform: scale(1.5);
-}
+
 
 /*---------------------------------------------*/
 /*---------------3. SECTION SOCIAL MEDIA---------------*/
@@ -170,4 +146,35 @@
     transition: opacity 0.3s ease-in-out;*/
     opacity: 0;
     transition: all 1s;
+}
+@media (max-width: 717px){
+    .section_questions{
+        margin-top: 400px;
+    }
+    .section_form{
+        margin-top: 200px;
+    }
+}
+@media (max-width: 382px){
+    .section_questions{
+        margin-top: 500px;
+    }
+    .block_questions{
+        padding-top: 200px;
+    }
+}
+@media (max-width: 361px){
+    .section_questions{
+        margin-top: 700px;
+    }
+    .section_form{
+        margin-top: 300px;
+    }
+
+}
+@media (max-width: 177px){
+    .section_questions{
+        margin-top: 800px;
+    }
+
 }
