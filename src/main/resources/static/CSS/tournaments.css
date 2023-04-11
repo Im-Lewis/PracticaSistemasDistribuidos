@@ -4,7 +4,7 @@
 
 /*-----------------------------------------------------------------------------------------------------*/
 /* Title */
-.title-tournaments {
+.title-tournaments, .title-users, .title-organizer {
     color: white;
     font-weight: 600;
     font-size: 25pt;
