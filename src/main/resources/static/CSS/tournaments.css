@@ -15,12 +15,12 @@
 
 /*-----------------------------------------------------------------------------------------------------*/
 /* Active tournaments section */
-.container-active-tournaments {
+.container-active-tournaments, .container-active-organizers, .container-active-users {
     position: absolute;
     top: 180px;
     flex-direction: column;
 }
-.torneos-activos {
+.active-tournaments-section, .organizer-created-text {
     background-color: #2d2d2a;
     padding: 3rem 4rem 3rem 4rem;
     display: flex;
@@ -44,7 +44,7 @@
     font-weight: 600;
     font-size: 25pt;
 }
-.torneos-activos span, .courrent-tournament span {
+.active-tournaments-section span, .courrent-tournament span {
     color: white;
     font-weight: 600;
     font-size: 25pt;
@@ -64,7 +64,7 @@
     border: #2d2d2a;
     transition: all 0.3s ease-in-out;
 }
-.create-tournament:hover, .go_back:hover, .edit-btn:hover, .delete-btn:hover {
+.create-tournament:hover, .go_back:hover, .edit-btn:hover, .delete-btn:hover, .go_back_btn_organizer {
     background-color: white;
     color:#C14953;
     cursor: pointer;
