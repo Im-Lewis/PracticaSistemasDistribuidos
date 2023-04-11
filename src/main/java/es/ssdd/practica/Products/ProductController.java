@@ -78,4 +78,22 @@ public class ProductController {
         return "deleted_product";
     }
 
+    @GetMapping("/product/{num}/edit")
+    public String editProduct(Model model, @PathVariable Long num){
+        model.addAttribute("indice", num);
+        model.addAttribute("product", productService.getProductById(num));
+        return "edit_product";
+    }
+
+    @PostMapping("/product/{num}/edited")
+    public String productEdited (Model model, @PathVariable Long num, Product product){
+        try{
+            double number = Double.parseDouble(product.getPrecio());
+            productService.editTournament(num, product);
+            return "added_new_product";
+        }catch (NumberFormatException e) {
+            return "error_add_new_product";
+        }
+    }
+
 }
