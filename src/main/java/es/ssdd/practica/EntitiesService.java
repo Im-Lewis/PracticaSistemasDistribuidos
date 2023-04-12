@@ -20,6 +20,7 @@ public class EntitiesService {
     private AtomicLong tournament_id = new AtomicLong();
     private AtomicLong organizer_id = new AtomicLong();
 
+    /*
     @PostConstruct
     public void init() {
 
@@ -79,6 +80,8 @@ public class EntitiesService {
         organizer2.setOrganized_tournament(tournament2);
         organizer3.setOrganized_tournament(tournament3);
     }
+
+     */
 
 /*--------------------------------------------------------------------------------------------------------------------*/
 /* Functions to create tournaments, organizers and  participants */

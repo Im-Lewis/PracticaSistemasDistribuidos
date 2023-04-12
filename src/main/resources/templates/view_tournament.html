@@ -43,7 +43,7 @@
     </div>
 
     <!-- Section of the active tournaments -->
-    <div class="container container-active-tournaments">
+    <div class="container-global container-active-tournaments">
         <span class="title-tournaments">{{tournament.name}}</span>
         <div class="courrent-tournament">
             <span>Nombre: {{tournament.name}}</span>
@@ -54,10 +54,10 @@
         </div>
 
         <!-- Section of the buttons of the options for tournaments -->
-        <div class="container container-tournaments-btns-options">
+        <div class="container-global container-tournaments-btns-options">
             <div class="container-btns">
-                <button id="edit_tournament_button" class="edit-btn">Editar Torneo</button>
-                <button id="delete_tournament_button" class="delete-btn">Eliminar Torneo</button>
+                <a href="/tournament/edit/{{tournament.id}}"><button id="edit_tournament_button" class="edit-btn">Editar Torneo</button></a>
+                <a href="/tournament/delete/{{tournament.id}}"><button id="delete_tournament_button" class="delete-btn">Eliminar Torneo</button></a>
             </div>
         </div>
     </div>

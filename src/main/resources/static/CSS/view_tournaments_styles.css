@@ -1,0 +1,134 @@
+/*-----------------------------------------------------------------------------------------------------*/
+/* General Settings */
+/*-----------------------------------------------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;1,300&display=swap');
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* General Options For Some Elements */
+*{
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-family: 'Barlow', sans-serif;
+    overflow-x: hidden;
+}
+button {
+    margin: 25px 10px;
+    outline: none;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    cursor: pointer;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+}
+img {
+    border-radius: 10px;
+}
+iframe {
+    border-radius: 10px;
+}
+
+/* Body */
+.body{
+    display: flex;
+    flex-direction: column;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* Container */
+.container-global {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* Main container */
+.container-main {
+    flex-direction: column;
+}
+
+/*-----------------------------------------------------------------------------------------------------*/
+/* Top Menu */
+.container-top-menu {
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+.top-menu {
+    background-color: #C14953;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Icon and Name section*/
+.icon-name {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.icon-name img {
+    height: 70px;
+    width: 85px;
+}
+.home-btn {
+    height: 70px;
+    width: 85px;
+    margin: 15px 35px;
+    border: none;
+    background: none;
+}
+.icon-name span {
+    font-weight: 600;
+    font-size: 45pt;
+    margin: 10px 10px;
+    color: white;
+}
+
+/* Buttons section */
+.buttons-top-menu {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: 15px;
+}
+.singin-btn, .login-btn {
+    background-color: #2d2d2a;
+    color: white;
+    border: #2d2d2a;
+    transition: all 0.3s ease-in-out;
+}
+.login-btn:hover, .singin-btn:hover{
+    background-color: white;
+    color:#C14953;
+    cursor: pointer;
+}
+
+/* Under Menu section */
+.under-menu {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.under-menu button {
+    border: none;
+    background: none;
+    font-size: large;
+    padding: 0;
+    height: 30px;
+    border-radius: 0%;
+    transition: all 0.2s ease-in-out;
+}
+.under-menu button:hover{
+    transform: scale(1.5);
+    color: #C14953;
+    cursor: pointer;
+}
