@@ -3,13 +3,22 @@ package es.ssdd.practica.Tournament;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 
+@Entity
 public class Tournament {
-    private long id = -1;
+
+    @javax.persistence.Id
+    @Id
+    private long id;
     private String name;
     private String date;
     private String hour;
@@ -57,4 +66,11 @@ public class Tournament {
         this.organizer = organizer;
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }
