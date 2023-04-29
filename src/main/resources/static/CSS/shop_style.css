@@ -215,6 +215,24 @@
     background-color: white;
     color:#C14953;
 }
+.button_add_new_shop{
+    background-color: #C14953;
+    color:white;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+    border:none;
+    position:fixed;
+    bottom: 0;
+    right: 10%;
+    padding: 10px;
+    margin:50px;
+    z-index: 10;
+    transition:all 0.3s ease-in-out;
+}
+.button_add_new_shop:hover{
+    background-color: white;
+    color:#C14953;
+}
 
 /* ------ Media querys ------*/
 @media (max-width: 738px){

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/basic_styles.css">
+    <link rel="stylesheet" href="../CSS/style_add_new_product.css">
+    <title>Add Shop</title>
+</head>
+<body>
+  <div class="container-global container-main">
+    <div class="container-global container-top-menu">
+      <div class="container-global top-menu">
+        <div class="icon-name">
+          <button id="home_button" class="home-btn">
+            <img src="/images/table-tennis-7216579_1280.png" alt="logo-img"/>
+          </button>
+          <span>BePong</span>
+        </div>
+        <div class="buttons-top-menu">
+          <button id="log_in_button" class="login-btn">
+            <span>Iniciar Sesión</span>
+          </button>
+          <button id="sign_in_button" class="singin-btn">
+            <span>Registarse</span>
+          </button>
+        </div>
+      </div>
+      <div class="under-menu">
+        <div class="buttons-under-menu">
+          <button id="shop_button">Tienda</button>
+          <span>|</span>
+          <button id="tournaments_button">Torneos</button>
+          <span>|</span>
+          <button id="support_button">Soporte</button>
+          <span>|</span>
+          <button id="multimedia_button">Multimedia</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section_form_new_product container">
+    <div class="container-fluid container_form">
+      <div class="container-fluid">
+        <div class="row no-gutters">
+          <div class="col-md-6" style="background-color:#C14953; border-top-right-radius: 10px; border-bottom-right-radius: 10px;">
+            <form action="../shop/added" method="post" novalidate class="section_form_labels naneProductInput" id="form_new_product">
+              <div class="section_form_labels naneProductInput" id="form_new_product">
+                <div class="mb-3">
+                  <label for="nameShop" class="form-label title_form">Nombre de la tienda</label>
+                  <input name="name" type="text" class="form-control fontRegular exampleFormInput" id="nameShop" placeholder="EJ: Tienda Valdemoro">
+                </div>
+                <div class="mb-3">
+                  <label for="ubicationShop" class="form-label title_form">Ubicación</label>
+                  <input name="ubication" type="text" class="form-control fontRegular exampleFormInput" id="ubicationShop" placeholder="EJ: Valdemoro">
+                </div>
+                <div class="mb-3">
+                  <label for="urlImage" class="form-label title_form">URL de la imagen</label>
+                  <input name="url" type="text" class="form-control fontRegular exampleFormInput" id="urlImage" placeholder="">
+                </div>
+                <!--<button class="button_white" onclick="añadir();">Añadir producto</button>-->
+                <button type="submit" class="button_white">Añadir tienda</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="center">
+    <a href="../view/shops"><button class="button_red">Ver tiendas nuevas</button></a>
+  </div>
+<script src="../JS/change_page.js" defer></script>
+<script src="../JS/add_new_product.js" defer></script>
+</body>
+</html>

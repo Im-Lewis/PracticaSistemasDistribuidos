@@ -9,11 +9,11 @@ import java.util.concurrent.atomic.AtomicLong;
 
 @Service
 public class ProductService {
-    private Map<Long, Product> productMap = new ConcurrentHashMap<>();
+    private static Map<Long, Product> productMap = new ConcurrentHashMap<>();
 
     private AtomicLong id = new AtomicLong();
 
-    public Collection<Product> getAll(){
+    public static Collection<Product> getAll(){
         return productMap.values();
     }
     /*--------------------------------------------------------------------------------------------------------------------*/
