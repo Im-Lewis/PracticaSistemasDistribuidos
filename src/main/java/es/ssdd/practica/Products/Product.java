@@ -4,9 +4,16 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
+@Entity
 public class Product {
 
     private String nombre;
@@ -14,6 +21,8 @@ public class Product {
     private String precio;
     private String descripcion;
     private String url;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     public Product(String name, String tag, String price, String description, String url){
@@ -45,6 +54,12 @@ public class Product {
 
     public void setUrl(String url){this.url=url;}
 
-
+    public void replace(Product p){
+        this.nombre = p.getNombre();
+        this.etiqueta = p.getEtiqueta();
+        this.precio = p.getPrecio();
+        this.descripcion = p.getDescripcion();
+        this.url = p.getUrl();
+    }
 
 }

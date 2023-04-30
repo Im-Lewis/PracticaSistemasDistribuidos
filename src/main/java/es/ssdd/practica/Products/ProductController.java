@@ -1,4 +1,5 @@
 package es.ssdd.practica.Products;
+import es.ssdd.practica.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -7,18 +8,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class ProductController {
 
     @Autowired
-    ProductService productService;
+    ProductRepository productRepository;
 
-    /*private List<Product> listProducts = new ArrayList<>();
-
-    public ProductController(){
+    @PostConstruct
+    public void init(){
         String imageURL1 = "/images/kit.png";
         String imageURL2 = "/images/mesabasica.png";
         String imageURL3 = "/images/mesapalatronix.png";
@@ -31,19 +33,19 @@ public class ProductController {
         Product p4 = new Product("BOLA", "Bolas", "0.99", "Se venden por unidades las bolas. Bolas de la marca Palatronix", imageURL4);
         Product p5 = new Product("RED MESA CASERA", "Equipamiento", "10.99", "Disfruta desde cualquier sitio con esta red", imageURL5);
         Product p6 = new Product("PALA PRO", "Pala", "10.99", "Con nuestra última pala, ten claro que ahora esta pala nos será tu excusa", imageURL6);
-        listProducts.add(p1);
-        listProducts.add(p2);
-        listProducts.add(p3);
-        listProducts.add(p4);
-        listProducts.add(p5);
-        listProducts.add(p6);
-    }*/
+        productRepository.save(p1);
+        productRepository.save(p2);
+        productRepository.save(p3);
+        productRepository.save(p4);
+        productRepository.save(p5);
+        productRepository.save(p6);
+    }
 
     @PostMapping("/product/added")
     public String addedProduct(Model model, Product product) {
         try{
             double num = Double.parseDouble(product.getPrecio());
-            productService.createProduct(product);
+            productRepository.save(product);
             return "added_new_product";
         }catch (NumberFormatException e) {
             return "error_add_new_product";
@@ -53,19 +55,19 @@ public class ProductController {
 
     @GetMapping("/view/products")
     public String viewProducts(Model model){
-        model.addAttribute("products", productService.getAll());
+        model.addAttribute("products", productRepository.findAll());
         return "view_new_products";
     }
 
     @GetMapping("/shop")
     public String shop(Model model){
-        model.addAttribute("products", productService.getAll());
+        model.addAttribute("products", productRepository.findAll());
         return "shop";
     }
 
     @GetMapping("/product/{num}")
     public String viewProduct(Model model, @PathVariable Long num){
-        Product product = productService.getProductById(num);
+        Product product = productRepository.getById(num);
         model.addAttribute("product", product);
         model.addAttribute("indice", num);
         return "view_product";
@@ -73,7 +75,8 @@ public class ProductController {
 
     @GetMapping("/product/{num}/deleted")
     public String productDeleted(Model model, @PathVariable Long num){
-        Product product = productService.deleteProduct(num);
+        Product product = productRepository.getById(num);
+        productRepository.deleteById(num);
         model.addAttribute("product", product);
         return "deleted_product";
     }
@@ -81,7 +84,8 @@ public class ProductController {
     @GetMapping("/product/{num}/edit")
     public String editProduct(Model model, @PathVariable Long num){
         model.addAttribute("indice", num);
-        model.addAttribute("product", productService.getProductById(num));
+        Product product = productRepository.getById(num);
+        model.addAttribute("product", product);
         return "edit_product";
     }
 
@@ -89,7 +93,7 @@ public class ProductController {
     public String productEdited (Model model, @PathVariable Long num, Product product){
         try{
             double number = Double.parseDouble(product.getPrecio());
-            productService.editTournament(num, product);
+            productRepository.getById(num).replace(product);
             return "added_new_product";
         }catch (NumberFormatException e) {
             return "error_add_new_product";
