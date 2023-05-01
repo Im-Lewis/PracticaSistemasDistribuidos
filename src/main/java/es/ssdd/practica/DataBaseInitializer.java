@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class DataBaseInitializer {
@@ -32,25 +34,21 @@ public class DataBaseInitializer {
         Product p4 = new Product("BOLA", "Bolas", "0.99", "Se venden por unidades las bolas. Bolas de la marca Palatronix", imageURL4);
         Product p5 = new Product("RED MESA CASERA", "Equipamiento", "10.99", "Disfruta desde cualquier sitio con esta red", imageURL5);
         Product p6 = new Product("PALA PRO", "Pala", "10.99", "Con nuestra última pala, ten claro que ahora esta pala nos será tu excusa", imageURL6);
-
-        String imgUrl1 = "/images/shop3.jpg";
-        String imgUrl2 = "/images/shop2.jpg";
-        Shop s1 = new Shop("MePong Móstoles", "Móstoles", imgUrl1);
-        s1.getProducts().add(p1);
-        s1.getProducts().add(p5);
-        s1.getProducts().add(p6);
-        Shop s2 = new Shop("MePong Pinto", "Pinto", imgUrl2);
-        s2.getProducts().add(p2);
-        s2.getProducts().add(p3);
-        s2.getProducts().add(p4);
-        s2.getProducts().add(p6);
-
         productService.createProduct(p1);
         productService.createProduct(p2);
         productService.createProduct(p3);
         productService.createProduct(p4);
         productService.createProduct(p5);
         productService.createProduct(p6);
+
+        String imgUrl1 = "/images/shop3.jpg";
+        String imgUrl2 = "/images/shop2.jpg";
+        Shop s1 = new Shop("MePong Móstoles", "Móstoles", imgUrl1);
+        Shop s2 = new Shop("MePong Pinto", "Pinto", imgUrl2);
+        s1.setProduct(p1);
+        s1.setProduct(p3);
+        s2.setProduct(p6);
+        s2.setProduct(p5);
         shopService.createShop(s1);
         shopService.createShop(s2);
     }

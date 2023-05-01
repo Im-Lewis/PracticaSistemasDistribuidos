@@ -6,7 +6,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.swing.text.html.Option;
 import java.util.Collection;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/shops")
@@ -26,7 +28,7 @@ public class ShopRestController {
         boolean contains = shopService.containsShop(id);
 
         if (contains) {
-            return new ResponseEntity<>(shopService.getShopById(id), HttpStatus.OK);
+            return new ResponseEntity<>(shopService.getShopById(id).get(), HttpStatus.OK);
         } else {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -48,9 +50,9 @@ public class ShopRestController {
     @PutMapping("/{id}")
     public ResponseEntity<Shop> updateShop(@PathVariable Long id, @RequestBody Shop newShop) {
 
-        Shop oldShop = shopService.getShopById(id);
+        Optional<Shop> oldShop = shopService.getShopById(id);
 
-        if (oldShop != null) {
+        if (oldShop.isPresent()) {
             shopService.editShop(id, newShop);
             return new ResponseEntity<>(newShop, HttpStatus.OK);
         } else {

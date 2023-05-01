@@ -36,10 +36,10 @@ public class ShopController {
 
     @GetMapping("/shop/{num}")
     public String viewShop(Model model, @PathVariable Long num){
-        Shop shop = shopService.getShopById(num);
+        Shop shop = shopService.getShopById(num).get();
         model.addAttribute("shop", shop);
         model.addAttribute("indice", num);
-        model.addAttribute("products", shopService.getShopById(num).getProducts());
+        model.addAttribute("products", shopService.getShopById(num).get().getProducts());
         model.addAttribute("listproducts", productService.getAll());
         return "view_shop";
     }
@@ -51,4 +51,25 @@ public class ShopController {
         return "deleted_shop";
     }
 
+    @GetMapping("/shop/{idshop}/added/{idproduct}")
+    public String shopAddedProduct(Model model, @PathVariable Long idshop, @PathVariable Long idproduct){
+        Product product = productService.getProductById(idproduct);
+        Shop shop = shopService.getShopById(idshop).get();
+        if (shopService.containsProduct(idshop, product)){
+            return "error_add_new_product";
+        }
+        shop.setProduct(product);
+        shopService.editShop(idshop, shop);
+
+
+        return "added_product_shop";
+        /*if (shopService.containsProduct(idshop, product)){
+            return "error_add_new_product";
+        }
+        else{
+            shop.setProduct(product);
+            shopService.editShop(idshop, shop);
+            return "added_new_product";
+        }*/
+    }
 }

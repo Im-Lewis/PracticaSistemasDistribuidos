@@ -75,7 +75,7 @@
                     <h2 class="title_container">Productos disponibles:</h2>
                     {{#products}}
                     <div>
-                        <a href="../product/{{-index}}">{{name}}</a>
+                        <a href="../product/{{id}}">{{nombre}}</a>
                     </div>
                     {{/products}}
                 </div>
@@ -90,7 +90,7 @@
                     {{#listproducts}}
                     <div  style="display: flex; flex-direction: column;">
                         <div style="display: flex; align-items: center;">
-                            <img src="/images/guardar.png" class="img_edit" style="width: 40px; height: 40px; margin-right: 10px;">
+                            <a href="../../shop/{{shop.id}}/added/{{id}}"><img src="/images/guardar.png" class="img_edit" style="width: 40px; height: 40px; margin-right: 10px;"></a>
                             <a href="../product/{{-index}}">{{nombre}}</a>
                         </div>
                     </div>
