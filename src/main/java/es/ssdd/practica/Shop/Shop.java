@@ -4,20 +4,28 @@ import es.ssdd.practica.Products.Product;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.ManyToAny;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
+@Entity
 public class Shop {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String name;
     private String ubication;
     private String url;
-    private ArrayList<Product> products;
+    @ManyToMany(mappedBy = "shops")
+    private List<Product> products;
 
     public Shop(String name, String ubication, String url){
         this.name = name;

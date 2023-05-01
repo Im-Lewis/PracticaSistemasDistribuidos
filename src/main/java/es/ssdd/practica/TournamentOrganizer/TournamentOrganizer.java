@@ -6,17 +6,23 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.*;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
+@Entity
 public class TournamentOrganizer {
     public interface Basic{};
     public interface Tournaments {};
-    @JsonView(Basic.class)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id = -1;
     @JsonView(Basic.class)
     private String name;
-    @JsonView(Tournaments.class)
+
+    @OneToOne
     private Tournament organized_tournament;
 
     public TournamentOrganizer(String name) {
