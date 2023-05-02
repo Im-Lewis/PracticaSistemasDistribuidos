@@ -24,7 +24,7 @@ public class Shop {
     private String name;
     private String ubication;
     private String url;
-    @OneToMany
+    @OneToMany(mappedBy = "shop")
     private List<Product> products;
 
     public Shop(String name, String ubication, String url){

@@ -21,8 +21,8 @@ public class Product {
     private String precio;
     private String descripcion;
     private String url;
-    /*@ManyToMany
-    private List<Shop> shops;*/
+    @ManyToOne
+    private Shop shop;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
@@ -56,7 +56,7 @@ public class Product {
 
     public void setUrl(String url){this.url=url;}
 
-    //public void setShop(Shop s){this.shops.add(s);}
+    public void setShop(Shop s){this.shop = s;}
 
     public void replace(Product p){
         this.nombre = p.getNombre();

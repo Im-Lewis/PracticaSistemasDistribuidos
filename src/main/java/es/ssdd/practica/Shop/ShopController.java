@@ -12,10 +12,16 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.annotation.PostConstruct;
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 
 @Controller
 public class ShopController {
+
+    @Autowired
+    private EntityManager entityManager;
 
     @Autowired
     private ShopService shopService;
@@ -30,6 +36,8 @@ public class ShopController {
 
     @PostMapping("/shop/added")
     public String addedShop(Model model, Shop shop){
+        int id = shopService.getId().intValue()+1;
+        entityManager.createQuery("insert into Shop (id, name, ubication, url) values ()");
         shopService.createShop(shop);
         return "added_new_shop";
     }
@@ -38,6 +46,7 @@ public class ShopController {
     public String viewShop(Model model, @PathVariable Long num){
         Shop shop = shopService.getShopById(num).get();
         model.addAttribute("shop", shop);
+        model.addAttribute("shopId", shop.getId());
         model.addAttribute("indice", num);
         model.addAttribute("products", shopService.getShopById(num).get().getProducts());
         model.addAttribute("listproducts", productService.getAll());
@@ -51,6 +60,7 @@ public class ShopController {
         return "deleted_shop";
     }
 
+    @Transactional
     @GetMapping("/shop/{idshop}/added/{idproduct}")
     public String shopAddedProduct(Model model, @PathVariable Long idshop, @PathVariable Long idproduct){
         Product product = productService.getProductById(idproduct);
@@ -61,6 +71,7 @@ public class ShopController {
         shop.setProduct(product);
         shopService.editShop(idshop, shop);
 
+        Query q = entityManager.createQuery("UPDATE Product c SET c.shop = :idshop WHERE c.id = :idproduct");
 
         return "added_product_shop";
         /*if (shopService.containsProduct(idshop, product)){

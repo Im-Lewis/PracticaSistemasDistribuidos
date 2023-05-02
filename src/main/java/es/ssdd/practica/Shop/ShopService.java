@@ -73,4 +73,7 @@ public class ShopService {
         shopRepository.save(shop);
         return shop;
     }
+    public AtomicLong getId(){
+        return id;
+    }
 }

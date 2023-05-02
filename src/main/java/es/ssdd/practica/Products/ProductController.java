@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.annotation.PostConstruct;
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -19,7 +21,6 @@ public class ProductController {
 
     @Autowired
     ProductService productService;
-
 
     @PostMapping("/product/added")
     public String addedProduct(Model model, Product product) {
@@ -35,6 +36,8 @@ public class ProductController {
 
     @GetMapping("/view/products")
     public String viewProducts(Model model){
+        /*Query q1 = entityManager.createQuery("SELECT c FROM Product c");
+        List<Product> list = q1.getResultList();*/
         model.addAttribute("products", productService.getAll());
         return "view_new_products";
     }

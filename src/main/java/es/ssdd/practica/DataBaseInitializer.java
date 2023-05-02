@@ -12,11 +12,16 @@ import org.springframework.boot.web.embedded.undertow.UndertowServletWebServer;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.List;
 
 @Service
 public class DataBaseInitializer {
+
+    @Autowired
+    private EntityManager entityManager;
 
     @Autowired
     ShopService shopService;
@@ -29,7 +34,7 @@ public class DataBaseInitializer {
 
     @PostConstruct
     public void init() {
-        String imageURL1 = "/images/kit.png";
+        /*String imageURL1 = "/images/kit.png";
         String imageURL2 = "/images/mesabasica.png";
         String imageURL3 = "/images/mesapalatronix.png";
         String imageURL4 = "/images/bolapingpong.png";
@@ -57,10 +62,10 @@ public class DataBaseInitializer {
         s2.setProduct(p6);
         s2.setProduct(p5);
         shopService.createShop(s1);
-        shopService.createShop(s2);
+        shopService.createShop(s2);*/
 
         /* Default Tournaments, Organizers and Users */
-        Tournament tournament1 = new Tournament("Torneo-1", "10/10/23", "10:10", "Pinto");
+        /*Tournament tournament1 = new Tournament("Torneo-1", "10/10/23", "10:10", "Pinto");
         Tournament tournament2 = new Tournament("Torneo-2", "11/10/23", "11:11", "Valdemoro");
 
         tournament1.setOrganizer(new TournamentOrganizer("Luis"));
@@ -95,7 +100,28 @@ public class DataBaseInitializer {
         tournament2.getParticipants().add(user8);
 
         service.createTournament(tournament1);
-        service.createTournament(tournament2);
+        service.createTournament(tournament2);*/
+
+        /*Query q1 = entityManager.createQuery("SELECT c FROM Product c");
+        List<Product> listProducts = q1.getResultList();
+        for (Product p : listProducts)
+            productService.createProduct(p);
+
+        Query q2 = entityManager.createQuery("SELECT c FROM Shop c");
+        List<Shop> listShop = q2.getResultList();
+        for(Shop s : listShop) {
+            shopService.createShop(s);
+        }*/
+        Query q1 = entityManager.createQuery("SELECT c FROM Product c");
+        Query q2 = entityManager.createQuery("SELECT c FROM Shop c");
+        List<Product> listProducts = q1.getResultList();
+        for (Product p : listProducts)
+            productService.createProduct(p);
+
+        List<Shop> listShop = q2.getResultList();
+        for(Shop s : listShop) {
+            shopService.createShop(s);
+        }
     }
 
 }
