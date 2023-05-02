@@ -55,6 +55,22 @@
 .naneProductInput{
     margin-bottom: 10px;
 }
+/* Rich text*/
+.container_rich_text{
+    display: flex;
+}
+.bold_button{
+    border: #2D2D2A solid 1px;
+    background-color:#ffffff;
+    border-radius: 1px;
+    width: 35px;
+    height: 35px;
+    margin: 0px;
+}
+.img_bold{
+    width: 20px;
+    padding: 1px;
+}
 /*Esta regla selecciona todas las columnas de una fila que tenga la clase no-gutters 
 y elimina el padding derecho e izquierdo que se aplica automáticamente a las columnas 
 en Bootstrap. De esta manera, las columnas se mostrarán juntas sin espacios entre ellas.*/

@@ -69,7 +69,27 @@
                                     </div>
                                     <div class="mb-3">
                                         <label for="descProduct" class="form-label title_form">Descripción</label>
-                                        <textarea name="descripcion" class="form-control exampleFormInput" id="descProduct" rows="3"></textarea>
+                                        <div class="container_rich_text">
+                                            <button type="button" class="bold_button" onclick="setBold()" style="border-top-left-radius: 10px;">
+                                                <img src="../images/bold.svg" class="img_bold">
+                                            </button>
+                                            <button type="button" class="bold_button" onclick="setUnderline()">
+                                                <img src="../images/subrayado.avif" class="img_bold">
+                                            </button>
+                                            <button type="button" class="bold_button" onclick="setCursive()">
+                                                <img src="../images/cursiva.png" class="img_bold">
+                                            </button>
+                                            <button type="button" class="bold_button" onclick="crossOutFont()">
+                                                <img src="../images/tachar.png" class="img_bold">
+                                            </button>
+                                            <button type="button" class="bold_button" onclick="increaseFont()">
+                                                <img src="../images/aumentar.png" class="img_bold">
+                                            </button>
+                                            <button type="button" class="bold_button" onclick="decreaseFont()" style="border-top-right-radius: 10px;">
+                                                <img src="../images/disminuir.png" class="img_bold">
+                                            </button>
+                                        </div>
+                                        <textarea name="descripcion" class="form-control exampleFormInput" id="descProduct" rows="3" style="border-top-left-radius: 0px;"></textarea>
                                     </div>
                                     <div class="mb-3">
                                         <label for="priceProduct" class="form-label title_form">URL de la imagen</label>
@@ -91,5 +111,6 @@
 </div>
 <script src="../JS/change_page.js" defer></script>
 <script src="../JS/add_new_product.js" defer></script>
+<script src="../JS/rich_text.js" defer></script>
 </body>
 </html>

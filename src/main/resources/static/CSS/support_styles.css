@@ -147,6 +147,24 @@
     opacity: 0;
     transition: all 1s;
 }
+
+/* Rich text*/
+.container_rich_text{
+    display: flex;
+}
+.bold_button{
+    border: #2D2D2A solid 1px;
+    background-color:#ffffff;
+    border-radius: 1px;
+    width: 35px;
+    height: 35px;
+    margin: 0px;
+}
+.img_bold{
+    width: 20px;
+    padding: 1px;
+}
+
 @media (max-width: 717px){
     .section_questions{
         margin-top: 400px;
