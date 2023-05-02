@@ -15,10 +15,10 @@ public class TournamentOrganizerController {
 
     /*--------------------------------------------------------------------------------------------------------------------*/
     /* Controller functions */
-    @GetMapping("/view/organizers")
+    @GetMapping("/tournament/edit/{id}/view/organizers")
     public String viewOrganizers(Model model) {
         model.addAttribute("organizers", organizerRepository.findAll());
-        return "active_organizers";
+        return "organizers_active";
     }
 
     @PostMapping("/organizer/added")
@@ -27,11 +27,11 @@ public class TournamentOrganizerController {
         return "organizer_created_succesfully";
     }
 
-    @GetMapping("/organizer/{num}")
+    @GetMapping("/tournament/edit/{id}/organizer/{num}")
     public String viewOrganizer(Model model, @PathVariable Long num) {
         TournamentOrganizer organizer = organizerRepository.findById(num).get();
         model.addAttribute("organizer", organizer);
-        return "view_organizer";
+        return "organizer_view";
     }
 
     @GetMapping("/organizer/delete/{num}")

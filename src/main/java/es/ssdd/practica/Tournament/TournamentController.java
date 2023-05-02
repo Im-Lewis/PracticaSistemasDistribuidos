@@ -1,5 +1,7 @@
 package es.ssdd.practica.Tournament;
 
+import es.ssdd.practica.EntitiesService;
+import es.ssdd.practica.TournamentOrganizer.TournamentOrganizer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,6 +14,9 @@ public class TournamentController {
     private Long temId;
     @Autowired
     private TournamentsRepository tournamentsRepository;
+
+    @Autowired
+    private EntitiesService service;
 
     /*--------------------------------------------------------------------------------------------------------------------*/
     /* Controller functions */
@@ -35,7 +40,7 @@ public class TournamentController {
             return "tournament_view";
         }
         else{
-            return "view_tournament_null_data";
+            return "tournament_view_null_data";
         }
 
     }
@@ -66,10 +71,18 @@ public class TournamentController {
         tournament2.setDate(tournament.getDate());
         tournament2.setHour(tournament.getHour());
         tournament2.setLocation(tournament.getLocation());
-        tournament2.setOrganizer(tournament.getOrganizer());
         tournamentsRepository.delete(tournament);
         tournamentsRepository.save(tournament2);
         return "tournament_edited_succesfully";
+    }
+
+    @GetMapping("/tournament/edit/{id_tour}/organizer/{id_org}/set_organizer")
+    public String setOrganizer(Model model, @PathVariable Long id_tour, @PathVariable Long id_org){
+        Tournament tournament = tournamentsRepository.findById(id_tour).get();
+        TournamentOrganizer organizer = service.getOrganizerById(id_org);
+        tournament.setOrganizer(organizer);
+        tournamentsRepository.save(tournament);
+        return "organizer_added_to_tournament";
     }
 }
 

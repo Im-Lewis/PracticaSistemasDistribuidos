@@ -51,8 +51,8 @@ public class EntitiesService {
     public Collection<TournamentOrganizer> getAllOrganizers(){
         return organizerRepository.findAll();
     }
-    public Optional<TournamentOrganizer> getOrganizerById(Long id){
-        return organizerRepository.findById(id);
+    public TournamentOrganizer getOrganizerById(Long id){
+        return organizerRepository.getById(id);
     }
     public boolean containsOrganizer(long id){
         return organizerRepository.existsById(id);
@@ -65,8 +65,8 @@ public class EntitiesService {
         organizerRepository.save(organizer);
         return organizer;
     }
-    public Optional<TournamentOrganizer> deleteOrganizer(Long id){
-        Optional<TournamentOrganizer> organizer = getOrganizerById(id);
+    public TournamentOrganizer deleteOrganizer(Long id){
+        TournamentOrganizer organizer = getOrganizerById(id);
         organizerRepository.deleteById(id);
         return organizer;
     }

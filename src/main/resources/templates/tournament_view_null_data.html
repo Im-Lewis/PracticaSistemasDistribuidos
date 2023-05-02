@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tournaments BePong</title>
+  <link rel="stylesheet" href="/CSS/basic_styles.css">
+  <link rel="stylesheet" href="/CSS/tournaments.css">
+</head>
+<body>
+<div class="container-global container-main">
+
+  <!-- Menu of the top -->
+  <div class="container-global container-top-menu">
+    <div class="container-global top-menu">
+      <div class="icon-name">
+        <button id="home_button" class="home-btn">
+          <img src="/images/table-tennis-7216579_1280.png" alt="logo-img"/>
+        </button>
+        <span>BePong</span>
+      </div>
+      <div class="buttons-top-menu">
+        <button id="log_in_button" class="login-btn">
+          <span>Iniciar Sesión</span>
+        </button>
+        <button id="sign_in_button" class="singin-btn">
+          <span>Registarse</span>
+        </button>
+      </div>
+    </div>
+    <div class="under-menu">
+      <div class="buttons-under-menu">
+        <button id="shop_button">Tienda</button>
+        <span>|</span>
+        <button id="tournaments_button">Torneos</button>
+        <span>|</span>
+        <button id="support_button">Soporte</button>
+        <span>|</span>
+        <button id="multimedia_button">Multimedia</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Section of the active tournaments -->
+  <div class="container-global container-active-tournaments">
+    <span class="title-tournaments">{{tournament.name}}</span>
+    <div class="courrent-tournament">
+      <span>Nombre: {{tournament.name}}</span>
+      <span>Fecha: {{tournament.date}}</span>
+      <span>Hora: {{tournament.hour}}</span>
+      <span>Localizacion: {{tournament.location}}</span>
+    </div>
+
+    <!-- Section of the buttons of the options for tournaments -->
+    <div class="container-global container-tournaments-btns-options">
+      <div class="container-btns">
+        <a href="/tournament/edit/{{tournament.id}}"><button id="edit_tournament_button" class="edit-btn">Editar Torneo</button></a>
+        <a href="/tournament/delete/{{tournament.id}}"><button id="delete_tournament_button" class="delete-btn">Eliminar Torneo</button></a>
+        <a href="/tournament/edit/{{tournament.id}}/view/organizers"><button class="edit-btn">Añadir Organizador</button></a>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="/JS/change_page.js" defer></script>
+<script src="/JS/tournaments.js" defer></script>
+</body>
+</html>

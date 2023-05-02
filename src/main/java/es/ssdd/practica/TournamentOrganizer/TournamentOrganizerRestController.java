@@ -28,10 +28,9 @@ public class TournamentOrganizerRestController {
     @JsonView(Organizer_Details.class)
     @GetMapping("/{id}")
     public ResponseEntity<TournamentOrganizer> getElementById(@PathVariable Long id) {
-        Optional<TournamentOrganizer> op = service.getOrganizerById(id);
-        if(op.isPresent()) {
-            TournamentOrganizer organizer = op.get();
-            return new ResponseEntity<>(organizer, HttpStatus.OK);
+        TournamentOrganizer op = service.getOrganizerById(id);
+        if(op != null) {
+            return new ResponseEntity<>(op, HttpStatus.OK);
         }
         else{
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -47,9 +46,9 @@ public class TournamentOrganizerRestController {
 
     @JsonView(Organizer_Details.class)
     @DeleteMapping("/{id}")
-    public ResponseEntity<Optional<TournamentOrganizer>> removeElementById(@PathVariable Long id){
+    public ResponseEntity<TournamentOrganizer> removeElementById(@PathVariable Long id){
         try{
-            Optional<TournamentOrganizer> deleted_organizer = service.deleteOrganizer(id);
+            TournamentOrganizer deleted_organizer = service.deleteOrganizer(id);
             return new ResponseEntity<>(deleted_organizer, HttpStatus.OK);
         }
         catch(EmptyResultDataAccessException e){

@@ -24,7 +24,7 @@ public class TournamentOrganizer {
     @JsonView(Basic.class)
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id = null;
+    private long id = -1;
     @JsonView(Basic.class)
     private String name;
     @JsonView(Tournaments.class)

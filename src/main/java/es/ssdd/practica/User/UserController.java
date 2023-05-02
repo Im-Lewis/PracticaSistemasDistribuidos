@@ -18,7 +18,7 @@ public class UserController {
     @GetMapping("/view/users")
     public String viewUsers(Model model) {
         model.addAttribute("users", userRepository.findAll());
-        return "active_users";
+        return "users_active";
     }
 
     @PostMapping("/user/added")
@@ -31,7 +31,7 @@ public class UserController {
     public String viewUser(Model model, @PathVariable String dni) {
         User user = userRepository.findById(dni).get();
         model.addAttribute("user", user);
-        return "view_user";
+        return "user_view";
     }
 
     @GetMapping("/user/delete/{dni}")
