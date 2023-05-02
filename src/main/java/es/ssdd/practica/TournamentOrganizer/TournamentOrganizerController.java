@@ -41,20 +41,22 @@ public class TournamentOrganizerController {
         return "organizer_deleted_succesfully";
     }
 
-    @GetMapping("organizer/edit/{num}")
+    @GetMapping("/organizer/edit/{num}")
     public String editTournamentOrganizer_id(@PathVariable Long num){
         temId = num;
-        return "organizer/edited";
+        return "/organizer/edited";
     }
 
-    @GetMapping("organizer/edited")
-    public String editOrganizer_organizer(TournamentOrganizer organizer){return "edit_organizer";}
+    @GetMapping("/organizer/edited")
+    public String editOrganizer_organizer(TournamentOrganizer organizer){return "organizer_edit";}
 
-    @PostMapping("organizer/edited/update")
+    @PostMapping("/organizer/edited/update")
     public String editOrganizer_edit(Model model, TournamentOrganizer organizer){
         TournamentOrganizer organizer2 = organizerRepository.findById(temId).get();
         organizer2.setId(temId);
         organizer2.setName(organizer.getName());
+        organizerRepository.delete(organizer);
+        organizerRepository.save(organizer2);
         return "organizer_edited_succesfully";
     }
 }

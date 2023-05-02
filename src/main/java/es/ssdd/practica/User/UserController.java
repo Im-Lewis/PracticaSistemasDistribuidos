@@ -47,21 +47,23 @@ public class UserController {
         return "user_deleted_succesfully";
     }
 
-    @GetMapping("user/edit/{dni}")
+    @GetMapping("/user/edit/{dni}")
     public String editUser_id(@PathVariable String dni){
         temDNI = dni;
-        return "user/edited";
+        return "/user/edited";
     }
 
     @GetMapping("/user/edited")
-    public String editUser_user(User user){ return "edit_user"; }
+    public String editUser_user(User user){ return "user_edit"; }
 
-    @PostMapping("user/edited/update")
+    @PostMapping("/user/edited/update")
     public String editUser_edit(Model model, User user){
         User user2 = userRepository.findById(temDNI).get();
         user2.setDNI(temDNI);
         user2.setName(user.getName());
         user2.setLastName(user.getLastName());
+        userRepository.delete(user);
+        userRepository.save(user2);
         return "user_edited_succesfully";
     }
 }

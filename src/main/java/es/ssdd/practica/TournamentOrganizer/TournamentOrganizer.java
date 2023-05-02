@@ -28,7 +28,7 @@ public class TournamentOrganizer {
     @JsonView(Basic.class)
     private String name;
     @JsonView(Tournaments.class)
-    @OneToOne(mappedBy = "organizer")
+    @OneToOne(mappedBy = "organizer", cascade = CascadeType.ALL)
     private Tournament organized_tournament;
 
     /*--------------------------------------------------------------------------------------------------------------------*/
