@@ -51,6 +51,14 @@
             <span>Hora: {{tournament.hour}}</span>
             <span>Localizacion: {{tournament.location}}</span>
             <span>Organizador: {{tournament.organizer.name}}</span>
+            <span></span>
+            <span>Participantes:</span>
+            {{#tournament.participants}}
+            <div class="active-tournament">
+                <a href="../user/{{DNI}}">{{name}} / {{lastName}} / {{DNI}}</a><br>
+            </div>
+            {{/tournament.participants}}
+
         </div>
 
         <!-- Section of the buttons of the options for tournaments -->
@@ -58,6 +66,7 @@
             <div class="container-btns">
                 <a href="/tournament/edit/{{tournament.id}}"><button id="edit_tournament_button" class="edit-btn">Editar Torneo</button></a>
                 <a href="/tournament/delete/{{tournament.id}}"><button id="delete_tournament_button" class="delete-btn">Eliminar Torneo</button></a>
+                <a href="/tournament/edit/{{tournament.id}}/view/users"><button class="edit-btn">Añadir Participante</button></a>
             </div>
         </div>
     </div>

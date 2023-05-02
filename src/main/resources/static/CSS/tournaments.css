@@ -20,6 +20,9 @@
     top: 180px;
     flex-direction: column;
 }
+.container-btns-2{
+    height: 7rem;
+}
 .active-tournaments-section, .organizer-created-text {
     background-color: #2d2d2a;
     padding: 3rem 4rem 3rem 4rem;
@@ -27,7 +30,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 32.09rem;
+    height: 100vh;
     gap: 3rem;
 }
 .courrent-tournament {

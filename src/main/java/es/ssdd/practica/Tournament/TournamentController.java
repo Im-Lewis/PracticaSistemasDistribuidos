@@ -2,6 +2,7 @@ package es.ssdd.practica.Tournament;
 
 import es.ssdd.practica.EntitiesService;
 import es.ssdd.practica.TournamentOrganizer.TournamentOrganizer;
+import es.ssdd.practica.User.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -83,6 +84,15 @@ public class TournamentController {
         tournament.setOrganizer(organizer);
         tournamentsRepository.save(tournament);
         return "organizer_added_to_tournament";
+    }
+
+    @GetMapping("/tournament/edit/{id_tour}/user/{dni}/set_user")
+    public String setUser(Model model, @PathVariable Long id_tour, @PathVariable String dni){
+        Tournament tournament = tournamentsRepository.findById(id_tour).get();
+        User user = service.getUserById(dni);
+        tournament.getParticipants().add(user);
+        tournamentsRepository.save(tournament);
+        return "user_added_to_tournament";
     }
 }
 

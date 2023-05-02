@@ -55,7 +55,6 @@ public class TournamentOrganizerController {
         TournamentOrganizer organizer2 = organizerRepository.findById(temId).get();
         organizer2.setId(temId);
         organizer2.setName(organizer.getName());
-        //organizer2.setOrganized_tournament();  Poner el torneo que ha organizado a traves del path
         return "organizer_edited_succesfully";
     }
 }

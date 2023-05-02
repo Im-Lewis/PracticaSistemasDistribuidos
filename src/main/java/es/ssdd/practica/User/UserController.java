@@ -15,7 +15,7 @@ public class UserController {
 
     /*--------------------------------------------------------------------------------------------------------------------*/
     /* Controller functions */
-    @GetMapping("/view/users")
+    @GetMapping("/tournament/edit/{id}/view/users")
     public String viewUsers(Model model) {
         model.addAttribute("users", userRepository.findAll());
         return "users_active";
@@ -27,11 +27,17 @@ public class UserController {
         return "user_created_succesfully";
     }
 
-    @GetMapping("/user/{dni}")
+    @GetMapping("/tournament/edit/{id}/user/{dni}")
     public String viewUser(Model model, @PathVariable String dni) {
         User user = userRepository.findById(dni).get();
         model.addAttribute("user", user);
         return "user_view";
+    }
+    @GetMapping("/user/{dni}")
+    public String viewUser2(Model model, @PathVariable String dni) {
+        User user = userRepository.findById(dni).get();
+        model.addAttribute("user", user);
+        return "user_view_2";
     }
 
     @GetMapping("/user/delete/{dni}")

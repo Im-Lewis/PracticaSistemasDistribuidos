@@ -28,10 +28,9 @@ public class UserRestController {
     @JsonView(User_Details.class)
     @GetMapping("/{dni}")
     public ResponseEntity<User> getElementById(@PathVariable String dni) {
-        Optional<User> op = service.getUserById(dni);
-        if(op.isPresent()){
-            User user = op.get();
-            return new ResponseEntity<>(user, HttpStatus.OK);
+        User op = service.getUserById(dni);
+        if(op != null){
+            return new ResponseEntity<>(op, HttpStatus.OK);
         }
         else{
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
@@ -47,9 +46,9 @@ public class UserRestController {
 
     @JsonView(User_Details.class)
     @DeleteMapping("/{dni}")
-    public ResponseEntity<Optional<User>> removeElementById(@PathVariable String dni){
+    public ResponseEntity<User> removeElementById(@PathVariable String dni){
         try{
-            Optional<User> deleted_user = service.deleteUser(dni);
+            User deleted_user = service.deleteUser(dni);
             return new ResponseEntity<>(deleted_user, HttpStatus.OK);
         }
         catch (EmptyResultDataAccessException e){

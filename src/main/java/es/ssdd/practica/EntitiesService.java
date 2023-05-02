@@ -77,8 +77,8 @@ public class EntitiesService {
     public Collection<User> getAllUsers(){
         return userRepository.findAll();
     }
-    public Optional<User> getUserById(String dni){
-        return userRepository.findById(dni);
+    public User getUserById(String dni){
+        return userRepository.getById(dni);
     }
     public boolean containsUser(String dni){
         return userRepository.existsById(dni);
@@ -91,8 +91,8 @@ public class EntitiesService {
         userRepository.save(user);
         return user;
     }
-    public Optional<User> deleteUser(String dni){
-        Optional<User> user = getUserById(dni);
+    public User deleteUser(String dni){
+        User user = getUserById(dni);
         userRepository.deleteById(dni);
         return user;
     }
