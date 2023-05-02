@@ -1,6 +1,5 @@
 package es.ssdd.practica.TournamentOrganizer;
 
-import es.ssdd.practica.TournamentOrganizerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,23 +9,22 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
 public class TournamentOrganizerController {
-
     private Long temId;
     @Autowired
     private TournamentOrganizerRepository organizerRepository;
 
-/*--------------------------------------------------------------------------------------------------------------------*/
-/* Controller functions */
-    @PostMapping("/organizer/added")
-    public String addedOrganizer(Model model, TournamentOrganizer organizer) {
-        organizerRepository.save(organizer);
-        return "organizer_created_succesfully";
-    }
-
+    /*--------------------------------------------------------------------------------------------------------------------*/
+    /* Controller functions */
     @GetMapping("/view/organizers")
     public String viewOrganizers(Model model) {
         model.addAttribute("organizers", organizerRepository.findAll());
         return "active_organizers";
+    }
+
+    @PostMapping("/organizer/added")
+    public String addedOrganizer(Model model, TournamentOrganizer organizer) {
+        organizerRepository.save(organizer);
+        return "organizer_created_succesfully";
     }
 
     @GetMapping("/organizer/{num}")

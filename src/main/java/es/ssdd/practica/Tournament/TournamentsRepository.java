@@ -1,6 +1,5 @@
-package es.ssdd.practica;
+package es.ssdd.practica.Tournament;
 
-import es.ssdd.practica.Tournament.Tournament;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface TournamentsRepository extends JpaRepository<Tournament, Long> {

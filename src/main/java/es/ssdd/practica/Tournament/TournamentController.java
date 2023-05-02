@@ -1,6 +1,5 @@
 package es.ssdd.practica.Tournament;
 
-import es.ssdd.practica.TournamentsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,12 +10,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 @Controller
 public class TournamentController {
     private Long temId;
-
     @Autowired
     private TournamentsRepository tournamentsRepository;
 
     /*--------------------------------------------------------------------------------------------------------------------*/
     /* Controller functions */
+    @GetMapping("/view/tournaments")
+    public String viewTournaments(Model model) {
+        model.addAttribute("tournaments", tournamentsRepository.findAll());
+        return "active_tournaments";
+    }
 
     @PostMapping("/tournament/added")
     public String addedTournament(Model model, Tournament tournament) {
@@ -24,17 +27,17 @@ public class TournamentController {
         return "tournament_created_succesfully";
     }
 
-    @GetMapping("/view/tournaments")
-    public String viewTournaments(Model model) {
-        model.addAttribute("tournaments", tournamentsRepository.findAll());
-        return "active_tournaments";
-    }
-
     @GetMapping("/tournament/{num}")
     public String viewTournament(Model model, @PathVariable Long num) {
         Tournament tournament = tournamentsRepository.findById(num).get();
         model.addAttribute("tournament", tournament);
-        return "view_tournament";
+        if (tournament.getOrganizer()!=null){
+            return "view_tournament";
+        }
+        else{
+            return "view_tournament_null_data";
+        }
+
     }
 
     @GetMapping("/tournament/delete/{num}")

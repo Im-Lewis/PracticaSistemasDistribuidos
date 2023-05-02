@@ -4,6 +4,8 @@ import es.ssdd.practica.Products.Product;
 import es.ssdd.practica.Products.ProductService;
 import es.ssdd.practica.Shop.Shop;
 import es.ssdd.practica.Shop.ShopService;
+import es.ssdd.practica.Tournament.Tournament;
+import es.ssdd.practica.TournamentOrganizer.TournamentOrganizer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +21,9 @@ public class DataBaseInitializer {
 
     @Autowired
     ProductService productService;
+
+    @Autowired
+    EntitiesService service;
 
     @PostConstruct
     public void init() {
@@ -51,6 +56,16 @@ public class DataBaseInitializer {
         s2.setProduct(p5);
         shopService.createShop(s1);
         shopService.createShop(s2);
+
+        /* Default Tournaments, Organizers and Users */
+        Tournament tournament1 = new Tournament("Torneo-1", "10/10/23", "10:10", "Pinto");
+        Tournament tournament2 = new Tournament("Torneo-2", "11/10/23", "11:11", "Valdemoro");
+
+        tournament1.setOrganizer(new TournamentOrganizer("Luis"));
+        tournament2.setOrganizer(new TournamentOrganizer("Jaime"));
+
+        service.createTournament(tournament1);
+        service.createTournament(tournament2);
     }
 
 }

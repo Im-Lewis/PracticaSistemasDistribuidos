@@ -9,19 +9,34 @@ import java.util.ArrayList;
 import java.util.List;
 import es.ssdd.practica.Tournament.Tournament;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.ManyToMany;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+
+@Entity
 public class User {
-    public interface Basic{};
-    public interface Tournaments{};
+    /*--------------------------------------------------------------------------------------------------------------------*/
+    /* Interfaces */
+    public interface Basic {
+    }
+    public interface Tournaments {
+    }
+
+    /*--------------------------------------------------------------------------------------------------------------------*/
+    /* Atributes */
     @JsonView(Basic.class)
+    @Id
     private String DNI = "-1";
     @JsonView(Basic.class)
     private String name;
     @JsonView(Basic.class)
     private String lastName;
     @JsonView(Tournaments.class)
+    @ManyToMany
     private List<Tournament> participating_in = new ArrayList<>();
 
     public User(String DNI, String name, String lastName) {
@@ -30,8 +45,8 @@ public class User {
         this.lastName = lastName;
     }
 
-/*--------------------------------------------------------------------------------------------------------------------*/
-/* GETTER AND SETTER FUNCTIONS */
+    /*--------------------------------------------------------------------------------------------------------------------*/
+    /* GETTER AND SETTER FUNCTIONS */
     public String getDNI() {
         return DNI;
     }
@@ -49,12 +64,6 @@ public class User {
     }
     public void setLastName(String lastName) {
         this.lastName = lastName;
-    }
-    public List<Tournament> getParticipating_in() {
-        return participating_in;
-    }
-    public void setParticipating_in(List<Tournament> participating_in) {
-        this.participating_in = participating_in;
     }
 }
 

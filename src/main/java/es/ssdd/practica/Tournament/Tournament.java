@@ -1,13 +1,16 @@
 package es.ssdd.practica.Tournament;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import es.ssdd.practica.TournamentOrganizer.TournamentOrganizer;
+import es.ssdd.practica.User.User;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.Id;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -15,22 +18,41 @@ import javax.persistence.GenerationType;
 
 @Entity
 public class Tournament {
+    /*--------------------------------------------------------------------------------------------------------------------*/
+    /* Interfaces */
+    public interface Basic{}
+    public interface Organizers{}
+    public interface Participants{}
 
-    @javax.persistence.Id
+    /*--------------------------------------------------------------------------------------------------------------------*/
+    /* Atributes */
+    @JsonView(Basic.class)
     @Id
-    private long id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id = null;
+    @JsonView(Basic.class)
     private String name;
+    @JsonView(Basic.class)
     private String date;
+    @JsonView(Basic.class)
     private String hour;
+    @JsonView(Basic.class)
     private String location;
-    private String organizer;
+    @JsonView(Organizers.class)
+    @OneToOne(cascade = CascadeType.ALL)
+    private TournamentOrganizer organizer;
+    @JsonView(Participants.class)
+    @ManyToMany(mappedBy = "participating_in")
+    private List<User> participants = new ArrayList<>();
 
-    public Tournament(String name, String date, String hour, String location, String organizer) {
+    /*--------------------------------------------------------------------------------------------------------------------*/
+    /* Constructor */
+    public Tournament(String name, String date, String hour, String location) {
         this.name = name;
         this.date = date;
         this.hour = hour;
         this.location = location;
-        this.organizer = organizer;
+        this.organizer = new TournamentOrganizer("");
     }
 
     /*--------------------------------------------------------------------------------------------------------------------*/
@@ -59,18 +81,16 @@ public class Tournament {
     public void setLocation(String location) {
         this.location = location;
     }
-    public String getOrganizer() {
-        return organizer;
-    }
-    public void setOrganizer(String organizer) {
-        this.organizer = organizer;
-    }
-
     public void setId(Long id) {
         this.id = id;
     }
-
     public Long getId() {
         return id;
+    }
+    public TournamentOrganizer getOrganizer() {
+        return organizer;
+    }
+    public void setOrganizer(TournamentOrganizer organizer) {
+        this.organizer = organizer;
     }
 }

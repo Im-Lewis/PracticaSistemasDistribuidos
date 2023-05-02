@@ -14,44 +14,46 @@ import javax.persistence.*;
 
 @Entity
 public class TournamentOrganizer {
-    public interface Basic{};
-    public interface Tournaments {};
+    /*--------------------------------------------------------------------------------------------------------------------*/
+    /* Interfaces */
+    public interface Basic{}
+    public interface Tournaments {}
+
+    /*--------------------------------------------------------------------------------------------------------------------*/
+    /* Atributes */
+    @JsonView(Basic.class)
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id = -1;
+    private Long id = null;
     @JsonView(Basic.class)
     private String name;
-
-    @OneToOne
+    @JsonView(Tournaments.class)
+    @OneToOne(mappedBy = "organizer")
     private Tournament organized_tournament;
 
+    /*--------------------------------------------------------------------------------------------------------------------*/
+    /* Constructor */
     public TournamentOrganizer(String name) {
         this.name = name;
     }
 
-/*--------------------------------------------------------------------------------------------------------------------*/
-/* GETTER AND SETTER FUNCTIONS */
-
+    /*--------------------------------------------------------------------------------------------------------------------*/
+    /* GETTER AND SETTER FUNCTIONS */
     public long getId() {
         return id;
     }
-
     public void setId(long id) {
         this.id = id;
     }
-
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
     public Tournament getOrganized_tournament() {
         return organized_tournament;
     }
-
     public void setOrganized_tournament(Tournament organized_tournament) {
         this.organized_tournament = organized_tournament;
     }
