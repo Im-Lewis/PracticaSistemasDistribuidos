@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Active Organizers - BePong</title>
-    <link rel="stylesheet" href="/CSS/basic_styles_2.css">
+    <title>Organizers BePong</title>
+    <link rel="stylesheet" href="/CSS/basic_styles.css">
     <link rel="stylesheet" href="/CSS/tournaments.css">
 </head>
 <body>
-<div class="container container-main">
+<div class="container-global container-main">
 
     <!-- Menu of the top -->
-    <div class="container container-top-menu">
-        <div class="container top-menu">
+    <div class="container-global container-top-menu">
+        <div class="container-global top-menu">
             <div class="icon-name">
                 <button id="home_button" class="home-btn">
                     <img src="/images/table-tennis-7216579_1280.png" alt="logo-img"/>
@@ -43,20 +43,20 @@
     </div>
 
     <!-- Section of the active tournaments -->
-    <div class="container container-active-tournaments">
+    <div class="container-global container-active-tournaments">
         <span class="title-tournaments">ORGANIZADORES ACTIVOS</span>
         <div class="active-tournaments-section">
             {{#organizers}}
             <div class="active-tournament">
-                <a href="../organizer/{{-index}}">{{name}}</a><br>
+                <a href="../organizer/{{id}}">{{name}}</a><br>
             </div>
             {{/organizers}}
         </div>
 
         <!-- Section of the buttons of the options for tournaments -->
-        <div class="container container-tournaments-btns-options">
+        <div class="container-global container-tournaments-btns-options">
             <div class="container-btns">
-                <button id="create_organizer_btn" class="create-tournament">Crear Organizador</button>
+                <a href="/HTML/add_new_organizer.html"><button class="create-tournament">Crear Organizador</button></a>
             </div>
         </div>
     </div>

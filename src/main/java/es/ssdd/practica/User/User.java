@@ -36,7 +36,7 @@ public class User {
     @JsonView(Basic.class)
     private String lastName;
     @JsonView(Tournaments.class)
-    @ManyToMany
+    @ManyToMany(mappedBy = "participants")
     private List<Tournament> participating_in = new ArrayList<>();
 
     public User(String DNI, String name, String lastName) {

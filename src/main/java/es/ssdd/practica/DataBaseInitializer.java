@@ -6,7 +6,9 @@ import es.ssdd.practica.Shop.Shop;
 import es.ssdd.practica.Shop.ShopService;
 import es.ssdd.practica.Tournament.Tournament;
 import es.ssdd.practica.TournamentOrganizer.TournamentOrganizer;
+import es.ssdd.practica.User.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.embedded.undertow.UndertowServletWebServer;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
@@ -63,6 +65,34 @@ public class DataBaseInitializer {
 
         tournament1.setOrganizer(new TournamentOrganizer("Luis"));
         tournament2.setOrganizer(new TournamentOrganizer("Jaime"));
+
+        User user1 = new User("00000000A", "Ana", "García Perez");
+        User user2 = new User("11111111B", "Fernando", "Rodríguez Martinez");
+        User user3 = new User("22222222C", "Isabel", "Fernández López");
+        User user4 = new User("33333333D", "Juan", "González García");
+        User user5 = new User("44444444E", "María", "Pérez Ruiz");
+        User user6 = new User("55555555F", "Carlos", "Martín Sánzhez");
+        User user7 = new User("66666666G", "Laura", "Gómez García");
+        User user8 = new User("77777777H", "Alejandro", "López Torres");
+
+        service.createUser(user1);
+        service.createUser(user2);
+        service.createUser(user3);
+        service.createUser(user4);
+        service.createUser(user5);
+        service.createUser(user6);
+        service.createUser(user7);
+        service.createUser(user8);
+
+        tournament1.getParticipants().add(user1);
+        tournament1.getParticipants().add(user2);
+        tournament1.getParticipants().add(user3);
+        tournament1.getParticipants().add(user4);
+
+        tournament2.getParticipants().add(user5);
+        tournament2.getParticipants().add(user6);
+        tournament2.getParticipants().add(user7);
+        tournament2.getParticipants().add(user8);
 
         service.createTournament(tournament1);
         service.createTournament(tournament2);

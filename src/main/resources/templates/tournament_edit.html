@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario Crear Torneos - BePong</title>
     <link rel="stylesheet" href="/CSS/basic_styles.css">
+    <link rel="stylesheet" href="/CSS/tournaments.css">
     <link rel="stylesheet" href="/CSS/add_new_tournaments_styles.css">
 </head>
 <body>
@@ -47,7 +48,7 @@
         <div class="container-global container-title-add-tournaments">
             <span class="title-add-tournaments">Editar Torneo</span>
         </div>
-        <div class=" container-global form-create-tournament">
+        <div class=" container-global form-edit-tournament">
             <form action="../../tournament/edited/update" method="post" novalidate>
                 <label for="tournament-name">
                     <span>Nombre</span>
@@ -65,12 +66,14 @@
                     <span>Localización</span>
                     <input id="tournament-location" name="location" type="text">
                 </label>
-                <label for="tournament-organizer">
-                    <span>Organizador</span>
-                    <input id="tournament-organizer" name="organizer" type="text">
-                </label>
                 <button type="submit" class="submit-btn">Enviar</button>
             </form>
+        </div>
+        <div class="container-global container-tournaments-btns-options">
+            <div class="container-btns">
+                <a href="/view/organizers"><button  class="edit-btn">Añadir Organizador</button></a>
+                <a href=""><button  class="edit-btn">Añadir Participante</button></a>
+            </div>
         </div>
     </div>
 

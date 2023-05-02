@@ -18,7 +18,7 @@ public class TournamentController {
     @GetMapping("/view/tournaments")
     public String viewTournaments(Model model) {
         model.addAttribute("tournaments", tournamentsRepository.findAll());
-        return "active_tournaments";
+        return "tournaments_active";
     }
 
     @PostMapping("/tournament/added")
@@ -32,7 +32,7 @@ public class TournamentController {
         Tournament tournament = tournamentsRepository.findById(num).get();
         model.addAttribute("tournament", tournament);
         if (tournament.getOrganizer()!=null){
-            return "view_tournament";
+            return "tournament_view";
         }
         else{
             return "view_tournament_null_data";
@@ -55,7 +55,7 @@ public class TournamentController {
 
     @GetMapping("/tournament/edited")
     public String editTournament_tournament(Tournament tournament){
-        return "edit_tournament";
+        return "tournament_edit";
     }
 
     @PostMapping("/tournament/edited/update")

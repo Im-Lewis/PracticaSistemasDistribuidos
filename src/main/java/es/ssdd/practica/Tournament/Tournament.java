@@ -42,7 +42,7 @@ public class Tournament {
     @OneToOne(cascade = CascadeType.ALL)
     private TournamentOrganizer organizer;
     @JsonView(Participants.class)
-    @ManyToMany(mappedBy = "participating_in")
+    @ManyToMany
     private List<User> participants = new ArrayList<>();
 
     /*--------------------------------------------------------------------------------------------------------------------*/
@@ -92,5 +92,11 @@ public class Tournament {
     }
     public void setOrganizer(TournamentOrganizer organizer) {
         this.organizer = organizer;
+    }
+    public List<User> getParticipants() {
+        return participants;
+    }
+    public void setParticipants(List<User> participants) {
+        this.participants = participants;
     }
 }
