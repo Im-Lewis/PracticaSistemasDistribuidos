@@ -52,7 +52,6 @@ public class Tournament {
         this.date = date;
         this.hour = hour;
         this.location = location;
-        this.organizer = new TournamentOrganizer("");
     }
 
     /*--------------------------------------------------------------------------------------------------------------------*/

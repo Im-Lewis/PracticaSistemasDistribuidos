@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Optional;
+import java.util.concurrent.atomic.AtomicLong;
 
 @Service
 public class EntitiesService {
@@ -20,6 +21,8 @@ public class EntitiesService {
     private TournamentOrganizerRepository organizerRepository;
     @Autowired
     private UserRepository userRepository;
+
+    private AtomicLong tournament_id = new AtomicLong(2);
 
     /*--------------------------------------------------------------------------------------------------------------------*/
     /* Functions for tournaments */
@@ -33,6 +36,8 @@ public class EntitiesService {
         return tournamentsRepository.existsById(id);
     }
     public Tournament createTournament(Tournament tournament){
+        long tem = tournament_id.incrementAndGet();
+        tournament.setId(tem);
         tournamentsRepository.save(tournament);
         return tournament;
     }
@@ -95,5 +100,9 @@ public class EntitiesService {
         User user = getUserById(dni);
         userRepository.deleteById(dni);
         return user;
+    }
+
+    public Long getLastId(){
+        return tournament_id.incrementAndGet();
     }
 }
