@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.persistence.EntityManager;
+import javax.transaction.Transactional;
+import java.util.concurrent.atomic.AtomicLong;
+
 @Controller
 public class TournamentController {
     private Long temId;
@@ -19,6 +23,9 @@ public class TournamentController {
     @Autowired
     private EntitiesService service;
 
+    @Autowired
+    EntityManager entityManager;
+
     /*--------------------------------------------------------------------------------------------------------------------*/
     /* Controller functions */
     @GetMapping("/view/tournaments")
@@ -27,9 +34,19 @@ public class TournamentController {
         return "tournaments_active";
     }
 
+    @Transactional
     @PostMapping("/tournament/added")
     public String addedTournament(Model model, Tournament tournament) {
-        tournamentsRepository.save(tournament);
+        long temId = service.getLastId();
+        entityManager.createNativeQuery("INSERT INTO Tournament (id, name, date, hour, location, organizer_id) VALUES (?,?,?,?,?,?)")
+                .setParameter(1, temId)
+                .setParameter(2, tournament.getName())
+                .setParameter(3, tournament.getDate())
+                .setParameter(4, tournament.getHour())
+                .setParameter(5, tournament.getLocation())
+                .setParameter(6, null)
+                .executeUpdate();
+        //tournamentsRepository.save(tournament);
         return "tournament_created_succesfully";
     }
 
