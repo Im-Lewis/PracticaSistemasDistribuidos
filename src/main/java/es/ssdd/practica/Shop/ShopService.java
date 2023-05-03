@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicLong;
 @Service
 public class ShopService {
 
-    private AtomicLong id = new AtomicLong();
+    private AtomicLong id = new AtomicLong(2);
     @Autowired
     private ShopRepository shopRepository;
 

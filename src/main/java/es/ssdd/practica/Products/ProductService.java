@@ -11,7 +11,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 @Service
 public class ProductService {
-    private AtomicLong id = new AtomicLong();
+    private AtomicLong id = new AtomicLong(6);
     @Autowired
     private ProductRepository productRepository;
 
@@ -56,6 +56,9 @@ public class ProductService {
     public Product editTournament(Long id, Product product){
         productRepository.save(product);
         return product;
+    }
+    public AtomicLong getId(){
+        return id;
     }
 }
 

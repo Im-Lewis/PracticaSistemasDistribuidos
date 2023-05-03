@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import javax.annotation.PostConstruct;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -22,11 +23,24 @@ public class ProductController {
     @Autowired
     ProductService productService;
 
+    @Autowired
+    private EntityManager entityManager;
+
+    @Transactional
     @PostMapping("/product/added")
     public String addedProduct(Model model, Product product) {
         try{
             double num = Double.parseDouble(product.getPrecio());
-            productService.createProduct(product);
+            int id = productService.getId().intValue()+1;
+            entityManager.createNativeQuery("INSERT INTO Product (etiqueta, precio, descripcion, url, id, nombre, shop_id) VALUES (?,?,?,?,?,?,?)")
+                    .setParameter(1, product.getEtiqueta())
+                    .setParameter(2, product.getPrecio())
+                    .setParameter(3, product.getDescripcion())
+                    .setParameter(4, product.getUrl())
+                    .setParameter(5, product.getId())
+                    .setParameter(6, product.getNombre())
+                    .setParameter(7, null)
+                    .executeUpdate();
             return "added_new_product";
         }catch (NumberFormatException e) {
             return "error_add_new_product";

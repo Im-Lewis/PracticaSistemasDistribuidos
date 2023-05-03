@@ -102,26 +102,7 @@ public class DataBaseInitializer {
         service.createTournament(tournament1);
         service.createTournament(tournament2);*/
 
-        /*Query q1 = entityManager.createQuery("SELECT c FROM Product c");
-        List<Product> listProducts = q1.getResultList();
-        for (Product p : listProducts)
-            productService.createProduct(p);
 
-        Query q2 = entityManager.createQuery("SELECT c FROM Shop c");
-        List<Shop> listShop = q2.getResultList();
-        for(Shop s : listShop) {
-            shopService.createShop(s);
-        }*/
-        Query q1 = entityManager.createQuery("SELECT c FROM Product c");
-        Query q2 = entityManager.createQuery("SELECT c FROM Shop c");
-        List<Product> listProducts = q1.getResultList();
-        for (Product p : listProducts)
-            productService.createProduct(p);
-
-        List<Shop> listShop = q2.getResultList();
-        for(Shop s : listShop) {
-            shopService.createShop(s);
-        }
     }
 
 }

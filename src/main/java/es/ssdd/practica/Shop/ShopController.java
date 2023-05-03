@@ -34,11 +34,16 @@ public class ShopController {
         return "view_new_shop";
     }
 
+    @Transactional
     @PostMapping("/shop/added")
     public String addedShop(Model model, Shop shop){
         int id = shopService.getId().intValue()+1;
-        entityManager.createQuery("insert into Shop (id, name, ubication, url) values ()");
-        shopService.createShop(shop);
+        entityManager.createNativeQuery("INSERT INTO Shop (id, name, ubication, url) VALUES (?,?,?,?)")
+                .setParameter(1, id)
+                .setParameter(2, shop.getName())
+                .setParameter(3, shop.getUbication())
+                .setParameter(4, shop.getUrl())
+                .executeUpdate();
         return "added_new_shop";
     }
 
@@ -68,10 +73,9 @@ public class ShopController {
         if (shopService.containsProduct(idshop, product)){
             return "error_add_new_product";
         }
-        shop.setProduct(product);
+        product.setShop(shop);
         shopService.editShop(idshop, shop);
 
-        Query q = entityManager.createQuery("UPDATE Product c SET c.shop = :idshop WHERE c.id = :idproduct");
 
         return "added_product_shop";
         /*if (shopService.containsProduct(idshop, product)){
